@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
 body {
-    background: linear-gradient(45deg, #4465ad, #002f9644);
+    background: linear-gradient(135deg, #054379c5, #69251c);
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -114,7 +117,160 @@ body {
     animation: pulse 1.5s infinite;
 }
 
-
-#backAnchor{
+#backAnchor {
     font-size: 2em;
+}
+
+
+main {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-card {
+    background: transparent;
+    background-image: url(../MEDIA/young-AI-engineer-programming-1.jpg.webp);
+    background-size: cover;
+    background-position: center;  
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 400px;
+    height: 100%;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+
+.course-thumbnail {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.course-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    border-top-left-radius: 15px;
+    
+}
+
+
+.course-content {
+    text-align: center;
+}
+
+.course-content{
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #000000;
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+.course-meta {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.course-content p {
+    font-size: 1rem;
+    color: #4A5568;
+    margin-bottom: 15px;
+}
+
+.course-content .btn {
+    color: #1a2a6c;
+    margin-top: 10px;
+}
+
+
+#mainContainer {
+    display: flex;
+    column-gap: 0px;
+    height: 500px;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, #1a2a6c83, #b21f1f73, #fdbb2d7e);
+    border-radius: 15px;
+
+    transition: transform 0.2s ease-in;
+}
+
+#mainContainer:hover {
+    transform: scale(1.02);
+}
+
+#detailsToEnroll{
+    width: 500px;
+    height: 100%;
+    padding: 20px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+#enrollBtn{
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: rgb(151, 15, 15);
+    border: 2px solid rgba(0, 0, 0, 0.808);
+    width: 30%;
+    transition: background-color 0.1s fade;
+    position: absolute;
+    bottom: 5%;
+    left: 35%;
+}
+
+#enrollBtn:hover{
+    background-color: hsl(0, 82%, 50%);
+}
+
+#enrollBtn:active{
+    background-color: hsl(0, 82%, 60%);
+}
+
+.courseDetails{
+    color: rgb(0, 0, 0);
+}
+
+
+#tutorName{
+    color: rgb(35, 147, 161);
+    font-weight: 800;
+    font-size: 1.6em;
+
+    font-family: 'Caveat', cursive;
+}
+
+#isCertified{
+    color: rgb(218, 28, 28);
+    font-weight: 800;
+    font-size: 1.6em;
+    font-family: 'Caveat', cursive;
+}
+
+#coursePrice{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #169149;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    font-family: 'Arial', sans-serif;
+}
+
+#courseDescription{
+    font-size: 0.95em;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="CSS/courseDetails.css">
     <link rel="icon" href="MEDIA/favicon.ico">
 </head>
+
 <body>
     <header>
         <nav class="glass-nav" aria-label="Main navigation">
@@ -22,6 +24,23 @@
             </div>
         </nav>
     </header>
+
+    <main>
+        <div id="mainContainer">
+            <div class="course-card">
+            </div>
+
+            <div id="detailsToEnroll">
+                <h3 class="course-content" id="courseTitle"></h3>
+                <p class="courseDetails" id="courseDescription"></p>
+                <p class="courseDetails">Tutor: <span id="tutorName"></span></p>
+                <p class="courseDetails">Certified: <span id="isCertified"></span></p>
+                <p class="courseDetails">Price: <span id="coursePrice"></span></p>
+                <button class="btn btn-primary" id="enrollBtn">Enroll Now</button>
+            </div>
+        </div>
+    </main>
     <script src="JS/courseDetails.js"></script>
 </body>
+
 </html>
