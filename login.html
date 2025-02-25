@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="CSS/login.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="icon" href="MEDIA/favicon.ico">
+</head>
+<body>
+    <header>
+        <div id="logoDiv">
+            <a href="index.html"><img id="logo" src="MEDIA/logo.jpeg" alt="logo"></a>
+            <a href="index.html"><p class="logo-text">M & T Tutoring</p></a>
+        </div>
+    </header>
+    
+    <main>
+        <form id="loginForm" action="">
+            <h3 class="formTitle">Login</h3>
+            <div class="passDiv">
+                <label for="usernameInput">Username:</label>
+                <input id="usernameInput" type="text" placeholder="Enter your username...">
+            </div>
+            <div class="passDiv">
+                <label for="passwordInput">Password:</label>
+                <input id="passwordInput" type="password" placeholder="Enter your password...">
+                <img title="click to show password" id="hidePass" class="passControlImgs" src="MEDIA/hidepassword2.png" alt="closed eye">
+                <img title="click to hide password" id="showPass" class="passControlImgs" src="MEDIA/showpassword2.png" alt="open eye">
+            </div>
+            <p id="signupInstead" class="switchForm">Don't have an account? Sign up instead</p>
+            <div class="btnDiv">
+                <button id="backBtn1" class="btn btn-primary" type="button">Back to Home</button>
+                <button id="loginBtn" class="btn btn-primary">Login</button>
+            </div>
+        </form>
+    
+    
+    
+        <form id="signupForm" action="">
+            <h3 class="formTitle">Signup</h3>
+            <div class="passDiv">
+                <label for="usernameInput2">Username:</label>
+                <input id="usernameInput2" type="text" placeholder="Enter your username...">
+            </div>
+            <div class="passDiv">
+                <label for="passwordInput2">Password:</label>
+                <input id="passwordInput2" type="password" placeholder="Enter your password...">
+                <img title="click to show password" id="hidePass2" class="passControlImgs" src="MEDIA/hidepassword2.png" alt="closed eye">
+                <img title="click to hide password" id="showPass2" class="passControlImgs" src="MEDIA/showpassword2.png" alt="open eye">
+            </div>
+            <div class="passDiv">
+                <label for="passwordInput3">Repeat Pass:</label>
+                <input id="passwordInput3" type="password" placeholder="Repeat your password...">
+            </div>
+            <div class="passDiv">
+                <label for="emailInput">Email:</label>
+                <input id="emailInput" type="email" placeholder="Enter your Email...">
+            </div>
+            <div class="passDiv">
+                <label for="majorCombo">Major/Field:</label>
+                <select name="Major" id="majorCombo">
+                    <option value="CCE">Computer Engineering</option>
+                    <option value="ME">Mechanical Engineering</option>
+                    <option value="MECH">Mechatronics</option>
+                    <option value="ELECT">Electrical Engineering</option>
+                    <option value="PSYCH">Psychology</option>
+                    <option value="MANAGE">Management</option>
+                    <option value="BUSI">Business</option>
+                    <option value="BIO">Biology</option>
+                    <option value="BIOM">Biomedical</option>
+                </select>
+            </div>
+            
+            <p id="loginInstead" class="switchForm">Already have an account? Login instead</p>
+            <div class="btnDiv">
+                <button type="button" id="backBtn2" class="btn btn-primary">Back to Home</button>
+                <button id="signupBtn" class="btn btn-primary">Signup</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2025 M&T Tutoring. All rights reserved.</p>
+    </footer>
+    
+    <script src="JS/login.js"></script>
+</body>
+</html>

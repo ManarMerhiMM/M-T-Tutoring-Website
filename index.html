@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M&T Tutoring</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="CSS/global.css">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <link rel="icon" href="MEDIA/favicon.ico">
+</head>
+
+<body>
+  
+
+  <!-- Hero Section with Gradient Overlay -->
+  <header class="hero">
+    <nav class="glass-nav" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo">
+          <span class="logo-text">M & T Tutoring</span>
+        </a>
+        <ul class="nav-links" id="NAVLIST">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
+          <div id="accountDiv">
+            <li><a href="" id="accountInNav">Account&#x25BC;</a></li>
+            <ul class="nav-links-burger" id="nav-links-burger-1">
+              <li><a href="" class="dashBoardInNav">Dashboard</a></li>
+              <li><a href="account.html">Account</a></li>
+              <li><a href="" class="signoutInNav">Signout</a></li>
+            </ul>
+          </div>
+        </ul>
+        <div class="nav-toggle">
+          <span>&#9776;</span>
+          <ul class="nav-links-burger" id="nav-links-burger-2">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="toRemoveWhenNotLoggedIn"><a href="" class="dashBoardInNav">Dashboard</a></li>
+            <li class="toRemoveWhenNotLoggedIn"><a href="account.html">Account</a></li>
+            <li class="toRemoveWhenNotLoggedIn"><a href="" class="signoutInNav">Signout</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="heading-container">
+          <h1 style="color: #f57c00;">M & T</h1>
+          <h1 style="color:#4facfe">Tutoring</h1>
+        </div>
+        <h1>Empowering Learning, Anytime, Anywhere!</h1>
+        <p class="hero-subtitle">
+          Expert guidance in coding, research, presentations, and project execution – all tailored for Lebanese students
+          and professionals.
+        </p>
+        <div class="cta-group">
+          <a href="courses.html" class="btn btn-primary">Browse Courses</a>
+          <a href="https://www.instagram.com/reel/DE9eQ7hMiu6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            class="btn btn-video">
+            <i class="fas fa-play" style="color: white;">Watch Intro</i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Featured Courses Section -->
+  <section class="container featured-courses">
+    <h2 class="section-title">Featured Courses</h2>
+    <div class="course-grid">
+      <article class="course-card">
+        <div class="course-thumbnail">
+          <img src="MEDIA/web-design-concept_23-2147841209.jpg.avif" alt="Web Development Bootcamp">
+          <span class="course-tag">New</span>
+        </div>
+        <div class="course-content">
+          <h3>Full-Stack Web Development</h3>
+          <div class="course-meta">
+            <span class="rating">4.9 <i class="fas fa-star"></i></span>
+            <span class="duration"><i class="fas fa-clock"></i> 120h</span>
+          </div>
+          <p>Learn to build responsive websites from scratch with our expert-led program.</p>
+          <a href="course-details.html" class="btn btn-secondary">View Course</a>
+        </div>
+      </article>
+      <article class="course-card">
+        <div class="course-thumbnail">
+          <img src="MEDIA/2022-07-19-Melhores-cursos-de-Python.jpg" alt="Python for Beginners">
+          <span class="course-tag">Trending</span>
+        </div>
+        <div class="course-content">
+          <h3>Python for Beginners</h3>
+          <div class="course-meta">
+            <span class="rating">4.8 <i class="fas fa-star"></i></span>
+            <span class="duration"><i class="fas fa-clock"></i> 80h</span>
+          </div>
+          <p>Master Python programming with hands-on projects and real-world applications.</p>
+          <a href="course-details.html" class="btn btn-secondary">View Course</a>
+        </div>
+      </article>
+      <article class="course-card">
+        <div class="course-thumbnail">
+          <img src="MEDIA/young-AI-engineer-programming-1.jpg.webp" alt="Data Science & AI">
+          <span class="course-tag">Popular</span>
+        </div>
+        <div class="course-content">
+          <h3>Data Science & AI</h3>
+          <div class="course-meta">
+            <span class="rating">5.0 <i class="fas fa-star"></i></span>
+            <span class="duration"><i class="fas fa-clock"></i> 100h</span>
+          </div>
+          <p>Explore data analytics, machine learning, and AI to transform your career.</p>
+          <a href="course-details.html" class="btn btn-secondary">View Course</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Our Services Section -->
+  <section class="container services-section">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-intro">
+      At M & T Tutoring, we offer a variety of services to help you excel academically and professionally.
+    </p>
+
+    <div class="services-grid">
+      <article class="service-card">
+        <img src="MEDIA/newbannerimage.png" alt="Coding Tutoring">
+        <h3>Coding Tutoring</h3>
+        <p>Personalized lessons in various programming languages to boost your skills.</p>
+      </article>
+
+      <article class="service-card">
+        <img src="MEDIA/Research Assistance.jpeg" alt="Research Assistance">
+        <h3>Research Assistance</h3>
+        <p>Expert guidance to help you ace your academic projects and research papers.</p>
+      </article>
+
+      <article class="service-card">
+        <img src="MEDIA/presentation_design.jpg.avif" alt="Presentation Design">
+        <h3>Presentation Design</h3>
+        <p>Create impactful presentations that convey your ideas clearly and professionally.</p>
+      </article>
+
+      <article class="service-card">
+        <img src="MEDIA/project_execution.jpg" alt="Project Execution">
+        <h3>Project Execution</h3>
+        <p>From ideation to completion, we help you execute projects that stand out.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Mission Statement Section -->
+  <section class="container mission-statement">
+    <div class="mission-wrapper">
+      <!-- Textual Content -->
+      <div class="mission-content">
+        <h2 class="mission-title">Bridging Lebanon's Education Gap</h2>
+        <p class="mission-description">
+          At M&T Tutoring, we combine modern pedagogy with cultural relevance to provide bilingual
+          courses and project support tailored to the Lebanese academic system, empowering students
+          and professionals to achieve excellence.
+        </p>
+
+        <!-- Highlights / Key Points -->
+        <div class="mission-highlights">
+          <article class="highlight-card">
+            <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+            <h4>1:1 Mentorship</h4>
+          </article>
+          <article class="highlight-card">
+            <i class="fas fa-certificate" aria-hidden="true"></i>
+            <h4>Career Certifications</h4>
+          </article>
+        </div>
+      </div>
+
+      <!-- Mission Image -->
+      <div class="mission-image">
+        <img src="MEDIA/Our mission.JPEG" alt="Our Mission">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials Section -->
+  <section class="container testimonials-section">
+    <h2 class="section-title">What Our Students Say</h2>
+    <div class="testimonials-grid">
+      <article class="testimonial-card">
+        <blockquote>
+          <p>“M&T Tutoring transformed my academic journey – the personalized support and expert guidance were
+            game-changers!”</p>
+        </blockquote>
+        <cite>- AUB Student</cite>
+      </article>
+      <article class="testimonial-card">
+        <blockquote>
+          <p>“Thanks to M&T Tutoring, I excelled in my projects and boosted my grades dramatically!”</p>
+        </blockquote>
+        <cite>- LAU Student</cite>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section class="container contact-section">
+    <h2 class="section-title">Contact Us</h2>
+    <p class="contact-intro">
+      Ready to elevate your academic journey? Get in touch today!
+    </p>
+    <address class="contact-details">
+      <p>
+        <strong>WhatsApp:</strong>
+        <a href="https://wa.me/96181671594" target="_blank" rel="noopener noreferrer">+961 81 671 594</a>
+      </p>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:contact@mandttutoring.com">contact@mandttutoring.com</a>
+      </p>
+      <p>
+        <strong>Follow us on Instagram:</strong>
+        <a href="https://www.instagram.com/m_and_t_tutoring/" target="_blank"
+          rel="noopener noreferrer">@m_and_t_tutoring</a>
+      </p>
+    </address>
+  </section>
+
+
+
+  <!-- Footer Section -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="MEDIA/logo.jpeg" alt="M&T Tutoring Logo">
+          <p>Empowering Lebanon's Learners Since 2023</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/m_and_t_tutoring/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://wa.me/96181671594" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="tutor-apply.html">Become a Tutor</a></li>
+            <li><a href="webinars.html">Webinars</a></li>
+            <li><a href="careers.html">Career Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 M&T Tutoring. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="JS/main.js"></script>
+</body>
+
+</html>

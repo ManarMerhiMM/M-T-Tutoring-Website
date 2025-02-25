@@ -1,0 +1,1107 @@
+{
+    "accounts": [
+        {
+            "Username": "MalekShibli12",
+            "Password": "Ejr4f3o8y",
+            "Email": "maleksh12@outlook.com",
+            "AccountType": "tutor",
+            "Banned": false
+        },
+        {
+            "Username": "ManarMerhi99",
+            "Password": "Fejwof8yff",
+            "Email": "manarmer99@outlook.com",
+            "AccountType": "tutor",
+            "Banned": false
+        },
+        {
+            "Username": "MohammadHalabi100",
+            "Password": "Pewjfwe6211",
+            "Email": "mohhalabi100@outlook.com",
+            "AccountType": "tutor",
+            "Banned": false
+        },
+        {
+            "Username": "ShadowStorm92",
+            "Password": "EnqkaYI8gO",
+            "Email": "User17054@outlook.com",
+            "AccountType": "student",
+            "major": "CCE",
+            "Banned": false
+        },
+        {
+            "Username": "MoonlightEcho77",
+            "Password": "8FxjhOYCkF",
+            "Email": "User16551@outlook.com",
+            "AccountType": "tutor",
+            "Banned": true
+        },
+        {
+            "Username": "FrostByte404",
+            "Password": "8JKvIT48V3",
+            "Email": "User48659@outlook.com",
+            "AccountType": "student",
+            "major": "BUSI",
+            "Banned": true
+        },
+        {
+            "Username": "NeonPhantom23",
+            "Password": "dMAjDSNJv0",
+            "Email": "User90312@outlook.com",
+            "AccountType": "student",
+            "major": "ELECT",
+            "Banned": false
+        },
+        {
+            "Username": "EclipseRider88",
+            "Password": "4FBzLDQsJs",
+            "Email": "User90364@outlook.com",
+            "AccountType": "student",
+            "major": "BUSI",
+            "Banned": false
+        },
+        {
+            "Username": "BlazeHunter19",
+            "Password": "g75GIhBI4A",
+            "Email": "User16782@outlook.com",
+            "AccountType": "student",
+            "major": "BUSI",
+            "Banned": true
+        },
+        {
+            "Username": "MidnightVortex56",
+            "Password": "rJgqBVhBpE",
+            "Email": "User92233@outlook.com",
+            "AccountType": "student",
+            "major": "CS",
+            "Banned": false
+        },
+        {
+            "Username": "QuantumGhost99",
+            "Password": "lWexwsBSqi",
+            "Email": "User19733@outlook.com",
+            "AccountType": "student",
+            "major": "MECH",
+            "Banned": false
+        },
+        {
+            "Username": "ThunderPulse07",
+            "Password": "NKucIeswTD",
+            "Email": "User35582@outlook.com",
+            "AccountType": "tutor",
+            "Banned": true
+        },
+        {
+            "Username": "OblivionKnight13",
+            "Password": "Tmolu33mDC",
+            "Email": "User88683@outlook.com",
+            "AccountType": "student",
+            "major": "MANAGE",
+            "Banned": false
+        },
+        {
+            "Username": "CyberPhoenix21",
+            "Password": "83BrCjV8m8",
+            "Email": "User38440@outlook.com",
+            "AccountType": "student",
+            "major": "MANAGE",
+            "Banned": false
+        },
+        {
+            "Username": "FrozenSpecter65",
+            "Password": "8CAAFAnbmt",
+            "Email": "User37495@outlook.com",
+            "AccountType": "student",
+            "major": "CCE",
+            "Banned": true
+        },
+        {
+            "Username": "RoaaSoloh",
+            "Password": "Js3sE3gHzg",
+            "Email": "User54078@outlook.com",
+            "AccountType": "tutor",
+            "Banned": false
+        },
+        {
+            "Username": "StormBreaker07",
+            "Password": "er9xVgmgVs",
+            "Email": "User20897@outlook.com",
+            "AccountType": "student",
+            "major": "CS",
+            "Banned": true
+        },
+        {
+            "Username": "ShadowFury66",
+            "Password": "31L2j3hVaU",
+            "Email": "User21350@outlook.com",
+            "AccountType": "student",
+            "major": "BUSI",
+            "Banned": false
+        },
+        {
+            "Username": "MysticVortex81",
+            "Password": "h9mjOPjfgK",
+            "Email": "User98683@outlook.com",
+            "AccountType": "student",
+            "major": "CS",
+            "Banned": false
+        },
+        {
+            "Username": "PhantomStriker22",
+            "Password": "UmkYT6ijkb",
+            "Email": "User02758@outlook.com",
+            "AccountType": "student",
+            "major": "MANAGE",
+            "Banned": false
+        },
+        {
+            "Username": "FrostGuardian99",
+            "Password": "97e7tAjLXJ",
+            "Email": "User33741@outlook.com",
+            "AccountType": "student",
+            "major": "ELECT",
+            "Banned": false
+        },
+        {
+            "Username": "SolarEclipse45",
+            "Password": "jkVlE89504",
+            "Email": "User73523@outlook.com",
+            "AccountType": "student",
+            "major": "BIOM",
+            "Banned": false
+        },
+        {
+            "Username": "Himynameis88",
+            "Password": "Ywp6W7NQoS",
+            "Email": "User02028@outlook.com",
+            "AccountType": "student",
+            "major": "MANAGE",
+            "Banned": false
+        },
+        {
+            "Username": "CyberWolfX77",
+            "Password": "tCBrh5LFWp",
+            "Email": "User99730@outlook.com",
+            "AccountType": "tutor",
+            "Banned": true
+        },
+        {
+            "Username": "ThunderSpecter18",
+            "Password": "BBSRHg5dOY",
+            "Email": "User91309@outlook.com",
+            "AccountType": "tutor",
+            "Banned": true
+        },
+        {
+            "Username": "BlizzardRogue53",
+            "Password": "CzO9V5jPnO",
+            "Email": "User78245@outlook.com",
+            "AccountType": "student",
+            "major": "PSYCH",
+            "Banned": true
+        },
+        {
+            "Username": "VenomRider64",
+            "Password": "Nzv8GxzOVJ",
+            "Email": "User15438@outlook.com",
+            "AccountType": "student",
+            "major": "ELECT",
+            "Banned": false
+        },
+        {
+            "Username": "GlitchSeeker92",
+            "Password": "fhSvxyazCi",
+            "Email": "User72717@outlook.com",
+            "AccountType": "tutor",
+            "Banned": true
+        },
+        {
+            "Username": "SteelHorizon47",
+            "Password": "7gQefuJM5l",
+            "Email": "User69871@outlook.com",
+            "AccountType": "student",
+            "major": "BIOM",
+            "Banned": false
+        },
+        {
+            "Username": "EchoNomad31",
+            "Password": "zFM01VuXXC",
+            "Email": "User51592@outlook.com",
+            "AccountType": "student",
+            "major": "MECH",
+            "Banned": false
+        },
+        {
+            "Username": "DriftSpectra88",
+            "Password": "vfTBO4ih6D",
+            "Email": "User59141@outlook.com",
+            "AccountType": "tutor",
+            "Banned": true
+        },
+        {
+            "Username": "NeonGuardian54",
+            "Password": "eCBk0RyjMW",
+            "Email": "User53251@outlook.com",
+            "AccountType": "student",
+            "major": "BIO",
+            "Banned": true
+        },
+        {
+            "Username": "WarpShifter99",
+            "Password": "sMY4LKrjHg",
+            "Email": "User00164@outlook.com",
+            "AccountType": "tutor",
+            "Banned": false
+        },
+        {
+            "Username": "VoltageRider83",
+            "Password": "yHS09W2OWw",
+            "Email": "User84924@outlook.com",
+            "AccountType": "student",
+            "major": "ELECT",
+            "Banned": false
+        },
+        {
+            "Username": "FrostVanguard65",
+            "Password": "ZSejKX1ixW",
+            "Email": "User23381@outlook.com",
+            "AccountType": "student",
+            "major": "BUSI",
+            "Banned": false
+        },
+        {
+            "Username": "AetherSurge77",
+            "Password": "tUkjCU3U0c",
+            "Email": "User39434@outlook.com",
+            "AccountType": "tutor",
+            "Banned": true
+        },
+        {
+            "Username": "StormWarden48",
+            "Password": "vvDO5Z6KPa",
+            "Email": "User79403@outlook.com",
+            "AccountType": "student",
+            "major": "CS",
+            "Banned": false
+        },
+        {
+            "Username": "InfinityRunner2",
+            "Password": "7WwYzxXm2g",
+            "Email": "User96139@outlook.com",
+            "AccountType": "student",
+            "major": "PSYCH",
+            "Banned": true
+        },
+        {
+            "Username": "VoidPioneer07",
+            "Password": "zDZmGDDCS4",
+            "Email": "User53153@outlook.com",
+            "AccountType": "student",
+            "major": "BUSI",
+            "Banned": false
+        },
+        {
+            "Username": "SolarWanderer91",
+            "Password": "GZF99SSPeb",
+            "Email": "User94919@outlook.com",
+            "AccountType": "student",
+            "major": "CCE",
+            "Banned": true
+        },
+        {
+            "Username": "OblivionPilot38",
+            "Password": "BA4LsHDPvS",
+            "Email": "User54191@outlook.com",
+            "AccountType": "student",
+            "major": "CS",
+            "Banned": false
+        },
+        {
+            "Username": "BlazeNavigator56",
+            "Password": "Vi9Jq03me4",
+            "Email": "User79405@outlook.com",
+            "AccountType": "student",
+            "major": "CCE",
+            "Banned": true
+        },
+        {
+            "Username": "ThunderLancer22",
+            "Password": "dPV3chSfzh",
+            "Email": "User74412@outlook.com",
+            "AccountType": "tutor",
+            "Banned": true
+        }
+    ],
+    "courses": [
+        {
+            "name": "Advanced Mathematics",
+            "category": [
+                "Mathematics"
+            ],
+            "tutor": "ThunderLancer22",
+            "price": "180$",
+            "takenBy": [
+                "InfinityRunner2",
+                "OblivionPilot38"
+            ],
+            "certified": false,
+            "description": "Advanced Mathematics is the study of complex mathematical concepts beyond basic arithmetic and algebra. It includes topics like calculus, linear algebra, differential equations, real and complex analysis, abstract algebra, topology, and mathematical logic. It is used in fields like physics, engineering, economics, and computer science to solve theoretical and practical problems."
+        },
+        {
+            "name": "Cybersecurity Essentials",
+            "category": [
+                "Tech and Development",
+                "Science and Engineering"
+            ],
+            "tutor": "GlitchSeeker92",
+            "price": "356$",
+            "takenBy": [
+                "VoidPioneer07",
+                "NeonGuardian54",
+                "VenomRider64",
+                "FrostGuardian99"
+            ],
+            "certified": true,
+            "description": "Cybersecurity Essentials focuses on fundamental principles and best practices for protecting digital systems, networks, and data from cyber threats. It includes topics like encryption, authentication, firewalls, malware protection, threat detection, risk management, and secure coding. It is essential for preventing cyberattacks, ensuring data integrity, and maintaining privacy in both personal and professional environments."
+        },
+        {
+            "name": "Business Law",
+            "category": [
+                "Business and Management"
+            ],
+            "tutor": "WarpShifter99",
+            "price": "222$",
+            "takenBy": [
+                "ShadowFury66",
+                "BlizzardRogue53",
+                "FrostByte404",
+                "ShadowStorm92"
+            ],
+            "certified": false,
+            "description": "Business Law refers to the legal rules and regulations governing business activities and commercial transactions. It covers areas such as contracts, intellectual property, corporate law, employment law, taxation, consumer protection, and dispute resolution. Business law ensures fair practices, protects rights, and regulates interactions between businesses, consumers, and the government. It is essential for maintaining legal compliance, resolving disputes, and fostering ethical business operations."
+        },
+        {
+            "name": "Machine Learning",
+            "category": [
+                "Science and Engineering",
+                "Tech and Development"
+            ],
+            "tutor": "MoonlightEcho77",
+            "price": "459$",
+            "takenBy": [
+                "Himynameis88"
+            ],
+            "certified": false,
+            "description": "The Machine Learning course explores the fundamentals of machine learning, covering key concepts such as supervised and unsupervised learning, neural networks, decision trees, and model evaluation. Students will gain hands-on experience with real-world applications using Python and frameworks like TensorFlow and Scikit-Learn."
+        },
+        {
+            "name": "Data Structures I",
+            "category": [
+                "Tech and Development",
+                "Mathematics",
+                "Science and Engineering"
+            ],
+            "tutor": "CrimsonEcho91",
+            "price": "219$",
+            "takenBy": [
+                "VenomRider64",
+                "QuantumGhost99",
+                "EchoNomad31",
+                "OblivionPilot38",
+                "StormBreaker07",
+                "BlazeHunter19",
+                "MidnightVortex56",
+                "FrostVanguard65"
+            ],
+            "certified": false,
+            "description": "Data Structures I is an introductory study of fundamental data structures used in computer science, such as arrays, linked lists, stacks, queues, and hash tables. It explores their implementation, operations, and applications, focusing on efficiency and performance analysis. This foundational knowledge is essential for algorithm development and problem-solving in programming."
+        },
+        {
+            "name": "Data Structures II",
+            "category": [
+                "Tech and Development",
+                "Mathematics",
+                "Science and Engineering"
+            ],
+            "tutor": "DriftSpectra88",
+            "price": "231$",
+            "takenBy": [
+                "SolarEclipse45"
+            ],
+            "certified": false,
+            "description": "The Data Structures II course builds on foundational data structures, introducing advanced topics such as trees, graphs, heaps, hash tables, and dynamic programming. Students will learn efficient algorithms for searching, sorting, and optimizing data manipulation, with a focus on real-world applications and problem-solving in software development."
+        },
+        {
+            "name": "Introduction to Marketing",
+            "category": [
+                "Business and Management"
+            ],
+            "tutor": "AetherSurge77",
+            "price": "269$",
+            "takenBy": [
+                "PhantomStriker22",
+                "SteelHorizon47",
+                "QuantumGhost99"
+            ],
+            "certified": false,
+            "description": "The Introduction to Marketing course provides a foundational understanding of marketing principles, consumer behavior, and market research. Students will explore key topics such as branding, digital marketing, pricing strategies, and promotional techniques. The course emphasizes practical applications, helping learners develop effective marketing plans and strategies for various industries."
+        },
+        {
+            "name": "Operating Systems",
+            "category": [
+                "Tech and Development",
+                "Science and Engineering"
+            ],
+            "tutor": "CyberWolfX77",
+            "price": "184$",
+            "takenBy": [
+                "StormBreaker07",
+                "StormWarden48"
+            ],
+            "certified": false,
+            "description": "The Operating Systems course covers the fundamental concepts and functionalities of modern operating systems. Topics include process management, memory allocation, file systems, concurrency, and security. Students will explore how operating systems interact with hardware and software, learning about multitasking, virtualization, and system performance optimization. Practical exercises will reinforce theoretical concepts through hands-on experience with Linux, Windows, and other OS environments."
+        },
+        {
+            "name": "Embedded Systems",
+            "category": [
+                "Tech and Development",
+                "Science and Engineering"
+            ],
+            "tutor": "WarpShifter99",
+            "price": "320$",
+            "takenBy": [
+                "EclipseRider88",
+                "FrozenSpecter65",
+                "ShadowFury66",
+                "BlizzardRogue53"
+            ],
+            "certified": true,
+            "description": "The Embedded Systems course focuses on the design, development, and optimization of software and hardware for embedded applications. Topics include microcontrollers, real-time operating systems (RTOS), sensor integration, power management, and embedded C programming. Students will gain hands-on experience in developing efficient, low-level software for various embedded platforms used in industries such as automotive, healthcare, and IoT."
+        },
+        {
+            "name": "BSc in Management ",
+            "category": [
+                "Business and Management"
+            ],
+            "tutor": "AetherSurge77",
+            "price": "459$",
+            "takenBy": [
+                "FrostVanguard65",
+                "BlazeNavigator56"
+            ],
+            "certified": true,
+            "description": "A BSc in Management is an undergraduate degree that provides students with foundational knowledge in business, leadership, and organizational management. It covers key areas such as finance, marketing, human resources, operations, and strategy, preparing graduates for roles in business administration, entrepreneurship, and corporate leadership. The program emphasizes problem-solving, decision-making, and analytical skills, equipping students to manage businesses effectively in various industries."
+        },
+        {
+            "name": "Database Management",
+            "category": [
+                "Business and Management",
+                "Science and Engineering"
+            ],
+            "tutor": "CrimsonEcho91",
+            "price": "188$",
+            "takenBy": [
+                "VenomRider64"
+            ],
+            "certified": false,
+            "description": "Database Management refers to the process of storing, organizing, and managing data efficiently using Database Management Systems (DBMS). It involves designing, maintaining, and optimizing databases to ensure data integrity, security, and accessibility. Key aspects include data modeling, indexing, querying, backup, and recovery. Common DBMS types include relational databases (SQL) like MySQL and PostgreSQL, and NoSQL databases like MongoDB and Firebase. Effective database management is essential for businesses, enabling efficient data retrieval, transaction processing, and decision-making."
+        },
+        {
+            "name": "Cloud Computing",
+            "category": [
+                "Tech and Development"
+            ],
+            "tutor": "ThunderPulse07",
+            "price": "428$",
+            "takenBy": [
+                "SteelHorizon47",
+                "BlazeNavigator56"
+            ],
+            "certified": true,
+            "description": "Cloud Computing is the delivery of computing services—including servers, storage, databases, networking, software, and analytics—over the internet (“the cloud”) instead of local computers or physical servers. It offers scalability, flexibility, cost-efficiency, and remote access."
+        },
+        {
+            "name": "Computer Vision",
+            "category": [
+                "Mathematics"
+            ],
+            "tutor": "MoonlightEcho77",
+            "price": "385$",
+            "takenBy": [
+                "Himynameis88"
+            ],
+            "certified": true,
+            "description": "Computer Vision is a field of AI that enables computers to interpret and analyze visual data from images or videos. It involves tasks like image recognition, object detection, facial recognition, and motion tracking. Applications include autonomous vehicles, medical imaging, surveillance, and augmented reality. Techniques often use machine learning, deep learning, and neural networks to extract meaningful insights from visual inputs."
+        },
+        {
+            "name": "Networking Basics",
+            "category": [
+                "Business and Management",
+                "Tech and Development",
+                "Science and Engineering"
+            ],
+            "tutor": "ThunderSpecter18",
+            "price": "279$",
+            "takenBy": [
+                "CyberPhoenix21",
+                "NeonGuardian54",
+                "EchoNomad31"
+            ],
+            "certified": false,
+            "description": "Networking Basics refers to the fundamental concepts of connecting computers and devices to share data. It includes key components like IP addresses, routers, switches, firewalls, and protocols (e.g., TCP/IP, HTTP, DNS). Networks can be wired (Ethernet) or wireless (Wi-Fi) and follow models like LAN (Local Area Network), WAN (Wide Area Network), and the Internet. Understanding networking is essential for communication, security, and data transfer across devices and systems."
+        },
+        {
+            "name": "Anatomy",
+            "category": [
+                "Biology and Biomedical"
+            ],
+            "tutor": "DriftSpectra88",
+            "price": "320$",
+            "takenBy": [
+                "FrostGuardian99",
+                "StormWarden48",
+                "MysticVortex81"
+            ],
+            "certified": true,
+            "description": "Anatomy is the study of the structure and organization of living organisms. It is divided into gross anatomy (large structures like organs and muscles), microscopic anatomy (cells and tissues), and systemic anatomy (body systems like skeletal and nervous systems). Anatomy is essential for understanding biological functions, medical sciences, and healthcare applications."
+        },
+        {
+            "name": "Physiology",
+            "category": [
+                "Health & Medicine"
+            ],
+            "tutor": "ThunderSpecter18",
+            "price": "189$",
+            "takenBy": [
+                "Himynameis88",
+                "BlazeHunter19",
+                "ShadowFury66"
+            ],
+            "certified": true,
+            "description": "Physiology is the study of how living organisms function, focusing on biological processes and systems that sustain life. It covers areas like respiration, circulation, digestion, nervous function, and muscle movement. Physiology is essential in medicine and biology, helping to understand how the body maintains balance (homeostasis) and responds to external changes."
+        },
+        {
+            "name": "Pathology",
+            "category": [
+                "Health & Medicine"
+            ],
+            "tutor": "DriftSpectra88",
+            "price": "189$",
+            "takenBy": [
+                "NeonGuardian54",
+                "FrostByte404",
+                "ShadowStorm92"
+            ],
+            "certified": false,
+            "description": "Pathology is the study of diseases, focusing on their causes, development, and effects on the body. It involves examining tissues, cells, and bodily fluids to diagnose conditions. Pathology is divided into anatomical pathology (structural changes in organs) and clinical pathology (lab analysis of blood and fluids). It plays a crucial role in medicine, helping in disease detection, treatment planning, and medical research."
+        },
+        {
+            "name": "Emergency Medicine",
+            "category": [
+                "Health & Medicine"
+            ],
+            "tutor": "AetherSurge77",
+            "price": "110$",
+            "takenBy": [
+                "FrostByte404",
+                "SteelHorizon47",
+                "ShadowFury66"
+            ],
+            "certified": true,
+            "description": "Emergency Medicine is a medical specialty focused on the immediate diagnosis and treatment of acute illnesses and injuries. It involves rapid decision-making and life-saving interventions in emergency departments (EDs), ambulances, and trauma centers. Common cases include heart attacks, strokes, trauma, respiratory distress, and poisoning. Emergency physicians stabilize patients, manage critical conditions, and coordinate further care, playing a vital role in urgent and life-threatening situations."
+        },
+        {
+            "name": "Human Resources",
+            "category": [
+                "Business and Management"
+            ],
+            "tutor": "CrimsonEcho91",
+            "price": "110$",
+            "takenBy": [
+                "NeonPhantom23",
+                "VenomRider64",
+                "SolarEclipse45"
+            ],
+            "certified": true,
+            "description": "Human Resources (HR) is the department responsible for managing an organization's workforce. It focuses on hiring, training, employee relations, performance management, compensation, and compliance with labor laws. HR plays a crucial role in creating a positive work environment, ensuring employee well-being, and aligning human capital with business goals. By fostering professional development and workplace culture, HR helps organizations maintain productivity, retain talent, and adapt to changing workforce needs."
+        },
+        {
+            "name": "Machine Design",
+            "category": [
+                "Tech and Development",
+                "Science and Engineering"
+            ],
+            "tutor": "CrimsonEcho91",
+            "price": "50$",
+            "takenBy": [
+                "CyberPhoenix21",
+                "Himynameis88",
+                "PhantomStriker22"
+            ],
+            "certified": true,
+            "description": "Machine Design is the process of creating and developing mechanical systems and components to meet specific functional requirements. It involves engineering principles, material selection, stress analysis, and manufacturing considerations to ensure efficiency, durability, and safety. Machine design integrates concepts from physics, mechanics, and ergonomics to optimize performance while minimizing costs and failures. It plays a crucial role in industries like automotive, aerospace, robotics, and manufacturing, driving innovation and technological advancements."
+        },
+        {
+            "name": "Circuit Analysis",
+            "category": [
+                "Tech and Development",
+                "Science and Engineering"
+            ],
+            "tutor": "MoonlightEcho77",
+            "price": "122$",
+            "takenBy": [
+                "ShadowFury66",
+                "FrozenSpecter65",
+                "BlizzardRogue53"
+            ],
+            "certified": true,
+            "description": "Circuit Analysis is the study of electrical circuits to understand their behavior, performance, and functionality. It involves applying principles of electrical engineering, such as Ohm’s Law, Kirchhoff’s Laws, and network theorems, to determine voltages, currents, and power in a circuit. Circuit analysis can be performed using mathematical techniques, simulation software, or practical testing methods. It is essential in designing and troubleshooting electrical and electronic systems in various applications, including power distribution, communication, and embedded systems."
+        },
+        {
+            "name": "Robotics",
+            "category": [
+                "Tech and Development",
+                "Science and Engineering"
+            ],
+            "tutor": "ThunderSpecter18",
+            "price": "557$",
+            "takenBy": [
+                "QuantumGhost99"
+            ],
+            "certified": true,
+            "description": "Robotics is the interdisciplinary field that focuses on the design, construction, operation, and programming of robots. It combines mechanical engineering, electronics, computer science, and artificial intelligence to create machines capable of performing tasks autonomously or with human assistance. Robotics is widely used in industries such as manufacturing, healthcare, space exploration, and automation, improving efficiency, precision, and safety. Advances in robotics continue to drive innovation in artificial intelligence, machine learning, and human-robot interaction, expanding its applications in everyday life and industrial settings."
+        },
+        {
+            "name": "Microbiology",
+            "category": [
+                "Health & Medicine",
+                "Science and Engineering"
+            ],
+            "tutor": "ThunderSpecter18",
+            "price": "322$",
+            "takenBy": [
+                "QuantumGhost99",
+                "FrozenSpecter65",
+                "ShadowStorm92"
+            ],
+            "certified": false,
+            "description": "Microbiology is the branch of science that studies microscopic organisms, including bacteria, viruses, fungi, and protozoa. It explores their structure, function, genetics, and interactions with humans, animals, plants, and the environment. Microbiology plays a vital role in medicine, biotechnology, agriculture, and environmental science, contributing to advancements in disease prevention, antibiotic development, fermentation technology, and bioengineering. By understanding microbial life, scientists can develop new treatments, improve food safety, and harness beneficial microbes for various industrial and medical applications."
+        },
+        {
+            "name": "Organic Chemistry",
+            "category": [
+                "Health & Medicine"
+            ],
+            "tutor": "DriftSpectra88",
+            "price": "369$",
+            "takenBy": [
+                "VenomRider64",
+                "GlitchSeeker92",
+                "StormWarden48"
+            ],
+            "certified": false,
+            "description": "Organic Chemistry is the branch of chemistry that focuses on the study of carbon-containing compounds and their structures, properties, reactions, and synthesis. It plays a fundamental role in various fields, including pharmaceuticals, petrochemicals, agriculture, and materials science. Organic chemistry is essential for understanding biological processes, drug development, and the production of everyday products like plastics, dyes, and fuels. By studying molecular interactions and reaction mechanisms, organic chemists develop new compounds and innovative solutions for medicine, energy, and industry."
+        },
+        {
+            "name": "Econometrics",
+            "category": [
+                "Business and Management",
+                "Mathematics"
+            ],
+            "tutor": "WarpShifter99",
+            "price": "222$",
+            "takenBy": [
+                "Himynameis88",
+                "CyberPhoenix21"
+            ],
+            "certified": true,
+            "description": "Econometrics is the application of statistical and mathematical methods to economic data to analyze relationships, test theories, and make forecasts. It combines economics, statistics, and computer science to quantify economic phenomena and evaluate policies. Econometric models help researchers and policymakers understand market trends, inflation, employment, and financial risks by analyzing real-world data. It plays a crucial role in decision-making for businesses, governments, and financial institutions by providing empirical insights into economic behavior and trends."
+        },
+        {
+            "name": "Public Policy",
+            "category": [
+                "Business and Management"
+            ],
+            "tutor": "CrimsonEcho91",
+            "price": "122$",
+            "takenBy": [
+                "MidnightVortex56",
+                "SolarEclipse45"
+            ],
+            "certified": false,
+            "description": "Public Policy is the system of laws, regulations, actions, and decisions implemented by governments to address societal issues and improve public welfare. It encompasses various fields, including healthcare, education, environment, and economic development, shaping how governments respond to challenges. Public policy is developed through research, analysis, and stakeholder input, balancing social needs, economic feasibility, and political considerations. It plays a critical role in shaping societies by influencing economic growth, social justice, and national security while ensuring sustainable development and governance."
+        },
+        {
+            "name": "AI Ethics & Bias",
+            "category": [
+                "Tech and Development",
+                "Science and Engineering",
+                "Mathematics"
+            ],
+            "tutor": "CrimsonEcho91",
+            "price": "99$",
+            "takenBy": [
+                "OblivionKnight13",
+                "FrostVanguard65"
+            ],
+            "certified": true,
+            "description": "AI Ethics & Bias focuses on the moral and societal implications of artificial intelligence, ensuring that AI systems are fair, transparent, and accountable. It addresses issues such as algorithmic bias, discrimination, privacy, and the ethical use of AI in decision-making. Bias in AI can arise from data, algorithms, or human oversight, leading to unfair outcomes that reinforce social inequalities. Ethical AI development requires diverse and representative data, responsible AI design, and regulatory frameworks to promote fairness, inclusivity, and trust in AI systems. By prioritizing ethical considerations, AI can be used to benefit society while minimizing harm and unintended consequences."
+        },
+        {
+            "name": "Big Data & Analytics",
+            "category": [
+                "Tech and Development",
+                "Business and Management"
+            ],
+            "tutor": "GlitchSeeker92",
+            "price": "311$",
+            "takenBy": [
+                "PhantomStriker22",
+                "SteelHorizon47",
+                "VenomRider64"
+            ],
+            "certified": true,
+            "description": "Big Data & Analytics refers to the process of collecting, processing, and analyzing large volumes of complex data to uncover patterns, trends, and insights for decision-making. It involves advanced technologies, such as machine learning, artificial intelligence, and cloud computing, to handle structured and unstructured data from various sources. Big data analytics is widely used in industries like healthcare, finance, marketing, and cybersecurity to optimize operations, enhance customer experiences, and drive innovation. By transforming raw data into actionable intelligence, organizations can make data-driven decisions, predict future trends, and gain a competitive advantage in the digital era."
+        },
+        {
+            "name": "Malware Analysis",
+            "category": [
+                "Science and Engineering"
+            ],
+            "tutor": "WarpShifter99",
+            "price": "200$",
+            "takenBy": [
+                "Himynameis88",
+                "BlizzardRogue53",
+                "MysticVortex81"
+            ],
+            "certified": true,
+            "description": "Malware Analysis is the process of examining malicious software to understand its behavior, purpose, and potential impact on systems. It involves techniques such as static analysis (analyzing code without execution), dynamic analysis (executing malware in a controlled environment), and reverse engineering to identify threats, detect vulnerabilities, and develop defenses. Malware analysis is crucial for cybersecurity, helping organizations detect, mitigate, and prevent cyberattacks. It plays a key role in threat intelligence, antivirus development, and incident response, ensuring digital security and protecting sensitive data from cyber threats."
+        },
+        {
+            "name": "Data Mining & Warehousing",
+            "category": [
+                "Science and Engineering",
+                "Mathematics",
+                "Science and Engineering"
+            ],
+            "tutor": "MoonlightEcho77",
+            "price": "180$",
+            "takenBy": [
+                "FrostGuardian99"
+            ],
+            "certified": true,
+            "description": "Data Mining & Warehousing are essential components of data management and analysis in businesses and organizations. Data Warehousing involves the storage, integration, and management of large volumes of structured data from multiple sources in a centralized repository, enabling efficient data retrieval and reporting. Data Mining is the process of extracting meaningful patterns, correlations, and trends from large datasets using techniques such as machine learning, statistical analysis, and artificial intelligence. Together, these processes help organizations make data-driven decisions, optimize operations, and gain valuable insights in fields like finance, healthcare, marketing, and business"
+        },
+        {
+            "name": "Business Ethics",
+            "category": [
+                "Business and Management"
+            ],
+            "tutor": "ThunderLancer22",
+            "price": "133$",
+            "takenBy": [
+                "EchoNomad31",
+                "VenomRider64"
+            ],
+            "certified": false,
+            "description": "Business Ethics refers to the principles and moral values that guide the behavior and decision-making of businesses and professionals. It involves issues such as corporate social responsibility, fair trade, transparency, workplace integrity, and ethical treatment of employees, customers, and stakeholders. Business ethics ensures that companies operate with honesty, accountability, and fairness while balancing profitability with social and environmental responsibilities. Adhering to ethical business practices helps organizations build trust, maintain a positive reputation, and foster long-term success in a competitive market."
+        },
+        {
+            "name": "Leadership & Team Management",
+            "category": [
+                "Business and Management"
+            ],
+            "tutor": "CyberWolfX77",
+            "price": "329$",
+            "takenBy": [
+                "PhantomStriker22",
+                "CyberPhoenix21",
+                "FrostByte404"
+            ],
+            "certified": false,
+            "description": "Leadership & Team Management involves guiding, motivating, and coordinating a group of individuals to achieve common goals effectively. Leadership focuses on vision, decision-making, and inspiring others, while team management ensures smooth collaboration, task delegation, and conflict resolution. Strong leadership fosters trust, communication, and a positive work culture, enhancing productivity and innovation. Effective team management involves understanding team dynamics, setting clear objectives, and leveraging individual strengths to maximize performance. Both are essential for organizational success, driving employee engagement, efficiency, and long-term growth."
+        },
+        {
+            "name": "Change Management",
+            "category": [
+                "Business and Management"
+            ],
+            "tutor": "WarpShifter99",
+            "price": "321$",
+            "takenBy": [
+                "MysticVortex81",
+                "NeonGuardian54",
+                "PhantomStriker22"
+            ],
+            "certified": false,
+            "description": "Change Management is the structured approach to preparing, supporting, and guiding individuals, teams, and organizations through transitions or transformations. It involves strategies to manage resistance, communicate effectively, and ensure smooth adoption of new processes, technologies, or organizational structures. Change management focuses on minimizing disruptions, maintaining productivity, and fostering a positive work environment during periods of change. By aligning people, processes, and goals, it helps organizations adapt successfully, improve efficiency, and achieve long-term success in an evolving business landscape."
+        },
+        {
+            "name": "Project Management",
+            "category": [
+                "Business and Management"
+            ],
+            "tutor": "ThunderPulse07",
+            "price": "432$",
+            "takenBy": [
+                "StormBreaker07",
+                "VenomRider64",
+                "Himynameis88"
+            ],
+            "certified": true,
+            "description": "Project Management is the process of planning, organizing, executing, and controlling resources to achieve specific goals within a defined timeframe and budget. It involves key principles such as scope management, risk assessment, stakeholder communication, and performance monitoring. Effective project management ensures tasks are completed efficiently, deadlines are met, and resources are optimized. It is widely used across industries, including construction, IT, healthcare, and business, to drive innovation, improve productivity, and achieve strategic objectives. Project managers play a crucial role in balancing constraints like time, cost, and quality to deliver successful outcomes."
+        },
+        {
+            "name": "Calculus I",
+            "category": [
+                "Business and Management",
+                "Mathematics",
+                "Science and Engineering",
+                "Tech and Development"
+            ],
+            "tutor": "WarpShifter99",
+            "price": "126$",
+            "takenBy": [
+                "MidnightVortex56",
+                "StormBreaker07",
+                "FrozenSpecter65"
+            ],
+            "certified": true,
+            "description": "Calculus I is the foundational course in calculus that focuses on limits, derivatives, and integrals of functions. It introduces key concepts such as continuity, the derivative as a rate of change, differentiation rules, and applications like optimization and motion analysis. The course also covers the Fundamental Theorem of Calculus, linking differentiation and integration. Calculus I is essential in fields like engineering, physics, economics, and computer science, providing the mathematical tools needed to model and solve real-world problems involving change and motion."
+        },
+        {
+            "name": "Calculus II",
+            "category": [
+                "Business and Management",
+                "Mathematics",
+                "Science and Engineering",
+                "Tech and Development"
+            ],
+            "tutor": "MoonlightEcho77",
+            "price": "222$",
+            "takenBy": [
+                "SolarEclipse45",
+                "VenomRider64",
+                "EchoNomad31"
+            ],
+            "certified": true,
+            "description": "Calculus II builds upon the concepts from Calculus I, focusing on advanced integration techniques, infinite sequences and series, and applications of integrals. Topics typically include methods of integration (such as integration by parts, partial fractions, and trigonometric substitution), improper integrals, parametric equations, polar coordinates, and power series, including Taylor and Maclaurin series. Calculus II is essential in fields like engineering, physics, and economics, providing tools for solving more complex mathematical problems involving accumulation, approximation, and analysis of functions."
+        },
+        {
+            "name": "Calculus III",
+            "category": [
+                "Mathematics",
+                "Science and Engineering",
+                "Tech and Development"
+            ],
+            "tutor": "CrimsonEcho91",
+            "price": "111$",
+            "takenBy": [
+                "PhantomStriker22",
+                "StormBreaker07",
+                "Himynameis88"
+            ],
+            "certified": true,
+            "description": "Calculus III extends the principles of single-variable calculus to multiple dimensions, focusing on multivariable functions, vector calculus, and three-dimensional analysis. Key topics include partial derivatives, multiple integrals, gradient vectors, line and surface integrals, and vector fields. The course also covers essential theorems like Green’s Theorem, Stokes’ Theorem, and the Divergence Theorem, which are fundamental in physics and engineering. Calculus III is widely used in fields such as fluid dynamics, electromagnetism, machine learning, and economics, providing the mathematical framework for understanding complex systems in multiple dimensions."
+        },
+        {
+            "name": "Linear Algebra",
+            "category": [
+                "Mathematics",
+                "Science and Engineering",
+                "Tech and Development"
+            ],
+            "tutor": "DriftSpectra88",
+            "price": "121$",
+            "takenBy": [
+                "MysticVortex81",
+                "NeonGuardian54"
+            ],
+            "certified": true,
+            "description": "Linear Algebra is the branch of mathematics that studies vectors, matrices, and linear transformations. It focuses on key concepts such as vector spaces, systems of linear equations, determinants, eigenvalues, eigenvectors, and orthogonality. Linear algebra is fundamental in various fields, including computer science, engineering, physics, machine learning, and economics, as it provides the mathematical foundation for data analysis, graphics, and optimization. It plays a crucial role in solving real-world problems involving multidimensional systems, making it essential for both theoretical and applied sciences."
+        },
+        {
+            "name": "Ordinary differential equation ODE",
+            "category": [
+                "Mathematics",
+                "Science and Engineering",
+                "Tech and Development"
+            ],
+            "tutor": "AetherSurge77",
+            "price": "312$",
+            "takenBy": [
+                "SteelHorizon47",
+                "MidnightVortex56",
+                "BlizzardRogue53"
+            ],
+            "certified": false,
+            "description": "Ordinary Differential Equations (ODEs) involve equations containing functions and their derivatives, describing how a quantity changes over time. ODEs are classified based on order, linearity, and solution techniques. Key topics include first-order and higher-order differential equations, separable and exact equations, homogeneous and non-homogeneous solutions, and methods such as Laplace transforms and numerical approximations. ODEs are fundamental in modeling real-world phenomena in physics, engineering, biology, and economics, including population growth, electrical circuits, mechanical vibrations, and fluid dynamics."
+        },
+        {
+            "name": "Partial differential equation PDE",
+            "category": [
+                "Mathematics"
+            ],
+            "tutor": "CyberWolfX77",
+            "price": "444$",
+            "takenBy": [
+                "NeonPhantom23",
+                "Himynameis88"
+            ],
+            "certified": true,
+            "description": "Partial Differential Equations (PDEs) are equations involving multiple independent variables, unknown functions, and their partial derivatives. They are used to describe a wide range of physical and engineering phenomena, such as heat conduction, wave propagation, fluid flow, and quantum mechanics. Key types of PDEs include elliptic, parabolic, and hyperbolic equations, with famous examples like the Laplace equation, heat equation, and wave equation. Solution techniques include separation of variables, Fourier series, and numerical methods. PDEs are essential in fields like physics, engineering, finance, and machine learning for modeling complex dynamic systems."
+        },
+        {
+            "name": "Probability and Statistics",
+            "category": [
+                "Mathematics",
+                "Science and Engineering",
+                "Tech and Development",
+                "Business and Management"
+            ],
+            "tutor": "GlitchSeeker92",
+            "price": "100$",
+            "takenBy": [
+                "NeonGuardian54",
+                "ShadowStorm92",
+                "PhantomStriker22"
+            ],
+            "certified": true,
+            "description": "Probability and Statistics is the branch of mathematics that deals with analyzing data, measuring uncertainty, and making predictions. Probability theory focuses on modeling randomness through concepts like probability distributions, expected value, and stochastic processes. Statistics involves data collection, analysis, interpretation, and hypothesis testing using descriptive and inferential methods. Key topics include probability distributions (normal, binomial, Poisson), regression analysis, confidence intervals, and statistical inference. Probability and statistics are essential in fields such as data science, engineering, finance, healthcare, and artificial intelligence for decision-making and predictive modeling."
+        },
+        {
+            "name": "Numerical Analysis",
+            "category": [
+                "Mathematics",
+                "Science and Engineering",
+                "Tech and Development"
+            ],
+            "tutor": "ThunderPulse07",
+            "price": "79$",
+            "takenBy": [
+                "EchoNomad31",
+                "StormWarden48"
+            ],
+            "certified": true,
+            "description": "Numerical Analysis is the study of algorithms for solving mathematical problems using numerical approximations. It focuses on developing efficient computational methods to handle complex equations that may not have exact analytical solutions. Key topics include root-finding algorithms (such as Newton's method), numerical differentiation and integration, interpolation, solving linear and nonlinear systems, and numerical solutions for ordinary and partial differential equations. Numerical analysis is widely used in engineering, physics, computer science, and finance, enabling accurate simulations, optimizations, and real-world problem-solving in scientific computing."
+        },
+        {
+            "name": "Web Programming",
+            "category": [
+                "Mathematics",
+                "Science and Engineering",
+                "Tech and Development",
+                "Business and Management"
+            ],
+            "tutor": "RoaaSoloh",
+            "price": "522$",
+            "takenBy": [
+                "VoltageRider83",
+                "StormWarden48",
+                "EchoNomad31",
+                "PhantomStriker22",
+                "Himynameis88",
+                "NeonPhantom23"
+            ],
+            "certified": true,
+            "description": "Web Programming is the process of designing and developing dynamic websites and web applications using various programming languages and frameworks. It involves both front-end development, which focuses on user interfaces using HTML, CSS, and JavaScript, and back-end development, which handles server-side logic, databases, and APIs using languages like Python, PHP, Node.js, and databases like MySQL or MongoDB. Web programming includes technologies such as AJAX, RESTful APIs, and frameworks like React, Angular, and Django. It is essential for creating interactive, responsive, and scalable web solutions for businesses, e-commerce, social media, and other digital applications."
+        },
+        {
+            "name": "Discrete Mathematics",
+            "category": [
+                "Mathematics",
+                "Science and Engineering",
+                "Business and Management"
+            ],
+            "tutor": "WarpShifter99",
+            "price": "395$",
+            "takenBy": [
+                "BlizzardRogue53",
+                "FrostVanguard65",
+                "EchoNomad31"
+            ],
+            "certified": true,
+            "description": "Discrete Mathematics is the study of mathematical structures that are countable or distinct, rather than continuous. It includes topics such as logic, set theory, combinatorics, graph theory, number theory, and discrete probability. It is fundamental in computer science, cryptography, algorithm design, and artificial intelligence, providing the theoretical foundation for data structures, databases, and network security. Discrete mathematics helps in solving problems related to optimization, decision-making, and logical reasoning, making it essential for fields like software development, cybersecurity, and operations research."
+        },
+        {
+            "name": "Medical Termenology",
+            "category": [
+                "Health & Medicine",
+                "Biology and Biomedical"
+            ],
+            "tutor": "CrimsonEcho91",
+            "price": "390$",
+            "takenBy": [
+                "OblivionKnight13",
+                "FrostVanguard65"
+            ],
+            "certified": true,
+            "description": "Medical Terminology is the specialized language used in healthcare to accurately describe the human body, medical conditions, procedures, and treatments. It is based on Latin and Greek roots, prefixes, and suffixes, allowing healthcare professionals to communicate precisely and efficiently. Key areas include anatomical terms, disease classifications, diagnostic procedures, pharmacology, and surgical terms. Understanding medical terminology is essential for doctors, nurses, medical coders, and healthcare workers to ensure clear documentation, diagnosis, and patient care. Mastery of this terminology helps in interpreting medical records, prescriptions, and research in the medical field."
+        },
+        {
+            "name": "Networking LABI",
+            "category": [
+                "Tech and Development",
+                "Business and Management",
+                "Science and Engineering"
+            ],
+            "tutor": "ThunderSpecter18",
+            "price": "321$",
+            "takenBy": [
+                "BlazeHunter19",
+                "InfinityRunner2",
+                "OblivionKnight13"
+            ],
+            "certified": false,
+            "description": "Networking LABI likely refers to a Networking Laboratory or Networking Lab Implementation, where students or professionals practice and experiment with networking concepts in a controlled environment. A Networking Lab typically includes hands-on activities related to network configuration, troubleshooting, security, and performance testing. It involves working with networking devices such as routers, switches, firewalls, and network simulation tools like Cisco Packet Tracer or GNS3. Key topics include IP addressing, subnetting, VLANs, routing protocols (e.g., OSPF, BGP), network security, and wireless networking. These labs are essential for understanding real-world networking scenarios, preparing for certifications like CCNA, CCNP, and improving practical skills in computer networking and cybersecurity."
+        },
+        {
+            "name": "Networking LABII",
+            "category": [
+                "Science and Engineering",
+                "Tech and Development",
+                "Business and Management"
+            ],
+            "tutor": "ThunderPulse07",
+            "price": "121$",
+            "takenBy": [
+                "EchoNomad31",
+                "QuantumGhost99",
+                "FrostGuardian99",
+                "CyberPhoenix21"
+            ],
+            "certified": true,
+            "description": "Networking Lab II is an advanced hands-on course that builds on fundamental networking principles, focusing on complex network configurations, security implementations, and performance optimization. It covers advanced routing and switching protocols such as OSPF, EIGRP, and BGP, along with VLAN management and wireless networking. The lab also emphasizes network security through firewalls, VPNs, and intrusion prevention systems while integrating modern technologies like cloud networking, SDN (Software-Defined Networking), and automation using Python or Ansible. Students gain practical experience in troubleshooting network issues, analyzing traffic with tools like Wireshark, and optimizing network performance. This lab is essential for those pursuing careers in network administration, cybersecurity, and cloud computing, as well as for professionals preparing for advanced certifications like CCNP and CISSP."
+        },
+        {
+            "name": "Networking LABIII",
+            "category": [
+                "Science and Engineering",
+                "Tech and Development"
+            ],
+            "tutor": "ThunderPulse07",
+            "price": "394$",
+            "takenBy": [
+                "Himynameis88",
+                "SolarEclipse45"
+            ],
+            "certified": true,
+            "description": "Networking Lab III is an advanced course that delves deeper into enterprise-level networking, focusing on complex architectures, high-level security measures, and network automation. It covers advanced routing and switching techniques, including MPLS, BGP optimization, and SD-WAN configurations. Security is a key component, with topics like advanced firewall policies, zero-trust networking, intrusion detection and prevention systems (IDS/IPS), and network forensics. The lab also explores virtualization, cloud networking, and automation using tools like Python, Ansible, and Cisco DNA Center. Students gain hands-on experience in designing, implementing, and troubleshooting large-scale networks while analyzing real-world case studies. This course is essential for professionals aiming for expert-level certifications like CCIE, CISSP, or AWS Certified Advanced Networking, as well as those pursuing careers in enterprise networking, cybersecurity, or cloud infrastructure."
+        },
+        {
+            "name": "Networking LABIV",
+            "category": [
+                "Science and Engineering",
+                "Tech and Development"
+            ],
+            "tutor": "CyberWolfX77",
+            "price": "436$",
+            "takenBy": [
+                "FrostByte404"
+            ],
+            "certified": true,
+            "description": "Networking Lab IV is an expert-level course focused on designing, securing, and managing highly complex, large-scale network infrastructures. It covers advanced topics such as network orchestration, AI-driven network management, cybersecurity threat intelligence, and cloud-native networking. Students gain hands-on experience with multi-cloud networking, 5G and IoT integration, SDN (Software-Defined Networking), NFV (Network Functions Virtualization), and edge computing. Security measures such as zero-trust architecture, advanced encryption, DDoS mitigation, and security automation are emphasized. The lab also explores network performance optimization, big data analytics in networking, and self-healing networks using AI and machine learning. This course is crucial for professionals targeting expert certifications like CCIE, AWS Advanced Networking, or CISSP, preparing them for roles in enterprise network architecture, cybersecurity operations, and next-generation network engineering."
+        }
+    ]
+}

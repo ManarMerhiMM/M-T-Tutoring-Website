@@ -1,0 +1,158 @@
+/* about.css */
+
+/* Use your global variables */
+:root {
+    --primary-blue: #1a2a6c;
+    --secondary-blue: #4facfe;
+    --accent-orange: #f57c00;
+    --white: #ffffff;
+    --dark-gray: #333333;
+    --light-gray: #f5f5f5;
+    --dark-gradient: linear-gradient(135deg, #1A365D 0%, #2B6CB0 100%);
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+  
+  /* Base Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: var(--font-body);
+    line-height: 1.8;
+    color: #2D3748;
+    background-color: var(--light-gray);
+  }
+  
+  /* About Header Section */
+  header {
+    background: linear-gradient(135deg, var(--secondary-blue), var(--accent-orange));
+    color: var(--white);
+    padding: 4rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  header h1 {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--accent-orange);
+    border-radius: 2px;
+  }
+  
+  /* About Content Container */
+  .about-content {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem 2.5rem;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    animation: slideUp 1s ease forwards;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Paragraphs */
+  .about-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: #2D3748;
+  }
+  
+  /* Section Subheadings */
+  .about-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin: 2rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .about-content h2:hover {
+    color: var(--accent-orange);
+  }
+  
+  .about-content h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-orange);
+    border-radius: 2px;
+  }
+  
+  /* Background Pattern Overlay */
+  .about-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 150%;
+    background: url('../MEDIA/pattern-light.png');
+    opacity: 0.05;
+    transform: rotate(15deg);
+    pointer-events: none;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2.5rem;
+    }
+    
+    .about-content {
+      margin: 2rem 1rem;
+      padding: 1.5rem;
+    }
+    
+    .about-content h2 {
+      font-size: 1.8rem;
+    }
+  }
+  

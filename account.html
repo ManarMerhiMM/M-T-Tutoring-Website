@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/account.css">
+    <link rel="icon" href="MEDIA/favicon.ico">
+
+</head>
+<body>
+    <header>
+        <nav class="glass-nav" aria-label="Main navigation">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo">
+                    <span class="logo-text">M & T Tutoring</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="" aria-current="page">Account</a></li>
+                </ul>
+                <div class="nav-toggle">
+                    <span>&#9776;</span>
+                    <ul class="nav-links-burger">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="" aria-current="page">Account</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <form id="accountDetailsForm" action="">
+            <h3 class="formTitle">Account Details</h3>
+            <div class="passDiv">
+                <label for="usernameInput">Username:</label>
+                <input id="usernameInput" type="text" readonly="1" placeholder="Enter your username...">
+            </div>
+            <div class="passDiv">
+                <label for="passwordInput">Password:</label>
+                <input id="passwordInput" type="password" readonly="1" placeholder="Enter your password...">
+                <img title="click to show password" id="hidePass" class="passControlImgs" src="MEDIA/hidepassword2.png" alt="closed eye">
+                <img title="click to hide password" id="showPass" class="passControlImgs" src="MEDIA/showpassword2.png" alt="open eye">
+            </div>
+            <div class="passDiv">
+                <label for="emailInput">Email:</label>
+                <input id="emailInput" type="email" readonly="1" placeholder="Enter your Email...">
+            </div>
+            <div class="passDiv">
+                <label for="accountTypeInput">Account type:</label>
+                <input id="accountTypeInput" type="text" readonly="1" placeholder="Enter your Email...">
+            </div>
+            <div class="btnDiv" id="btnDiv">
+                <button type="button" class="btn btn-primary" id="backToDashboard">Back to Dashboard</button>
+                <button id="signout" class="btn btn-primary" type="button">Sign out</button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; Copyright 2025 M&T Tutoring. All rights reserved.</p>
+    </footer>
+    <script src="JS/account.js"></script>
+</body>
+</html>
