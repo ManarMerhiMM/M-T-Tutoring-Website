@@ -1025,7 +1025,7 @@
             "description": "Discrete Mathematics is the study of mathematical structures that are countable or distinct, rather than continuous. It includes topics such as logic, set theory, combinatorics, graph theory, number theory, and discrete probability. It is fundamental in computer science, cryptography, algorithm design, and artificial intelligence, providing the theoretical foundation for data structures, databases, and network security. Discrete mathematics helps in solving problems related to optimization, decision-making, and logical reasoning, making it essential for fields like software development, cybersecurity, and operations research."
         },
         {
-            "name": "Medical Termenology",
+            "name": "Medical Terminology",
             "category": [
                 "Health & Medicine",
                 "Biology and Biomedical"

@@ -1,5 +1,3 @@
-// localStorage.setItem("curCourseName", "Cloud Computing");
-// localStorage.setItem("lastPage", "index.html"); set the last page over here so you can test the functionality of the back button or to see that the tutor is taken to the last page after bumping
 document.title = `M & T's ${localStorage.getItem("curCourseName")}`;
 
 let courseName = localStorage.getItem("curCourseName");
@@ -72,7 +70,7 @@ async function prepCoursePageUsingJSON() {
         document.getElementById("courseCard").style.backgroundImage = `url('MEDIA/courseImages/BiologyAndBiomedical.jpg')`;
     }
     else {
-        courseImgtoAdd.src = "MEDIA/courseImages/HealthAndMedicine.jpg";
+        document.getElementById("courseCard").style.backgroundImage = "url('MEDIA/courseImages/HealthAndMedicine.jpg')";
     }
 
     if (localStorage.getItem("LoggedIn") == "true") {
