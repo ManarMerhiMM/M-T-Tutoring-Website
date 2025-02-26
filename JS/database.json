@@ -42,7 +42,7 @@
             "Email": "User48659@outlook.com",
             "AccountType": "student",
             "major": "BUSI",
-            "Banned": true
+            "Banned": false
         },
         {
             "Username": "NeonPhantom23",
@@ -183,14 +183,14 @@
             "Password": "tCBrh5LFWp",
             "Email": "User99730@outlook.com",
             "AccountType": "tutor",
-            "Banned": true
+            "Banned": false
         },
         {
             "Username": "ThunderSpecter18",
             "Password": "BBSRHg5dOY",
             "Email": "User91309@outlook.com",
             "AccountType": "tutor",
-            "Banned": true
+            "Banned": false
         },
         {
             "Username": "BlizzardRogue53",
@@ -274,7 +274,7 @@
             "Password": "tUkjCU3U0c",
             "Email": "User39434@outlook.com",
             "AccountType": "tutor",
-            "Banned": true
+            "Banned": false
         },
         {
             "Username": "StormWarden48",
@@ -306,7 +306,7 @@
             "Email": "User94919@outlook.com",
             "AccountType": "student",
             "major": "CCE",
-            "Banned": true
+            "Banned": false
         },
         {
             "Username": "OblivionPilot38",

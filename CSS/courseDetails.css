@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-
 body {
     background: linear-gradient(135deg, #054379c5, #69251c);
     background-size: cover;
@@ -8,9 +7,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
-
+/* ================================
+   Navbar (Do Not Touch)
+   ================================ */
 .glass-nav {
     position: fixed;
     top: 0;
@@ -73,7 +76,6 @@ body {
     box-shadow: 0 6px 20px rgba(26, 54, 93, 0.15);
 }
 
-/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -98,7 +100,6 @@ body {
     background: rgba(245, 124, 0, 0.08);
 }
 
-
 .nav-links a[aria-current="page"] {
     color: #f57c00 !important;
     font-weight: 600;
@@ -121,19 +122,16 @@ body {
     font-size: 2em;
 }
 
+/* ================================
+   End Navbar
+   ================================ */
 
-main {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-}
-
+/* Course Card and Main Content */
 .course-card {
     background: transparent;
     background-image: url(../MEDIA/young-AI-engineer-programming-1.jpg.webp);
     background-size: cover;
-    background-position: center;  
+    background-position: center;
     background-repeat: no-repeat;
     border-bottom-left-radius: 15px;
     border-top-left-radius: 15px;
@@ -143,7 +141,6 @@ main {
     transition: transform 0.3s ease;
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
-
 
 .course-thumbnail {
     position: relative;
@@ -158,19 +155,14 @@ main {
     border-bottom: 2px solid black;
     border-right: 2px solid black;
     border-top-left-radius: 15px;
-    
 }
-
 
 .course-content {
     text-align: center;
-}
-
-.course-content{
     font-size: 1.6rem;
     margin-bottom: 10px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: #000000;
+    color: #000;
     text-decoration: underline;
     font-weight: 800;
 }
@@ -194,24 +186,23 @@ main {
     margin-top: 10px;
 }
 
-
-#mainContainer {
+/* Main Course Container and Details */
+#mainCourseContainer {
     display: flex;
-    column-gap: 0px;
+    column-gap: 0;
     height: 500px;
     align-items: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     background: linear-gradient(135deg, #1a2a6c83, #b21f1f73, #fdbb2d7e);
     border-radius: 15px;
-
     transition: transform 0.2s ease-in;
 }
 
-#mainContainer:hover {
+#mainCourseContainer:hover {
     transform: scale(1.02);
 }
 
-#detailsToEnroll{
+#detailsToEnroll {
     width: 500px;
     height: 100%;
     padding: 20px;
@@ -219,58 +210,235 @@ main {
     display: flex;
     flex-direction: column;
     position: relative;
-
 }
 
-#enrollBtn{
+#enrollBtn {
     border-radius: 30px;
     cursor: pointer;
     background-color: rgb(151, 15, 15);
     border: 2px solid rgba(0, 0, 0, 0.808);
     width: 30%;
-    transition: background-color 0.1s fade;
+    transition: background-color 0.1s ease;
     position: absolute;
     bottom: 5%;
     left: 35%;
 }
 
-#enrollBtn:hover{
+#enrollBtn:hover {
     background-color: hsl(0, 82%, 50%);
 }
 
-#enrollBtn:active{
+#enrollBtn:active {
     background-color: hsl(0, 82%, 60%);
 }
 
-.courseDetails{
-    color: rgb(0, 0, 0);
+.courseDetails {
+    color: #000;
 }
 
-
-#tutorName{
+#tutorName {
     color: rgb(35, 147, 161);
     font-weight: 800;
     font-size: 1.6em;
-
     font-family: 'Caveat', cursive;
 }
 
-#isCertified{
+#isCertified {
     color: rgb(218, 28, 28);
     font-weight: 800;
     font-size: 1.6em;
     font-family: 'Caveat', cursive;
 }
 
-#coursePrice{
+#coursePrice {
     font-size: 1.3rem;
     font-weight: bold;
     color: #169149;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
     letter-spacing: 1px;
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
 }
 
-#courseDescription{
+#courseDescription {
     font-size: 0.95em;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    width: 1036px;
+    margin: 0 auto;
+}
+
+/* Suggested Courses */
+.suggestedCourse {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(203, 60, 17, 0.664), rgba(37, 112, 252, 0.651));
+    box-shadow: 2px 2px 4px black, -2px -2px 4px black;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+#suggestedCoursesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 26px;
+    row-gap: 26px;
+    background: transparent;
+    width: 100%;
+}
+
+#similarSuggestedDiv {
+    background: linear-gradient(135deg, rgba(107, 17, 203, 0.4), rgba(37, 116, 252, 0.4));
+}
+
+.suggestedCourse img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.viewBtns {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 10%;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.viewBtns:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.viewBtns:active {
+    background-color: #3e8e41;
+    transform: scale(0.98);
+}
+
+h3 {
+    font-size: 1.2em;
+    text-decoration: underline;
+    font-weight: bold;
+    color: #38b100;
+    text-align: center;
+    margin-bottom: 16px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: 800;
+    color: #a8a8a8;
+    text-decoration: underline;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* ================================
+   Media Queries
+   ================================ */
+@media (max-width: 1024px) {
+    #mainContainer {
+        width: 90%;
+        padding: 20px;
+    }
+    
+    #mainCourseContainer {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .course-card,
+    #detailsToEnroll {
+        width: 100%;
+    }
+    
+    #enrollBtn {
+        width: 50%;
+        left: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    #mainCourseContainer {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .course-card {
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+    
+    #detailsToEnroll {
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        padding: 15px;
+    }
+    
+    h2 {
+        font-size: 1.8em;
+    }
+    
+    h3 {
+        font-size: 1.1em;
+    }
+    
+    #enrollBtn {
+        width: 60%;
+        left: 20%;
+    }
+    
+    .suggestedCourse {
+        width: 45%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #mainContainer {
+        padding: 10px;
+    }
+    
+    #detailsToEnroll {
+        padding: 10px;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+    }
+    
+    h3 {
+        font-size: 1em;
+    }
+    
+    #enrollBtn {
+        width: 70%;
+        left: 15%;
+        font-size: 0.9em;
+    }
+    
+    .suggestedCourse {
+        width: 100%;
+    }
 }
