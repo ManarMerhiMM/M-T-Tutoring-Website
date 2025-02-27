@@ -52,7 +52,7 @@ async function prepCoursePageUsingJSON() {
         document.getElementById("isCertified").style.color = "rgb(218, 28, 28)";
     }
 
-    
+
 
     if (courseCategories.includes("Tech and Development")) {
         document.getElementById("courseCard").style.backgroundImage = `url('MEDIA/courseImages/TechAndDev.webp')`;
@@ -85,11 +85,22 @@ async function prepCoursePageUsingJSON() {
 
         }
         else {
+            let enrolled = false;
             for (let i = 0; i < studentsOfCourse.length; i++) {
                 if (studentsOfCourse[i] == localStorage.getItem("curUsername")) {
+                    enrolled = true;
                     document.getElementById("enrollBtn").textContent = "Enrolled ✔";
                     document.getElementById("enrollBtn").disabled = true;
                     break;
+                }
+            }
+
+            if (!enrolled) {
+                if ((localStorage.getItem("cartCourses") && !JSON.parse(localStorage.getItem("cartCourses")).includes(courseName)) || !localStorage.getItem("cartCourses")) {
+                    document.getElementById("enrollBtn").textContent = "Add to cart";
+                }
+                else {
+                    document.getElementById("enrollBtn").textContent = "Remove from cart";
                 }
             }
         }
@@ -159,20 +170,40 @@ document.getElementById("backAnchor").addEventListener("click", (event) => {
 });
 
 
-document.getElementById("enrollBtn").addEventListener("click", () => {
+document.getElementById("enrollBtn").addEventListener("click", (event) => {
     if (localStorage.getItem("LoggedIn") == "true") {
         if (localStorage.getItem("curAccountType") == "tutor") {
-            alert(`Successfully recommended M & T's ${courseName}!`);
-            window.location.href = lastPagePath;
+            alert(`Successfully recommended M & T's "${courseName}"!`);
         }
         else {
-            if (confirm(`Are you sure you want to enroll in M & T's ${courseName}?`)) {
-                window.location.href = "checkout.html";
+            if (event.target.textContent == "Add to cart") {
+                let curCart;
+                if (localStorage.getItem("cartCourses")) {
+                    curCart = JSON.parse(localStorage.getItem("cartCourses"));
+                }
+                else {
+                    curCart = [];
+                }
+
+
+                curCart.push(courseName);
+                localStorage.setItem("cartCourses", JSON.stringify(curCart));
+
+                alert(`Successfully added "${courseName}" to cart!`);
+                window.location.href = "courseDetails.html";
+            }
+            else {
+                let curCart = JSON.parse(localStorage.getItem("cartCourses"));
+                curCart.splice(curCart.indexOf(courseName), 1);
+                localStorage.setItem("cartCourses", JSON.stringify(curCart));
+
+                alert(`Successfully removed "${courseName}" from cart!`);
+                window.location.href = "courseDetails.html";
             }
         }
     }
     else {
-        alert("A guest cannot enroll in a course, you must log in first!");
+        alert("A guest cannot shop, you must log in first!");
         window.location.href = "login.html";
     }
 });

@@ -897,7 +897,7 @@ body {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   .nav-links{
       gap: 0px;
   }
@@ -907,14 +907,14 @@ body {
   }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1100px) {
 
   .nav-links a, #accountInNav{
       font-size: 0.8em;
   }
 }
 
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1030px) {
 
   .nav-logo img{
       width: 55px;
@@ -930,7 +930,7 @@ body {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 
   .nav-logo img{
       width: 60px;
@@ -953,6 +953,12 @@ body {
 
   #nav-links-burger-1 {
     display: none !important;
+  }
+  #nav-links-burger-2 a{
+    font-size: 0.8rem;
+  }
+  #nav-links-burger-2{
+    row-gap: 10px;
   }
 }
 

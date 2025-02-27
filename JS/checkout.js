@@ -1,4 +1,8 @@
 // Course data object
+if(localStorage.getItem("LoggedIn") == "false"){
+    window.location.href = "index.html";
+}
+
 const courseData = {
     name: "Machine Learning",
     category: ["Science and Engineering", "Tech and Development"],

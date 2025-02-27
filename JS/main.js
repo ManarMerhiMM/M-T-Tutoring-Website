@@ -10,6 +10,7 @@ if(!localStorage.getItem("LoggedIn")){
 if(localStorage.getItem("LoggedIn") == "false"){
     let NavList = document.getElementById("NAVLIST")
     NavList.removeChild(document.getElementById("accountDiv"));
+    NavList.removeChild(document.getElementById("cartLI"));
     let lastLi = document.createElement("li");
     let lasta = document.createElement("a");
     lasta.href = "login.html";
