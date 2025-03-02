@@ -45,8 +45,88 @@ document.querySelectorAll(".dashBoardInNav").forEach(dashBoard=>{dashBoard.addEv
 
 
 
-const remove_btn = document.getElementById("remove_btn");
-const clearAll_btn = document.getElementById("clearAll_btn");
-const buy_btn = document.getElementById("buy_btn");
+document.addEventListener("DOMContentLoaded", async () => {
+    const listContainer = document.querySelector(".listContainer");
+    const totalPriceLabel = document.querySelector(".totalPriceLabel");
+    const clearAllBtn = document.getElementById("clearAll_btn");
+
+    let cartCourses = JSON.parse(localStorage.getItem("cartCourses")) || [];
+    let totalPrice = 0;
+    let coursesData = [];
+
+    
+    async function fetchCourses() {
+        try {
+            const response = await fetch("JS/database.json");
+            const data = await response.json();
+            coursesData = data.courses;
+            renderCart();
+        } catch (error) {
+            console.error("Error loading JSON:", error);
+            listContainer.innerHTML = "<p>Error loading courses.</p>";
+        }
+    }
+
+    
+    function renderCart() {
+        listContainer.innerHTML = ""; 
+        totalPrice = 0;
+
+        if (cartCourses.length === 0) {
+            listContainer.innerHTML = "<p>Your cart is empty.</p>";
+            totalPriceLabel.textContent = "Total Price: $0";
+            return;
+        }
+
+        cartCourses.forEach((courseName, index) => {
+            const course = coursesData.find(c => c.name === courseName);
+            if (!course) return; 
+
+            const courseItem = document.createElement("div");
+            courseItem.classList.add("courseDetails");
+
+            const titleLabel = document.createElement("label");
+            titleLabel.textContent = course.name;
+
+            const priceLabel = document.createElement("label");
+            priceLabel.classList.add("priceLabel");
+            priceLabel.textContent = `Price: $${parseFloat(course.price.replace("$", "")).toFixed(2)}`;
+
+            const removeBtn = document.createElement("button");
+            removeBtn.textContent = "Remove";
+            removeBtn.classList.add("remove_btn");
+            removeBtn.dataset.courseName = course.name; 
+
+            courseItem.appendChild(titleLabel);
+            courseItem.appendChild(priceLabel);
+            courseItem.appendChild(removeBtn);
+            listContainer.appendChild(courseItem);
+
+            totalPrice += parseFloat(course.price.replace("$", ""));
+        });
+
+        totalPriceLabel.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+    }
+
+    
+    listContainer.addEventListener("click", (event) => {
+        if (event.target.classList.contains("remove_btn")) {
+            const courseName = event.target.dataset.courseName;
+            cartCourses = cartCourses.filter(c => c !== courseName);
+            localStorage.setItem("cartCourses", JSON.stringify(cartCourses));
+            renderCart();
+        }
+    });
+
+    
+    clearAllBtn.addEventListener("click", () => {
+        cartCourses = [];
+        localStorage.setItem("cartCourses", JSON.stringify(cartCourses));
+        renderCart();
+    });
+
+    
+    fetchCourses();
+});
 
 

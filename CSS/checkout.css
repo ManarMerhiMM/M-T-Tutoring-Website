@@ -364,40 +364,104 @@ body {
     }
     100% {
       opacity: 1;
-      transform: translateY(0); /* Final position */
+      transform: translateY(0); 
     }
   }
 
-#CONTAINER{
-    position: absolute;
-    height: 44vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%)
+
+
+
+#CONTAINER {
+  position: absolute;
+  width: 90%;
+  max-width: 650px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
 
-.listCntainer{
+
+.courseDetails {
   display: flex;
   align-items: center;
-  background-color: white;
-  width: 600px;
-  gap: 400px;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+
+.priceLabel {
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
 }
 
 
-.optionsContainer{
-  margin-top: 10px;
-  justify-content: right;
-  gap: 30px;
+.remove_btn {
+  padding: 8px 12px;
+  border: none;
+  background-color: #d32f2f;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.remove_btn:hover {
+  background-color: #b71c1c;
+}
+
+
+.optionsContainer {
   display: flex;
-  width: 300px;
-  background-color: rgb(98, 89, 231);
-  padding:10px;
-  margin-left: 50%;
-}
-.optionsContainer button{
-  padding: 10px;
+  justify-content: flex-start; 
+  align-items: center;
+  width: 100%;
+  background-color: #6259e7;
+  padding: 15px;
+  border-radius: 8px;
+  gap: 10px; 
 }
 
+
+
+.optionsContainer button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background-color: white;
+  color: #6259e7;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.optionsContainer button:hover {
+  background-color: #4b45be;
+  color: white;
+}
+
+
+.totalPriceLabel {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: auto;
+}
