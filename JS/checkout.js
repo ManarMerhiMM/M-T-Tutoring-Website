@@ -1,3 +1,10 @@
+if(localStorage.getItem("LoggedIn") == "false"){
+    window.location.href = "index.html";
+}
+else if(localStorage.getItem("curAccountType") == "tutor"){
+    window.location.href = "index.html";
+}
+
 document.getElementById("accountInNav").addEventListener("click", (event) => {
     event.preventDefault();
     if (event.target.textContent === "Account▼") {

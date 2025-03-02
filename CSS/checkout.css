@@ -292,6 +292,20 @@ body {
     border-radius: 50%;
     animation: pulse 1.5s infinite;
   }
+
+
+  #nav-links-burger-1{
+    padding-left: 0px;
+    padding-right: 0px;
+    right: 0%;
+    top: 204%;
+    border-bottom-right-radius: 40px;
+    border-right: 1px solid rgba(0, 0, 0, 0.616);
+  }
+
+  #accountDiv{
+    position: relative;
+  }
   @media screen and (max-width: 1300px) {
     .nav-links{
         gap: 0px;
