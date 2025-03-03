@@ -166,7 +166,7 @@ prepCoursePageUsingJSON();
 document.getElementById("backAnchor").addEventListener("click", (event) => {
     event.preventDefault();
 
-    window.location.href = "checkout.html";
+    window.location.href = lastPagePath;
 });
 
 
