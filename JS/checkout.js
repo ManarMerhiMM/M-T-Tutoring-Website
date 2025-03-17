@@ -93,6 +93,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             courseItem.classList.add("courseDetails");
 
             const titleLabel = document.createElement("label");
+            titleLabel.classList.add("courseNames");
             titleLabel.textContent = course.name;
 
             const priceLabel = document.createElement("label");
@@ -113,6 +114,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
 
         totalPriceLabel.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+
+        document.querySelectorAll(".courseNames").forEach(course => course.addEventListener("click", (event) => {
+            localStorage.setItem("curCourseName", event.target.textContent);
+            window.location.href = "courseDetails.html";
+        }));
     }
 
     
@@ -135,5 +141,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     fetchCourses();
 });
-
 

@@ -11,12 +11,13 @@ body {
     padding: 0;
 }
 
-main{
+main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-grow: 1;
 }
+
 .glass-nav {
     position: fixed;
     top: 0;
@@ -41,6 +42,13 @@ main{
     justify-content: space-between;
 }
 
+.nav-toggle {
+    display: none;
+
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Logo Styling */
 .nav-logo {
     display: flex;
     align-items: center;
@@ -79,6 +87,7 @@ main{
     box-shadow: 0 6px 20px rgba(26, 54, 93, 0.15);
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -86,7 +95,8 @@ main{
     gap: 25px;
 }
 
-.nav-links a {
+.nav-links a,
+#accountInNav {
     color: white;
     text-decoration: none;
     font-size: 1.1rem;
@@ -98,17 +108,21 @@ main{
     background: linear-gradient(45deg, #1A365D, #2B6CB0);
 }
 
-.nav-links a:not(.btn):hover {
+.nav-links a:not(.btn):hover,
+#accountInNav:not(.btn):hover {
     color: #f57c00;
     background: rgba(245, 124, 0, 0.08);
 }
 
-.nav-links a[aria-current="page"] {
+
+.nav-links a[aria-current="page"],
+#accountInNav[aria-current="page"] {
     color: #f57c00 !important;
     font-weight: 600;
 }
 
-.nav-links a[aria-current="page"]::after {
+.nav-links a[aria-current="page"]::after,
+#accountInNav[aria-current="page"]::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -119,6 +133,75 @@ main{
     background: #f57c00;
     border-radius: 50%;
     animation: pulse 1.5s infinite;
+}
+
+
+.nav-links-burger {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    flex-direction: column;
+    background: rgba(218, 218, 218, 0.158);
+    padding: 40px 10px 40px 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.616);
+    border-left: 1px solid rgba(0, 0, 0, 0.616);
+    border-bottom-left-radius: 40px;
+    align-items: center;
+    gap: 25px;
+
+    transform: translateY(-20px);
+    animation: dropDown 0.5s ease forwards;
+}
+
+.nav-links-burger a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bolder;
+    padding: 8px 15px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #1A365D, #2B6CB0);
+}
+
+.nav-links-burger a:not(.btn):hover {
+    color: #f57c00;
+    background: rgba(245, 124, 0, 0.08);
+}
+
+
+.nav-links-burger a[aria-current="page"] {
+    color: #f57c00 !important;
+    font-weight: 600;
+}
+
+.nav-links-burger a[aria-current="page"]::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background: #f57c00;
+    border-radius: 50%;
+    animation: pulse 1.5s infinite;
+}
+
+#nav-links-burger-1 {
+    padding-left: 0px;
+    padding-right: 0px;
+    right: 0%;
+    top: 204%;
+    border-bottom-right-radius: 40px;
+    border-right: 1px solid rgba(0, 0, 0, 0.616);
+}
+
+#accountDiv {
+    position: relative;
 }
 
 #backAnchor {
@@ -351,18 +434,18 @@ h2 {
         width: 90%;
         padding: 20px;
     }
-    
+
     .course-card,
     #detailsToEnroll {
         width: 100%;
     }
-    
+
     #enrollBtn {
         width: 20%;
         left: 40%;
     }
 
-    .suggestedCourse{
+    .suggestedCourse {
         width: 200px;
         height: 200px;
     }
@@ -372,31 +455,31 @@ h2 {
     body {
         padding: 10px;
     }
-    
+
     .course-card {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
     }
-    
+
     #detailsToEnroll {
         border-bottom-left-radius: 15px;
         border-bottom-right-radius: 15px;
         padding: 15px;
     }
-    
+
     h2 {
         font-size: 1.8em;
     }
-    
+
     h3 {
         font-size: 1.1em;
     }
-    
+
     #enrollBtn {
         width: 36%;
         left: 32%;
     }
-    
+
     .suggestedCourse {
         width: 45%;
         height: auto;
@@ -407,20 +490,104 @@ h2 {
     #mainContainer {
         padding: 10px;
     }
-    
+
     #detailsToEnroll {
         padding: 10px;
     }
-    
+
     h2 {
         font-size: 1.6em;
     }
-    
+
     h3 {
         font-size: 1em;
     }
-    
+
     .suggestedCourse {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .nav-links {
+        gap: 0px;
+    }
+
+    .nav-links a,
+    #accountInNav {
+        font-size: 0.95em;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+
+    .nav-links a,
+    #accountInNav {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 1030px) {
+
+    .nav-logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .logo-text {
+        font-size: 0.85em;
+    }
+
+    .nav-links a,
+    #accountInNav {
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .nav-logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo-text {
+        font-size: 1.2em;
+    }
+
+    .nav-links a,
+    #accountInNav {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        font-size: 2em;
+        font-weight: bold;
+    }
+
+    #nav-links-burger-1 {
+        display: none !important;
+    }
+
+    #nav-links-burger-2 a {
+        font-size: 0.8rem;
+    }
+
+    #nav-links-burger-2 {
+        row-gap: 10px;
+    }
+}
+
+@keyframes dropDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        /* Final position */
     }
 }

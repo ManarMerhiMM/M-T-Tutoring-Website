@@ -306,6 +306,16 @@ body {
   #accountDiv{
     position: relative;
   }
+
+
+  .courseNames{
+    cursor: pointer;
+  }
+
+  .courseNames:hover{
+    text-decoration: underline;
+  }
+  
   @media screen and (max-width: 1300px) {
     .nav-links{
         gap: 0px;

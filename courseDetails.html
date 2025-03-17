@@ -18,9 +18,34 @@
                     <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo">
                     <span class="logo-text">M & T Tutoring</span>
                 </a>
-                <ul class="nav-links">
-                    <li><a href="" id="backAnchor">&#8592;</a></li>
+                <ul class="nav-links" id="NAVLIST">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html" aria-current="page">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li id="cartLI"><a href="checkout.html">Cart</a></li>
+                    <div id="accountDiv">
+                        <li><a href="" id="accountInNav">Account&#x25BC;</a></li>
+                        <ul class="nav-links-burger" id="nav-links-burger-1">
+                            <li><a href="" class="dashBoardInNav">Dashboard</a></li>
+                            <li><a href="account.html">Account</a></li>
+                            <li><a href="" class="signoutInNav">Signout</a></li>
+                        </ul>
+                    </div>
                 </ul>
+                <div class="nav-toggle">
+                    <span>&#9776;</span>
+                    <ul class="nav-links-burger" id="nav-links-burger-2">
+                        <li><a href="index.html" aria-current="page">Home</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li class="toRemoveWhenNotLoggedIn"><a href="checkout.html">Cart</a></li>
+                        <li class="toRemoveWhenNotLoggedIn"><a href="" class="dashBoardInNav">Dashboard</a></li>
+                        <li class="toRemoveWhenNotLoggedIn"><a href="account.html">Account</a></li>
+                        <li class="toRemoveWhenNotLoggedIn"><a href="" class="signoutInNav">Signout</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
