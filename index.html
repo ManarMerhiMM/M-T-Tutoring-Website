@@ -12,47 +12,46 @@
 </head>
 
 <body>
-  
-
-  <!-- Hero Section with Gradient Overlay -->
-  <header class="hero">
-    <nav class="glass-nav" aria-label="Main navigation">
-      <div class="nav-container">
-        <a href="index.html" class="nav-logo">
-          <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo">
-          <span class="logo-text">M & T Tutoring</span>
-        </a>
-        <ul class="nav-links" id="NAVLIST">
+  <!-- Navigation Bar moved outside the header to fix stacking context -->
+  <nav class="glass-nav" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo">
+        <span class="logo-text">M & T Tutoring</span>
+      </a>
+      <ul class="nav-links" id="NAVLIST">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li id="cartLI"><a href="checkout.html">Cart</a></li>
+        <div id="accountDiv">
+          <li><a href="" id="accountInNav">Account&#x25BC;</a></li>
+          <ul class="nav-links-burger" id="nav-links-burger-1">
+            <li><a href="" class="dashBoardInNav">Dashboard</a></li>
+            <li><a href="account.html">Account</a></li>
+            <li><a href="" class="signoutInNav">Signout</a></li>
+          </ul>
+        </div>
+      </ul>
+      <div class="nav-toggle">
+        <span>&#9776;</span>
+        <ul class="nav-links-burger" id="nav-links-burger-2">
           <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="courses.html">Courses</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li id="cartLI"><a href="checkout.html">Cart</a></li>
-          <div id="accountDiv">
-            <li><a href="" id="accountInNav">Account&#x25BC;</a></li>
-            <ul class="nav-links-burger" id="nav-links-burger-1">
-              <li><a href="" class="dashBoardInNav">Dashboard</a></li>
-              <li><a href="account.html">Account</a></li>
-              <li><a href="" class="signoutInNav">Signout</a></li>
-            </ul>
-          </div>
+          <li class="toRemoveWhenNotLoggedIn"><a href="checkout.html">Cart</a></li>
+          <li class="toRemoveWhenNotLoggedIn"><a href="" class="dashBoardInNav">Dashboard</a></li>
+          <li class="toRemoveWhenNotLoggedIn"><a href="account.html">Account</a></li>
+          <li class="toRemoveWhenNotLoggedIn"><a href="" class="signoutInNav">Signout</a></li>
         </ul>
-        <div class="nav-toggle">
-          <span>&#9776;</span>
-          <ul class="nav-links-burger" id="nav-links-burger-2">
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li class="toRemoveWhenNotLoggedIn"><a href="checkout.html">Cart</a></li>
-            <li class="toRemoveWhenNotLoggedIn"><a href="" class="dashBoardInNav">Dashboard</a></li>
-            <li class="toRemoveWhenNotLoggedIn"><a href="account.html">Account</a></li>
-            <li class="toRemoveWhenNotLoggedIn"><a href="" class="signoutInNav">Signout</a></li>
-          </ul>
-        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
+  <!-- Hero Section with Gradient Overlay -->
+  <header class="hero">
     <div class="hero-overlay"></div>
     <div class="container">
       <div class="hero-content">
@@ -134,26 +133,22 @@
     <p class="section-intro">
       At M & T Tutoring, we offer a variety of services to help you excel academically and professionally.
     </p>
-
     <div class="services-grid">
       <article class="service-card">
         <img src="MEDIA/newbannerimage.png" alt="Coding Tutoring">
         <h3>Coding Tutoring</h3>
         <p>Personalized lessons in various programming languages to boost your skills.</p>
       </article>
-
       <article class="service-card">
         <img src="MEDIA/Research Assistance.jpeg" alt="Research Assistance">
         <h3>Research Assistance</h3>
         <p>Expert guidance to help you ace your academic projects and research papers.</p>
       </article>
-
       <article class="service-card">
         <img src="MEDIA/presentation_design.jpg.avif" alt="Presentation Design">
         <h3>Presentation Design</h3>
         <p>Create impactful presentations that convey your ideas clearly and professionally.</p>
       </article>
-
       <article class="service-card">
         <img src="MEDIA/project_execution.jpg" alt="Project Execution">
         <h3>Project Execution</h3>
@@ -165,7 +160,6 @@
   <!-- Mission Statement Section -->
   <section class="container mission-statement">
     <div class="mission-wrapper">
-      <!-- Textual Content -->
       <div class="mission-content">
         <h2 class="mission-title">Bridging Lebanon's Education Gap</h2>
         <p class="mission-description">
@@ -173,8 +167,6 @@
           courses and project support tailored to the Lebanese academic system, empowering students
           and professionals to achieve excellence.
         </p>
-
-        <!-- Highlights / Key Points -->
         <div class="mission-highlights">
           <article class="highlight-card">
             <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
@@ -186,14 +178,11 @@
           </article>
         </div>
       </div>
-
-      <!-- Mission Image -->
       <div class="mission-image">
         <img src="MEDIA/Our mission.JPEG" alt="Our Mission">
       </div>
     </div>
   </section>
-
 
   <!-- Testimonials Section -->
   <section class="container testimonials-section">
@@ -214,7 +203,6 @@
       </article>
     </div>
   </section>
-
 
   <!-- Contact Section -->
   <section class="container contact-section">
@@ -238,8 +226,6 @@
       </p>
     </address>
   </section>
-
-
 
   <!-- Footer Section -->
   <footer class="main-footer">

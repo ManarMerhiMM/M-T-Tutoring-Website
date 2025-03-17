@@ -1,4 +1,4 @@
-if(localStorage.getItem("LoggedIn") == "false"){
+if(!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") == "false"){
     window.location.href = "index.html";
 }
 else if(localStorage.getItem("curAccountType") == "tutor"){
