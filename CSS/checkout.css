@@ -1,400 +1,284 @@
 body {
-    background: linear-gradient(45deg, #4465ad, #002f9644);
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  background: linear-gradient(45deg, #4465ad, #002f9644);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-
+/* Navigation styling – kept exactly the same */
 .glass-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 12px 0;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2147483647 !important; /* Force highest stacking order */
+  transform: translateZ(0); /* Create a new stacking context */
+  padding: 12px 0;
+  background-color: #294169;
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0, 26, 255, 0.433);
+  border-bottom: 1px solid rgba(99, 92, 168, 0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-container {
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
+.nav-toggle {
+  display: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Logo Styling */
 .nav-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
 }
 
 .nav-logo:hover {
-    transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .logo-text {
-    font-size: 1.8rem;
-    margin-left: 15px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    background: #4facfe;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    transition: all 0.3s ease;
-    color: white;
+  font-size: 1.8rem;
+  margin-left: 15px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: #4facfe;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Gradient text effect – remove duplicate white color */
+  transition: all 0.3s ease;
 }
 
 .nav-logo img {
-    height: 65px;
-    width: 65px;
-    border: 2px solid rgba(26, 54, 93, 0.2);
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(26, 54, 93, 0.1);
+  height: 65px;
+  width: 65px;
+  border: 2px solid rgba(26, 54, 93, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(26, 54, 93, 0.1);
 }
 
 .nav-logo img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 20px rgba(26, 54, 93, 0.15);
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(26, 54, 93, 0.15);
 }
 
 /* Navigation Links */
 .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 25px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bolder;
-    padding: 8px 15px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    border-radius: 20px;
-    background: linear-gradient(45deg, #1A365D, #2B6CB0);
+.nav-links a,
+#accountInNav {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  padding: 8px 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
-.nav-links a:not(.btn):hover {
-    color: #f57c00;
-    background: rgba(245, 124, 0, 0.08);
+.nav-links a:not(.btn):hover,
+#accountInNav:not(.btn):hover {
+  color: #f57c00;
 }
 
-
-.nav-links a[aria-current="page"] {
-    color: #f57c00 !important;
-    font-weight: 600;
+.nav-links a[aria-current="page"],
+#accountInNav[aria-current="page"] {
+  color: #f57c00 !important;
+  font-weight: 600;
 }
 
-.nav-links a[aria-current="page"]::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 6px;
-    height: 6px;
-    background: #f57c00;
-    border-radius: 50%;
-    animation: pulse 1.5s infinite;
+.nav-links a[aria-current="page"]::after,
+#accountInNav[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #f57c00;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
 }
 
+/* Navigation Burger Menu */
+.nav-links-burger {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  flex-direction: column;
+  background: rgba(218, 218, 218, 0.158);
+  padding: 40px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.616);
+  border-left: 1px solid rgba(0, 0, 0, 0.616);
+  border-bottom-left-radius: 40px;
+  align-items: center;
+  gap: 25px;
+  transform: translateY(-20px);
+  animation: dropDown 0.5s ease forwards;
+}
 
+.nav-links-burger a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  padding: 8px 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #1A365D, #2B6CB0);
+}
 
+.nav-links-burger a:not(.btn):hover {
+  color: #f57c00;
+  background: rgba(245, 124, 0, 0.08);
+}
+
+.nav-links-burger a[aria-current="page"] {
+  color: #f57c00 !important;
+  font-weight: 600;
+}
+
+.nav-links-burger a[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #f57c00;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+/* Media Queries for Navigation */
 @media (max-width: 400px) {
-    .course-box {
-        width: 90%;
-        padding: 20px;
-    }
+  .course-box {
+    width: 90%;
+    padding: 20px;
+  }
 }
 
-/* Modern Glass Navigation */
-.glass-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 12px 0;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
-    backdrop-filter: blur(25px) saturate(180%);
-    -webkit-backdrop-filter: blur(25px) saturate(180%);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 15px;
-  }
-  
-  .nav-container {
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .nav-toggle {
-    display: none;
-  
-    transition: opacity 0.2s ease-in-out;
-  }
-  
-  /* Logo Styling */
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    transition: transform 0.3s ease;
-  }
-  
-  .nav-logo:hover {
-    transform: translateX(5px);
-  }
-  
-  .logo-text {
-    font-size: 1.8rem;
-    margin-left: 15px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    background: #4facfe;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    transition: all 0.3s ease;
-    color: white;
-  }
-  
-  .nav-logo img {
-    height: 65px;
-    width: 65px;
-    border: 2px solid rgba(26, 54, 93, 0.2);
-    border-radius: 50%;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(26, 54, 93, 0.1);
-  }
-  
-  .nav-logo img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 6px 20px rgba(26, 54, 93, 0.15);
-  }
-  
-  /* Navigation Links */
+#accountDiv {
+  position: relative;
+}
+
+.courseNames {
+  cursor: pointer;
+}
+
+.courseNames:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 1300px) {
   .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 25px;
+    gap: 0px;
   }
-  
-  .nav-links a, #accountInNav {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bolder;
-    padding: 8px 15px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    border-radius: 20px;
-    background: linear-gradient(45deg, #1A365D, #2B6CB0);
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.95em;
   }
-  
-  .nav-links a:not(.btn):hover, #accountInNav:not(.btn):hover {
-    color: #f57c00;
-    background: rgba(245, 124, 0, 0.08);
+}
+
+@media screen and (max-width: 1100px) {
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.8em;
   }
-  
-  
-  .nav-links a[aria-current="page"], #accountInNav[aria-current="page"] {
-    color: #f57c00 !important;
-    font-weight: 600;
+}
+
+@media screen and (max-width: 1030px) {
+  .nav-logo img {
+    width: 55px;
+    height: 55px;
   }
-  
-  .nav-links a[aria-current="page"]::after, #accountInNav[aria-current="page"]::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 6px;
-    height: 6px;
-    background: #f57c00;
-    border-radius: 50%;
-    animation: pulse 1.5s infinite;
+  .logo-text {
+    font-size: 0.85em;
   }
-  
-  
-  .nav-links-burger {
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav-logo img {
+    width: 60px;
+    height: 60px;
+  }
+  .logo-text {
+    font-size: 1.2em;
+  }
+  .nav-links a,
+  #accountInNav {
     display: none;
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    right: 0%;
-    flex-direction: column;
-    background: rgba(218, 218, 218, 0.158);
-    padding: 40px 10px 40px 10px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.616);
-    border-left: 1px solid rgba(0, 0, 0, 0.616);
-    border-bottom-left-radius: 40px;
-    align-items: center;
-    gap: 25px;
-  
-    transform: translateY(-20px);
-    animation: dropDown 0.5s ease forwards;
   }
-  
-  .nav-links-burger a {
+  .nav-toggle {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
     color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bolder;
-    padding: 8px 15px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-    border-radius: 20px;
-    background: linear-gradient(45deg, #1A365D, #2B6CB0);
   }
-  
-  .nav-links-burger a:not(.btn):hover {
-    color: #f57c00;
-    background: rgba(245, 124, 0, 0.08);
+  #nav-links-burger-1 {
+    display: none !important;
   }
-  
-  
-  .nav-links-burger a[aria-current="page"] {
-    color: #f57c00 !important;
-    font-weight: 600;
+  #nav-links-burger-2 a {
+    font-size: 0.8rem;
   }
-  
-  .nav-links-burger a[aria-current="page"]::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 6px;
-    height: 6px;
-    background: #f57c00;
-    border-radius: 50%;
-    animation: pulse 1.5s infinite;
+  #nav-links-burger-2 {
+    row-gap: 10px;
   }
+}
 
-
-  #nav-links-burger-1{
-    padding-left: 0px;
-    padding-right: 0px;
-    right: 0%;
-    top: 204%;
-    border-bottom-right-radius: 40px;
-    border-right: 1px solid rgba(0, 0, 0, 0.616);
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-
-  #accountDiv{
-    position: relative;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
 
+/* Added missing keyframes for pulse animation (used in active link indicators) */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
-  .courseNames{
-    cursor: pointer;
-  }
-
-  .courseNames:hover{
-    text-decoration: underline;
-  }
-  
-  @media screen and (max-width: 1300px) {
-    .nav-links{
-        gap: 0px;
-    }
-  
-    .nav-links a, #accountInNav{
-        font-size: 0.95em;
-    }
-  }
-  
-  @media screen and (max-width: 1100px) {
-  
-    .nav-links a, #accountInNav{
-        font-size: 0.8em;
-    }
-  }
-  
-  @media screen and (max-width: 1030px) {
-  
-    .nav-logo img{
-        width: 55px;
-        height: 55px;
-    }
-  
-    .logo-text {
-        font-size: 0.85em;
-    }
-  
-    .nav-links a, #accountInNav{
-        font-size: 0.5em;
-    }
-  }
-  
-  @media screen and (max-width: 800px) {
-  
-    .nav-logo img{
-        width: 60px;
-        height: 60px;
-    }
-  
-    .logo-text {
-        font-size: 1.2em;
-    }
-  
-    .nav-links a, #accountInNav{
-        display: none;
-    }
-  
-    .nav-toggle{
-        display: block;
-        font-size: 2em;
-        font-weight: bold;
-    }
-  
-    #nav-links-burger-1 {
-      display: none !important;
-    }
-    #nav-links-burger-2 a{
-      font-size: 0.8rem;
-    }
-    #nav-links-burger-2{
-      row-gap: 10px;
-    }
-  }
-  
-  @keyframes dropDown {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0); 
-    }
-  }
-
-
-
-
+/* Other Styling (Non-navigation) */
 #CONTAINER {
   position: absolute;
   width: 90%;
@@ -408,7 +292,6 @@ body {
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-
 .listContainer {
   display: flex;
   flex-direction: column;
@@ -419,7 +302,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-
 
 .courseDetails {
   display: flex;
@@ -434,7 +316,6 @@ body {
   color: #555;
   font-weight: 500;
 }
-
 
 .remove_btn {
   padding: 8px 12px;
@@ -451,19 +332,16 @@ body {
   background-color: #b71c1c;
 }
 
-
 .optionsContainer {
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   background-color: #6259e7;
   padding: 15px;
   border-radius: 8px;
-  gap: 10px; 
+  gap: 10px;
 }
-
-
 
 .optionsContainer button {
   padding: 10px 18px;
@@ -482,10 +360,21 @@ body {
   color: white;
 }
 
-
 .totalPriceLabel {
   color: white;
   font-weight: bold;
   font-size: 18px;
   margin-left: auto;
+}
+#nav-links-burger-1{
+  padding-left: 0px;
+  padding-right: 0px;
+  right: 0%;
+  top: 204%;
+  border-bottom-right-radius: 40px;
+  border-right: 1px solid rgba(0, 0, 0, 0.616);
+}
+
+#accountDiv{
+  position: relative;
 }

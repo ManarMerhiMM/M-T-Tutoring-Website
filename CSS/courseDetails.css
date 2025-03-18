@@ -21,18 +21,18 @@ main {
 .glass-nav {
     position: fixed;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
+    z-index: 2147483647 !important; /* Force highest stacking order */
+    transform: translateZ(0); /* Create a new stacking context */
     padding: 12px 0;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+    background-color: #294169;
     backdrop-filter: blur(25px) saturate(180%);
     -webkit-backdrop-filter: blur(25px) saturate(180%);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px rgba(0, 26, 255, 0.433);
+    border-bottom: 1px solid rgba(99, 92, 168, 0.15);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border-radius: 15px;
-}
-
+  }
 .nav-container {
     width: 90%;
     max-width: 1400px;

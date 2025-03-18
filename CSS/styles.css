@@ -34,13 +34,12 @@ body {
   z-index: 2147483647 !important; /* Force highest stacking order */
   transform: translateZ(0); /* Create a new stacking context */
   padding: 12px 0;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+  background-color: #294169;
   backdrop-filter: blur(25px) saturate(180%);
   -webkit-backdrop-filter: blur(25px) saturate(180%);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 26, 255, 0.433);
+  border-bottom: 1px solid rgba(99, 92, 168, 0.15);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border-radius: 15px;
 }
 
 .nav-container {
@@ -113,13 +112,13 @@ body {
   padding: 8px 15px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  border-radius: 20px;
-  background: linear-gradient(45deg, #1A365D, #2B6CB0);
+  /* border-radius: 20px; */
+  /* background: linear-gradient(45deg, #1A365D, #2B6CB0); */
 }
 
 .nav-links a:not(.btn):hover, #accountInNav:not(.btn):hover {
   color: #f57c00;
-  background: rgba(245, 124, 0, 0.08);
+  /* background: rgba(245, 124, 0, 0.08); */
 }
 
 
