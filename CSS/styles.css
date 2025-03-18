@@ -435,6 +435,7 @@ body {
 .course-content .btn {
   color: #1a2a6c;
   margin-top: 10px;
+  cursor: pointer;
 }
 
 /* --- Services Section --- */

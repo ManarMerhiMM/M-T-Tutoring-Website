@@ -1,7 +1,3 @@
-// main.js - Home Page Scripts for M&T Tutoring
-
-// Auto-Scroll Featured Courses (Carousel Effect)
-
 if(!localStorage.getItem("LoggedIn")){
     localStorage.setItem("LoggedIn", "false");
 }
@@ -118,18 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Ensure this script runs after your DOM content loads
-// document.addEventListener('DOMContentLoaded', () => {
-//     const navToggle = document.querySelector('.nav-toggle');
-//     const navLinks = document.querySelector('.nav-links');
-  
-//     navToggle.addEventListener('click', () => {
-//       navToggle.classList.toggle('active');
-//       navLinks.classList.toggle('active');
-//     });
-//   });
-
-
 document.querySelector(".nav-toggle span").addEventListener("click", (event) => {
     if (event.target.textContent === "☰") {
         event.target.textContent = "X";
@@ -228,3 +212,102 @@ else{
         theArticle.appendChild(theCite);
     }
 }
+
+
+async function getRandomCoursesForDisplayUsingJSON() {
+    let Courses;
+
+    try {
+        const response = await fetch('JS/database.json');
+        const data = await response.json();
+        Courses = data.courses;
+    } catch (error) {
+        console.error('Error loading JSON:', error);
+    }
+
+
+    let firstIndex = Math.floor(Math.random() * Courses.length);
+    let secondIndex;
+    let thirdIndex;
+
+    do {
+        secondIndex = Math.floor(Math.random() * Courses.length);
+    } while (secondIndex === firstIndex);
+
+    do {
+        thirdIndex = Math.floor(Math.random() * Courses.length);
+    } while (thirdIndex === firstIndex || thirdIndex === secondIndex);
+
+    let coursesToDisplay = [Courses[firstIndex], Courses[secondIndex], Courses[thirdIndex]];
+    let grid = document.querySelector(".course-grid");
+
+    for(let i = 0; i < 3; i++){
+        let article = document.createElement("article");
+        article.classList.add("course-card");
+
+        grid.appendChild(article);
+
+        let courseThumbnail = document.createElement("div");
+        courseThumbnail.classList.add("course-thumbnail");
+
+        article.appendChild(courseThumbnail);
+
+        let courseImg = document.createElement("img");
+         
+        if (coursesToDisplay[i].category.includes("Tech and Development")) {
+            courseImg.src = `MEDIA/courseImages/TechAndDev.webp`;
+            courseImg.alt = "Tech and development image";
+        }
+        else if (coursesToDisplay[i].category.includes("Mathematics")) {
+            courseImg.src = `MEDIA/courseImages/Mathematics.jpg`;
+            courseImg.alt = "Mathematics image";
+        }
+        else if (coursesToDisplay[i].category.includes("Science and Engineering")) {
+            courseImg.src = `MEDIA/courseImages/ScienceAndEngineering.jpg`;
+            courseImg.alt = "Science and Engineering image";
+        }
+        else if (coursesToDisplay[i].category.includes("Business and Management")) {
+            courseImg.src = `MEDIA/courseImages/BusinessAndManagement.webp`;
+            courseImg.alt = "Business and Management image";
+        }
+        else if (coursesToDisplay[i].category.includes("Biology and Biomedical")) {
+            courseImg.src = `MEDIA/courseImages/BiologyAndBiomedical.jpg`;
+            courseImg.alt = "Biology and Biomedical image";
+        }
+        else {
+            courseImg.src = "MEDIA/courseImages/HealthAndMedicine.jpg";
+            courseImg.alt = "Health and Medicine image";
+        }
+
+        courseThumbnail.appendChild(courseImg);
+
+        let contentContainer = document.createElement("div");
+        contentContainer.classList.add("course-content");
+
+        article.appendChild(contentContainer);
+
+
+        let title = document.createElement("h3");
+        title.textContent = coursesToDisplay[i].name;
+        contentContainer.appendChild(title);
+
+        let viewCourseBtn = document.createElement("button");
+        viewCourseBtn.dataset.courseName = coursesToDisplay[i].name;
+        viewCourseBtn.classList.add("btn");
+        viewCourseBtn.classList.add("btn-secondary");
+        viewCourseBtn.classList.add("viewCourseBtn");
+        viewCourseBtn.textContent = "View Course";
+        contentContainer.appendChild(viewCourseBtn);
+
+    }
+
+
+
+    document.querySelectorAll(".viewCourseBtn").forEach(btn => btn.addEventListener("click", (event) => {
+        localStorage.setItem("curCourseName", event.target.dataset.courseName);
+        window.location.href = "courseDetails.html";
+    }));
+
+}
+
+getRandomCoursesForDisplayUsingJSON();
