@@ -163,3 +163,68 @@ document.querySelectorAll(".dashBoardInNav").forEach(dashBoard=>{dashBoard.addEv
         window.location.href = "tutorDash.html";
     }
 });});
+
+let testimonialsSection = document.querySelector(".testimonials-section");
+let currentTestimonials = JSON.parse(localStorage.getItem("testimonials")) || [];
+
+if(currentTestimonials.length == 0){
+    testimonialsSection.remove();
+}
+else if(currentTestimonials.length == 1){
+    let mainContainer = document.createElement("div");
+    mainContainer.classList.add("testimonials-grid");
+    
+    testimonialsSection.appendChild(mainContainer);
+
+    let theArticle = document.createElement("article");
+    theArticle.classList.add("testimonial-card");
+
+    mainContainer.appendChild(theArticle);
+
+    let block = document.createElement("blockquote")
+    theArticle.appendChild(block);
+
+    let review = document.createElement("p");
+    review.textContent = currentTestimonials[0].message;
+
+    block.appendChild(review);
+
+    let theCite = document.createElement("cite");
+    theCite.textContent = `- ${currentTestimonials[0].name}`;
+
+    theArticle.appendChild(theCite);
+}
+else{
+    let firstIndex = Math.floor(Math.random() * currentTestimonials.length);
+    let secondIndex;
+
+    do {
+        secondIndex = Math.floor(Math.random() * currentTestimonials.length);
+    } while (secondIndex === firstIndex);
+
+    let testimonialsToAppend = [currentTestimonials[firstIndex], currentTestimonials[secondIndex]];
+
+    let mainContainer = document.createElement("div");
+    mainContainer.classList.add("testimonials-grid");
+    testimonialsSection.appendChild(mainContainer);
+
+    for(let i = 0; i < 2; i++){
+        let theArticle = document.createElement("article");
+        theArticle.classList.add("testimonial-card");
+
+        mainContainer.appendChild(theArticle);
+
+        let block = document.createElement("blockquote")
+        theArticle.appendChild(block);
+
+        let review = document.createElement("p");
+        review.textContent = testimonialsToAppend[i].message;
+
+        block.appendChild(review);
+
+        let theCite = document.createElement("cite");
+        theCite.textContent = `- ${testimonialsToAppend[i].name}`;
+
+        theArticle.appendChild(theCite);
+    }
+}
