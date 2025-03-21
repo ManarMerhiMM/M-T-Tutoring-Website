@@ -1,0 +1,59 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+
+.container {
+    max-width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+    padding: 12px;
+}
+
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.certified-yes {
+    color: green;
+    font-weight: bold;
+}
+
+.certified-no {
+    color: red;
+    font-weight: bold;
+}
