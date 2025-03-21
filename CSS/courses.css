@@ -9,26 +9,20 @@ body {
     max-width: 85%;
     margin: auto;
     text-align: center;
+    padding-top: 50px; 
 }
 
-h2 {
-    margin-bottom: 25px;
-    font-size: 28px;
-    color: #222;
-    font-weight: 600;
-}
+
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 200px; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     background: #fff;
     border-radius: 12px;
     overflow: hidden;
+    margin-top: 200px; 
 }
-
-
 
 th {
     background-color: #0056b3;
@@ -39,7 +33,6 @@ th {
     font-weight: bold;
 }
 
-
 th, td {
     border: 1px solid #ddd;
     padding: 14px;
@@ -47,18 +40,11 @@ th, td {
     font-size: 16px;
 }
 
-
-
 tr:hover {
     background-color: #dce4f5;
     transition: background 0.3s ease, transform 0.2s ease;
-    transform: scale(1.006); 
     cursor: pointer;
 }
-
-
-
-
 
 .certified-yes {
     color: #2d9c5b;
@@ -66,18 +52,8 @@ tr:hover {
 }
 
 .certified-no {
-    color: #d9534f;
+    color: #d9534f; 
     font-weight: bold;
-}
-
-#TitleOfTable {
-    font-size: 24px;
-    font-weight: 600;
-    color: #e1c3c3;  
-    
-    text-align: left;
-    margin-left: 10px; 
-    margin-top: 20px;  
 }
 
 
