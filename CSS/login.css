@@ -35,7 +35,9 @@ body::before {
   background: linear-gradient(to right, rgba(26, 54, 93, 0.8), rgba(43, 108, 176, 0.8));
 }
 
-main, header, footer {
+main,
+header,
+footer {
   position: relative;
   z-index: 1;
 }
@@ -46,7 +48,7 @@ header {
   left: 2%;
   display: flex;
   align-items: center;
-  
+
 }
 
 #logoDiv {
@@ -67,16 +69,16 @@ header {
   height: 80px;
 }
 
-  .logo-text {
-    font-size: 1.8rem;
-    margin-left: 15px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    background: #4facfe;
-    background-clip: text;
-    transition: all 0.3s ease;
-    color: white;
-    }
+.logo-text {
+  font-size: 1.8rem;
+  margin-left: 15px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: #4facfe;
+  background-clip: text;
+  transition: all 0.3s ease;
+  color: white;
+}
 
 
 .logo-text:hover {
@@ -282,33 +284,33 @@ a {
   .btnDiv {
     display: block;
   }
-  
+
   input[type="text"],
   input[type="password"],
   input[type="email"],
   select {
     width: 100%;
   }
-  
+
   #logo {
     width: 50px;
     height: 50px;
   }
-  
+
   #logo:hover {
     width: 60px;
     height: 60px;
   }
-  
+
   .logo-text {
     font-size: 1.4rem;
     margin-left: 10px;
   }
-  
+
   .passControlImgs {
     top: 50%;
   }
-  
+
   #loginBtn,
   #signupBtn,
   #backBtn1,
@@ -316,11 +318,11 @@ a {
     width: 100%;
     margin-bottom: 6px;
   }
-  
+
   .switchForm {
     font-size: 0.9em;
   }
-  
+
   footer {
     position: relative;
   }

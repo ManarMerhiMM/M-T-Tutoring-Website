@@ -1,9 +1,9 @@
-if(!localStorage.getItem("LoggedIn")){
+if (!localStorage.getItem("LoggedIn")) {
     localStorage.setItem("LoggedIn", "false");
 }
 
 
-if(localStorage.getItem("LoggedIn") == "false"){
+if (localStorage.getItem("LoggedIn") == "false") {
     let NavList = document.getElementById("NAVLIST")
     NavList.removeChild(document.getElementById("accountDiv"));
     NavList.removeChild(document.getElementById("cartLI"));
@@ -17,7 +17,7 @@ if(localStorage.getItem("LoggedIn") == "false"){
     let liToBeRemoved = document.querySelectorAll(".toRemoveWhenNotLoggedIn");
     let navBurger2 = document.getElementById("nav-links-burger-2");
 
-    liToBeRemoved.forEach(li => {navBurger2.removeChild(li);});
+    liToBeRemoved.forEach(li => { navBurger2.removeChild(li); });
 
     let loginLi = document.createElement("li");
     let logina = document.createElement("a");
@@ -28,21 +28,19 @@ if(localStorage.getItem("LoggedIn") == "false"){
 
     navBurger2.appendChild(loginLi);
 }
-else{
+else {
     document.getElementById("accountInNav").addEventListener("click", (event) => {
         event.preventDefault();
-        if (event.target.textContent === "Account▼") {
-            event.target.textContent = "Account▲";
+        if (window.getComputedStyle(document.getElementById("nav-links-burger-1")).display == "none") {
             document.getElementById("nav-links-burger-1").style.display = "flex";
         } else {
-            event.target.textContent = "Account▼";  
             document.getElementById("nav-links-burger-1").style.display = "none";
         }
     });
 }
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.querySelector('.nav-toggle');
     const navLinks = document.querySelector('.nav-links');
 
@@ -96,15 +94,15 @@ window.addEventListener("scroll", () => {
 });
 
 // Future Enhancements: Dynamic content fetching, interactive elements, API integration for course updates.
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const toggle = document.querySelector('.nav-toggle');
     const links = document.querySelector('.nav-links');
-    
+
     toggle.addEventListener('click', () => {
         links.classList.toggle('active');
         toggle.classList.toggle('active');
     });
-    
+
     // Close menu when clicking outside on mobile
     document.addEventListener('click', (e) => {
         if (!toggle.contains(e.target) && !links.contains(e.target)) {
@@ -119,45 +117,49 @@ document.querySelector(".nav-toggle span").addEventListener("click", (event) => 
         event.target.textContent = "X";
         document.getElementById("nav-links-burger-2").style.display = "flex";
     } else {
-        event.target.textContent = "☰";  
+        event.target.textContent = "☰";
         document.getElementById("nav-links-burger-2").style.display = "none";
     }
 });
 
-document.querySelectorAll(".signoutInNav").forEach(signout => {signout.addEventListener("click", (event)=>{
-    event.preventDefault();
-    let AccountType = localStorage.getItem("curAccountType");
-    if(confirm(`Are you sure you want to sign out of "${localStorage.getItem("curUsername")}"?`)){
-        localStorage.setItem("LoggedIn", "false");
-        ["curEmail", "curAccountType", "curPassword", "curUsername"].forEach(item => localStorage.removeItem(item));
-        if(AccountType == "student"){
-            localStorage.removeItem("curMajor");
+document.querySelectorAll(".signoutInNav").forEach(signout => {
+    signout.addEventListener("click", (event) => {
+        event.preventDefault();
+        let AccountType = localStorage.getItem("curAccountType");
+        if (confirm(`Are you sure you want to sign out of "${localStorage.getItem("curUsername")}"?`)) {
+            localStorage.setItem("LoggedIn", "false");
+            ["curEmail", "curAccountType", "curPassword", "curUsername"].forEach(item => localStorage.removeItem(item));
+            if (AccountType == "student") {
+                localStorage.removeItem("curMajor");
+            }
+
+            window.location.href = "login.html";
         }
+    });
+});
 
-        window.location.href = "login.html";
-    }
-});});
-
-document.querySelectorAll(".dashBoardInNav").forEach(dashBoard=>{dashBoard.addEventListener("click", (event)=>{
-    event.preventDefault();
-    if(localStorage.getItem("curAccountType") == "student"){
-        window.location.href = "studentDash.html";
-    }
-    else{
-        window.location.href = "tutorDash.html";
-    }
-});});
+document.querySelectorAll(".dashBoardInNav").forEach(dashBoard => {
+    dashBoard.addEventListener("click", (event) => {
+        event.preventDefault();
+        if (localStorage.getItem("curAccountType") == "student") {
+            window.location.href = "studentDash.html";
+        }
+        else {
+            window.location.href = "tutorDash.html";
+        }
+    });
+});
 
 let testimonialsSection = document.querySelector(".testimonials-section");
 let currentTestimonials = JSON.parse(localStorage.getItem("testimonials")) || [];
 
-if(currentTestimonials.length == 0){
+if (currentTestimonials.length == 0) {
     testimonialsSection.remove();
 }
-else if(currentTestimonials.length == 1){
+else if (currentTestimonials.length == 1) {
     let mainContainer = document.createElement("div");
     mainContainer.classList.add("testimonials-grid");
-    
+
     testimonialsSection.appendChild(mainContainer);
 
     let theArticle = document.createElement("article");
@@ -178,7 +180,7 @@ else if(currentTestimonials.length == 1){
 
     theArticle.appendChild(theCite);
 }
-else{
+else {
     let firstIndex = Math.floor(Math.random() * currentTestimonials.length);
     let secondIndex;
 
@@ -192,7 +194,7 @@ else{
     mainContainer.classList.add("testimonials-grid");
     testimonialsSection.appendChild(mainContainer);
 
-    for(let i = 0; i < 2; i++){
+    for (let i = 0; i < 2; i++) {
         let theArticle = document.createElement("article");
         theArticle.classList.add("testimonial-card");
 
@@ -241,7 +243,7 @@ async function getRandomCoursesForDisplayUsingJSON() {
     let coursesToDisplay = [Courses[firstIndex], Courses[secondIndex], Courses[thirdIndex]];
     let grid = document.querySelector(".course-grid");
 
-    for(let i = 0; i < 3; i++){
+    for (let i = 0; i < 3; i++) {
         let article = document.createElement("article");
         article.classList.add("course-card");
 
@@ -253,7 +255,7 @@ async function getRandomCoursesForDisplayUsingJSON() {
         article.appendChild(courseThumbnail);
 
         let courseImg = document.createElement("img");
-         
+
         if (coursesToDisplay[i].category.includes("Tech and Development")) {
             courseImg.src = `MEDIA/courseImages/TechAndDev.webp`;
             courseImg.alt = "Tech and development image";

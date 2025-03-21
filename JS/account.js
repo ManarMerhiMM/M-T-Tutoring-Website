@@ -1,4 +1,4 @@
-if(localStorage.getItem("LoggedIn") == "false"){
+if (localStorage.getItem("LoggedIn") == "false") {
     window.location.href = "index.html";
 }
 
@@ -15,7 +15,7 @@ document.getElementById("passwordInput").value = Password;
 document.getElementById("emailInput").value = Email;
 document.getElementById("accountTypeInput").value = AccountType;
 
-if(AccountType == "student"){
+if (AccountType == "student") {
     Major = localStorage.getItem("curMajor");
 
     let newDiv = document.createElement("div");
@@ -44,14 +44,14 @@ if(AccountType == "student"){
 
 
 
-document.getElementById("hidePass").addEventListener("click", ()=>{
+document.getElementById("hidePass").addEventListener("click", () => {
     document.getElementById("hidePass").style.display = "none";
     document.getElementById("showPass").style.display = "inline";
 
     document.getElementById("passwordInput").type = "text";
 });
 
-document.getElementById("showPass").addEventListener("click", ()=>{
+document.getElementById("showPass").addEventListener("click", () => {
     document.getElementById("hidePass").style.display = "inline";
     document.getElementById("showPass").style.display = "none";
 
@@ -59,21 +59,21 @@ document.getElementById("showPass").addEventListener("click", ()=>{
 });
 
 
-document.getElementById("backToDashboard").addEventListener("click", ()=>{
-    if(AccountType == "student"){
+document.getElementById("backToDashboard").addEventListener("click", () => {
+    if (AccountType == "student") {
         window.location.href = "studentDash.html";
     }
-    else{
+    else {
         window.location.href = "tutorDash.html";
     }
 });
 
 
-document.getElementById("signout").addEventListener("click", ()=>{
-    if(confirm(`Are you sure you want to sign out of "${document.getElementById("usernameInput").value}"?`)){
+document.getElementById("signout").addEventListener("click", () => {
+    if (confirm(`Are you sure you want to sign out of "${document.getElementById("usernameInput").value}"?`)) {
         localStorage.setItem("LoggedIn", "false");
         ["curEmail", "curAccountType", "curPassword", "curUsername"].forEach(item => localStorage.removeItem(item));
-        if(AccountType == "student"){
+        if (AccountType == "student") {
             localStorage.removeItem("curMajor");
         }
 
@@ -87,7 +87,7 @@ document.querySelector(".nav-toggle span").addEventListener("click", (event) => 
         event.target.textContent = "X";
         document.querySelector(".nav-links-burger").style.display = "flex";
     } else {
-        event.target.textContent = "☰";  
+        event.target.textContent = "☰";
         document.querySelector(".nav-links-burger").style.display = "none";
     }
 });

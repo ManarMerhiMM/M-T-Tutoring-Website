@@ -31,11 +31,9 @@ if(localStorage.getItem("LoggedIn") == "false"){
 else{
     document.getElementById("accountInNav").addEventListener("click", (event) => {
         event.preventDefault();
-        if (event.target.textContent === "Account▼") {
-            event.target.textContent = "Account▲";
+        if (window.getComputedStyle(document.getElementById("nav-links-burger-1")).display == "none") {
             document.getElementById("nav-links-burger-1").style.display = "flex";
         } else {
-            event.target.textContent = "Account▼";  
             document.getElementById("nav-links-burger-1").style.display = "none";
         }
     });
