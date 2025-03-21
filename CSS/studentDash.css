@@ -1,60 +1,471 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
+/* ========== Font Imports (Optional) ========== */
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter:400,600&display=swap');
+
+/* ========== CSS Variables ========== */
+:root {
+  --primary-blue: #1a2a6c;
+  --secondary-blue: #4facfe;
+  --accent-orange: #f57c00;
+  --white: #ffffff;
+  --dark-gray: #333333;
+  --light-gray: #f5f5f5;
+  --dark-gradient: linear-gradient(135deg, #1A365D 0%, #2B6CB0 100%);
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ========== Base Reset & Body ========== */
+* {
   margin: 0;
   padding: 0;
-  display: flex;
-  background: #f4f4f4;
+  box-sizing: border-box;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 250px;
-  background: #1a2a6c;
-  color: white;
-  padding-top: 20px;
+body {
+  font-family: var(--font-body);
+  line-height: 1.7;
+  color: #2D3748;
+  background-color: #F5F5F5;
+}
+
+/* ========== Navigation (Same as Provided) ========== */
+.glass-nav {
   position: fixed;
-  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2147483647 !important; /* Force highest stacking order */
+  transform: translateZ(0); /* Create a new stacking context */
+  padding: 12px 0;
+  background-color: #294169;
+  backdrop-filter: blur(25px) saturate(180%);
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+  box-shadow: 0 8px 32px rgba(0, 26, 255, 0.433);
+  border-bottom: 1px solid rgba(99, 92, 168, 0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.sidebar-menu {
+.nav-container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-toggle {
+  display: none;
+  transition: opacity 0.2s ease-in-out;
+}
+
+/* Logo Styling */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.nav-logo:hover {
+  transform: translateX(5px);
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  margin-left: 15px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: #4facfe;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Gradient text effect */
+  transition: all 0.3s ease;
+  /* Overriding color so that the gradient is visible */
+  color: white; /* fallback if needed */
+}
+
+.nav-logo img {
+  height: 65px;
+  width: 65px;
+  border: 2px solid rgba(26, 54, 93, 0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(26, 54, 93, 0.1);
+}
+
+.nav-logo img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(26, 54, 93, 0.15);
+}
+
+/* Navigation Links */
+.nav-links {
   list-style: none;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 25px;
 }
 
-.sidebar-menu li {
-  padding: 15px 20px;
-  cursor: pointer;
-}
-
-.sidebar-menu li a {
+.nav-links a,
+#accountInNav {
   color: white;
   text-decoration: none;
-  display: block;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  padding: 8px 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
 }
 
-.sidebar-menu li a:hover,
-.sidebar-menu .active a {
-  background: #4facfe;
-  padding: 10px;
-  border-radius: 5px;
+.nav-links a:not(.btn):hover,
+#accountInNav:not(.btn):hover {
+  color: #f57c00;
 }
 
-/* Content Area */
-.content {
-  margin-left: 260px;
+/* Current Page Indicator */
+.nav-links a[aria-current="page"],
+#accountInNav[aria-current="page"] {
+  color: #f57c00 !important;
+  font-weight: 600;
+}
+
+.nav-links a[aria-current="page"]::after,
+#accountInNav[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #f57c00;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+/* Dropdown Menus (Burger) */
+.nav-links-burger {
+  display: none;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  flex-direction: column;
+  background: rgba(218, 218, 218, 0.158);
+  padding: 40px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.616);
+  border-left: 1px solid rgba(0, 0, 0, 0.616);
+  border-bottom-left-radius: 40px;
+  align-items: center;
+  gap: 25px;
+  transform: translateY(-20px);
+  animation: dropDown 0.5s ease forwards;
+}
+
+.nav-links-burger a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bolder;
+  padding: 8px 15px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  border-radius: 20px;
+  background: linear-gradient(45deg, #1A365D, #2B6CB0);
+}
+
+.nav-links-burger a:not(.btn):hover {
+  color: #f57c00;
+  background: rgba(245, 124, 0, 0.08);
+}
+
+/* Current Page in Burger Menu */
+.nav-links-burger a[aria-current="page"] {
+  color: #f57c00 !important;
+  font-weight: 600;
+}
+
+.nav-links-burger a[aria-current="page"]::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 6px;
+  background: #f57c00;
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+/* Sub-menu Positioning */
+#nav-links-burger-1 {
+  padding-left: 0;
+  padding-right: 0;
+  right: 0;
+  top: 204%;
+  border-bottom-right-radius: 40px;
+  border-right: 1px solid rgba(0, 0, 0, 0.616);
+}
+
+#accountDiv {
+  position: relative;
+}
+
+/* Media Queries for Navigation */
+@media screen and (max-width: 800px) {
+  .nav-links a,
+  #accountInNav {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+  }
+  #nav-links-burger-1 {
+    display: none !important;
+  }
+  #nav-links-burger-2 a {
+    font-size: 0.8rem;
+  }
+  #nav-links-burger-2 {
+    row-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .nav-links {
+    gap: 0px;
+  }
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.95em;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .nav-logo img {
+    width: 55px;
+    height: 55px;
+  }
+  .logo-text {
+    font-size: 0.85em;
+  }
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.5em;
+  }
+}
+
+/* DropDown Animation */
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse Animation for Current Page Indicator */
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+/* ========== Footer (Same as Provided) ========== */
+.main-footer {
+  background: linear-gradient(135deg, #1A365D, #2B6CB0);
+  color: #fff;
+  padding: 3rem 0;
+  font-family: 'Arial', sans-serif; /* or var(--font-body) if you prefer */
+  position: relative;
+  overflow: hidden;
+}
+
+.main-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Arrange elements in a column and center them */
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer Brand (Logo and Social Links) */
+.footer-brand {
+  text-align: center;
+}
+
+.footer-brand img {
+  max-width: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-brand img:hover {
+  transform: scale(1.1);
+}
+
+.footer-brand p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #f57c00;
+  transform: scale(1.1);
+}
+
+/* Footer Navigation (Quick Links) */
+.footer-nav {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-nav h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* List quick links horizontally */
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1.5rem;
+}
+
+.footer-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  color: #f57c00;
+}
+
+/* Copyright */
+.main-footer .copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* ========== Dashboard-Specific Styles ========== */
+
+/* Dashboard Container */
+.dashboard-container {
+  /* We add extra top padding to avoid the nav overlapping the content */
+  padding: 120px 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Page Heading */
+.dashboard-container h1 {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 40px;
+}
+
+/* Dashboard Content Layout */
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+/* Dashboard Card Styling */
+.dashboard-card {
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.section {
-  padding: 40px;
-  background: white;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-h1 {
-  color: #1a2a6c;
+.dashboard-card h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--secondary-blue);
+  padding-bottom: 5px;
+}
+
+/* Section-Specific Content (if needed) */
+#courseList,
+#upcomingSessions,
+#progressOverview {
+  margin-top: 15px;
+}
+
+/* Example Item Styling for Dynamically Populated Lists */
+.dashboard-item {
+  background: var(--light-gray);
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: var(--dark-gray);
+}
+
+/* Footer Spacing on Dashboard (Optional) */
+.main-footer {
+  margin-top: 40px;
 }

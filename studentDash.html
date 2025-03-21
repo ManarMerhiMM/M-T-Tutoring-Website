@@ -1,61 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Student Dashboard - M&T Tutoring</title>
+    
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Student Dashboard</title>
-  <link rel="stylesheet" href="CSS/studentDash.css">
-</head>
+    <!-- Global CSS (nav, footer, etc.) -->
+    <link rel="stylesheet" href="CSS/global.css" />
 
-<body>
+    <!-- Page-Specific CSS for dashboard layout -->
+    <link rel="stylesheet" href="CSS/studentDash.css" />
 
-  <!-- Sidebar Navigation -->
-  <aside class="sidebar">
-    <ul class="sidebar-menu">
-      <li class="active"><a href="#dashboard">Dashboard</a></li>
-      <li><a href="#courses">My Courses</a></li>
-      <li><a href="#assignments">Assignments</a></li>
-      <li><a href="#calendar">Calendar</a></li>
-      <li><a href="#messages">Messages</a></li>
-      <li><a href="#settings">Settings</a></li>
-    </ul>
-  </aside>
+    <link rel="icon" href="MEDIA/favicon.ico" />
+  </head>
+  <body>
+    <!-- Navigation Bar (copied from your snippet) -->
+    <nav class="glass-nav" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo" />
+          <span class="logo-text">M & T Tutoring</span>
+        </a>
+        <ul class="nav-links" id="NAVLIST">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="cartLI"><a href="checkout.html">Cart</a></li>
+          <div id="accountDiv">
+            <li><a href="#" id="accountInNav">Account</a></li>
+            <ul class="nav-links-burger" id="nav-links-burger-1">
+              <li><a href="dashboard.html" class="dashBoardInNav">Dashboard</a></li>
+              <li><a href="account.html">Account</a></li>
+              <li><a href="#" class="signoutInNav">Signout</a></li>
+            </ul>
+          </div>
+        </ul>
+        <div class="nav-toggle">
+          <span>&#9776;</span>
+          <ul class="nav-links-burger" id="nav-links-burger-2">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="toRemoveWhenNotLoggedIn"><a href="checkout.html">Cart</a></li>
+            <li class="toRemoveWhenNotLoggedIn">
+              <a href="dashboard.html" class="dashBoardInNav">Dashboard</a>
+            </li>
+            <li class="toRemoveWhenNotLoggedIn"><a href="account.html">Account</a></li>
+            <li class="toRemoveWhenNotLoggedIn">
+              <a href="#" class="signoutInNav">Signout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-  <!-- Main Content Area -->
-  <main class="content">
-    <section id="dashboard" class="section">
-      <h1>Dashboard</h1>
-      <p>Welcome to your student dashboard.</p>
-    </section>
+    <!-- Main Dashboard Content -->
+    <main class="dashboard-container">
+      <header>
+        <h1>Student Dashboard</h1>
+      </header>
+      <section class="dashboard-content">
+        <article class="dashboard-card">
+          <h2>My Courses</h2>
+          <div id="courseList">
+            <!-- Courses will be dynamically populated here -->
+          </div>
+        </article>
+        <article class="dashboard-card">
+          <h2>Suggested Courses</h2>
+          <div id="upcomingSessions">
+            <!-- Suggested Courses will be dynamically populated here -->
+          </div>
+        </article>
+        <article class="dashboard-card">
+          <h2>Progress Overview</h2>
+          <div id="progressOverview">
+            <!-- Progress overview will be dynamically populated here -->
+          </div>
+        </article>
+      </section>
+    </main>
 
-    <section id="courses" class="section">
-      <h1>My Courses</h1>
-      <p>View and manage your enrolled courses.</p>
-    </section>
+    <!-- Footer (copied from your snippet) -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="MEDIA/logo.jpeg" alt="M&T Tutoring Logo" />
+            <p>Empowering Lebanon's Learners Since 2023</p>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/m_and_t_tutoring/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://wa.me/96181671594"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="tutor-apply.html">Become a Tutor</a></li>
+              <li><a href="webinars.html">Webinars</a></li>
+              <li><a href="careers.html">Career Support</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 M&T Tutoring. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
 
-    <section id="assignments" class="section">
-      <h1>Assignments</h1>
-      <p>Keep track of your upcoming assignments.</p>
-    </section>
-
-    <section id="calendar" class="section">
-      <h1>Calendar</h1>
-      <p>Check important dates and deadlines.</p>
-    </section>
-
-    <section id="messages" class="section">
-      <h1>Messages</h1>
-      <p>View and send messages.</p>
-    </section>
-
-    <section id="settings" class="section">
-      <h1>Settings</h1>
-      <p>Update your preferences and account settings.</p>
-    </section>
-  </main>
-
-  <script src="JS/studentDash.js"></script>
-</body>
-
+    <!-- Dashboard-specific JS -->
+    <script src="JS/dashboard.js"></script>
+  </body>
 </html>
