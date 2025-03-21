@@ -469,3 +469,99 @@ body {
 .main-footer {
   margin-top: 40px;
 }
+
+
+.course-card {
+  background: rgba(182, 182, 182, 0.7);
+  /* Semi-transparent white */
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  /* Adds a glassy effect */
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+
+.course-thumbnail {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.course-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .course-thumbnail img {
+  transform: scale(1.05);
+}
+
+
+.course-thumbnail {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.course-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .course-thumbnail img {
+  transform: scale(1.05);
+}
+
+
+.course-content p {
+  font-size: 1rem;
+  color: #4A5568;
+  margin-bottom: 15px;
+}
+
+.course-content .btn {
+  color: #1a2a6c;
+  margin-top: 10px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+}
+
+
+.btn-secondary {
+  background-color: var(--accent-gold);
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  background-color: #e69a00;
+}
+
+
+.course-content h3 {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: var(--font-heading);
+}
+
+.course-content {
+  padding: 20px;
+  text-align: center;
+}
