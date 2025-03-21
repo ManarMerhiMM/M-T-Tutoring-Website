@@ -52,7 +52,7 @@ th, td {
 tr:hover {
     background-color: #dce4f5;
     transition: background 0.3s ease, transform 0.2s ease;
-    transform: scale(1.02); 
+    transform: scale(1.006); 
     cursor: pointer;
 }
 
