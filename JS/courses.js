@@ -115,7 +115,7 @@ fetch('JS/database.json')
       categoryImage.alt = `${category} image`;
       categorySection.appendChild(categoryImage);
 
-      let categoryTitle = document.createElement("h2");
+      let categoryTitle = document.createElement("h1");
       categoryTitle.textContent = category;
       categoryTitle.classList.add("hover-underline");
       categoryTitle.addEventListener("click", () => {
@@ -155,6 +155,20 @@ fetch('JS/database.json')
       
 
       categorySlider.appendChild(categorySection);
+
+      document.getElementById("search_input_category").addEventListener("input" , function(){
+            const searchValueCategory = document.getElementById("search_input_category").value.toLowerCase();
+            document.querySelectorAll(".category-section").forEach(function(section){
+            section.style.display = section.querySelector("h1").textContent.toLowerCase().includes(searchValueCategory) ? "block" : "none";
+            });
+        })
+
+        document.getElementById("search_input_course").addEventListener("input" , function(){
+            const searchValueCourse = document.getElementById("search_input_course").value.toLowerCase();
+            document.querySelectorAll("")
+        })
+    
+    
     }
     
   })
