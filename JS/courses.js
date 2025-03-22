@@ -170,6 +170,26 @@ fetch('JS/database.json')
             })
         })
         
+        const certifiedCheck = document.getElementById("certifiedCheck");
+
+        certifiedCheck.addEventListener("change", function() {
+            if(certifiedCheck.checked){
+                document.querySelectorAll(".hover-underline").forEach(function(course){
+                    const courseNAME = course.textContent;
+                    const foundCourse = courses.find(c => c.name === courseNAME);
+                    if(foundCourse.certified){
+                        course.style.display = "list-item";
+                    } else {
+                        course.style.display = "none";
+                    }
+                });
+            } else {
+                
+                document.querySelectorAll(".hover-underline").forEach(function(course){
+                    course.style.display = "list-item";
+                });
+            }
+        });
         
     
     }
