@@ -117,7 +117,7 @@ fetch('JS/database.json')
 
       let categoryTitle = document.createElement("h1");
       categoryTitle.textContent = category;
-      categoryTitle.classList.add("hover-underline");
+      categoryTitle.classList.add("hover-underline-category");
       categoryTitle.addEventListener("click", () => {
         categoryTitle.addEventListener("click", () => {
             const section = document.getElementById(category);
@@ -165,9 +165,12 @@ fetch('JS/database.json')
 
         document.getElementById("search_input_course").addEventListener("input" , function(){
             const searchValueCourse = document.getElementById("search_input_course").value.toLowerCase();
-            document.querySelectorAll("")
+            document.querySelectorAll(".hover-underline").forEach(function(course){
+              course.style.display = course.textContent.toLowerCase().includes(searchValueCourse) ? "list-item" : "none";
+            })
         })
-    
+        
+        
     
     }
     
