@@ -296,7 +296,7 @@ body {
 }
 /* ========== Main Content Styles ========== */
 #mainContainer {
-  max-width: 1200px;
+  max-width: 1350px;
   margin: 100px auto 40px;
   padding: 30px;
   background: var(--white);
@@ -451,7 +451,7 @@ body {
 }
 
 .viewBtns {
-  width: 300px;
+  width: 100px;
   margin: 15px auto;
   padding: 10px;
   background: var(--primary-blue);
@@ -465,6 +465,7 @@ body {
 .viewBtns:hover {
   background: var(--accent-orange);
   transform: translateY(-2px);
+  cursor: pointer;
 }
 
 /* ========== Responsive Design ========== */
