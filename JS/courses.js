@@ -79,18 +79,14 @@ document.querySelectorAll(".dashBoardInNav").forEach(dashBoard => {
 });
 
 
-// Fetch the data from the external JSON file
 fetch('JS/database.json')
-  .then(response => response.json())  // Parse the JSON data
+  .then(response => response.json())
   .then(data => {
-    const courses = data.courses;  // Access the courses array from the JSON data
+    const courses = data.courses;
 
-    // Create an object to store courses by categories
     let categoriesMap = {};
 
-    // Loop through the courses and group them by category
     courses.forEach(course => {
-      // Loop through each category in the course (it can have multiple categories)
       course.category.forEach(category => {
         if (!categoriesMap[category]) {
           categoriesMap[category] = [];
@@ -99,7 +95,6 @@ fetch('JS/database.json')
       });
     });
 
-    
     const categoryImages = {
       "Tech and Development": "MEDIA/courseImages/TechAndDev.webp",
       "Mathematics": "MEDIA/courseImages/Mathematics.jpg",
@@ -109,46 +104,53 @@ fetch('JS/database.json')
       "Health and Medicine": "MEDIA/courseImages/HealthAndMedicine.jpg"
     };
 
-    
     let categorySlider = document.querySelector('.category-slider');
 
     for (const category in categoriesMap) {
-     
       let categorySection = document.createElement("div");
       categorySection.classList.add("category-section");
 
-      
       let categoryImage = document.createElement("img");
       categoryImage.src = categoryImages[category] || "defaultImage.jpg"; 
       categoryImage.alt = `${category} image`;
       categorySection.appendChild(categoryImage);
 
-      
       let categoryTitle = document.createElement("h2");
       categoryTitle.textContent = category;
+      categoryTitle.classList.add("hover-underline");
+      categoryTitle.addEventListener("click", () => {
+        localStorage.setItem("curCourseName", category);
+        window.location.href = "courseDetails.html";
+      });
       categorySection.appendChild(categoryTitle);
 
-      
       let courseList = document.createElement("ul");
       categoriesMap[category].forEach(courseName => {
         let courseItem = document.createElement("li");
         courseItem.textContent = courseName;
+        courseItem.classList.add("hover-underline");
+
+        courseItem.addEventListener("click", () => {
+          localStorage.setItem("curCourseName", courseName);
+          window.location.href = "courseDetails.html";
+        });
         courseList.appendChild(courseItem);
       });
       categorySection.appendChild(courseList);
 
-      
       let viewCourseBtn = document.createElement("button");
       viewCourseBtn.textContent = "View Courses";
       categorySection.appendChild(viewCourseBtn);
 
-      
       categorySlider.appendChild(categorySection);
     }
   })
   .catch(error => {
     console.error('Error loading the courses data:', error);
   });
+
+
+
 
 
 

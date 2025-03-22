@@ -443,3 +443,11 @@ ul li {
 .category-section button:hover {
   background-color: #0056b3;
 }
+.hover-underline {
+  text-decoration: none;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
+
