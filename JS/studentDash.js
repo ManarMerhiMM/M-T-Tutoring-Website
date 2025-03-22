@@ -1,3 +1,9 @@
+if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "false") {
+  window.location.href = "index.html";
+} else if (localStorage.getItem("curAccountType") !== "student") {
+  window.location.href = "tutorDash.html";
+}
+
 document.getElementById("accountInNav").addEventListener("click", (event) => {
   event.preventDefault();
   if (window.getComputedStyle(document.getElementById("nav-links-burger-1")).display == "none") {
@@ -49,8 +55,8 @@ let Courses;
 
 async function fillCourses() {
   try {
-      const response = await fetch('JS/database.json');
-      const data = await response.json();
+      let response = await fetch('JS/database.json');
+      let data = await response.json();
       Courses = data.courses;
   } catch (error) {
       console.error('Error loading JSON:', error);

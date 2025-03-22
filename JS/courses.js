@@ -82,7 +82,7 @@ document.querySelectorAll(".dashBoardInNav").forEach(dashBoard => {
 fetch('JS/database.json')
   .then(response => response.json())
   .then(data => {
-    const courses = data.courses;
+    let courses = data.courses;
 
     let categoriesMap = {};
 
@@ -95,7 +95,7 @@ fetch('JS/database.json')
       });
     });
 
-    const categoryImages = {
+    let categoryImages = {
       "Tech and Development": "MEDIA/courseImages/TechAndDev.webp",
       "Mathematics": "MEDIA/courseImages/Mathematics.jpg",
       "Science and Engineering": "MEDIA/courseImages/ScienceAndEngineering.jpg",
@@ -106,7 +106,7 @@ fetch('JS/database.json')
 
     let categorySlider = document.querySelector('.category-slider');
 
-    for (const category in categoriesMap) {
+    for (let category in categoriesMap) {
       let categorySection = document.createElement("div");
       categorySection.classList.add("category-section");
 
@@ -120,7 +120,7 @@ fetch('JS/database.json')
       categoryTitle.classList.add("hover-underline-category");
       categoryTitle.addEventListener("click", () => {
         categoryTitle.addEventListener("click", () => {
-            const section = document.getElementById(category);
+            let section = document.getElementById(category);
             if (section) {
               section.scrollIntoView({ behavior: "smooth" });
           
@@ -157,26 +157,26 @@ fetch('JS/database.json')
       categorySlider.appendChild(categorySection);
 
       document.getElementById("search_input_category").addEventListener("input" , function(){
-            const searchValueCategory = document.getElementById("search_input_category").value.toLowerCase();
+            let searchValueCategory = document.getElementById("search_input_category").value.toLowerCase();
             document.querySelectorAll(".category-section").forEach(function(section){
             section.style.display = section.querySelector("h1").textContent.toLowerCase().includes(searchValueCategory) ? "block" : "none";
             });
         })
 
         document.getElementById("search_input_course").addEventListener("input" , function(){
-            const searchValueCourse = document.getElementById("search_input_course").value.toLowerCase();
+            let searchValueCourse = document.getElementById("search_input_course").value.toLowerCase();
             document.querySelectorAll(".hover-underline").forEach(function(course){
               course.style.display = course.textContent.toLowerCase().includes(searchValueCourse) ? "list-item" : "none";
             })
         })
         
-        const certifiedCheck = document.getElementById("certifiedCheck");
+        let certifiedCheck = document.getElementById("certifiedCheck");
 
         certifiedCheck.addEventListener("change", function() {
             if(certifiedCheck.checked){
                 document.querySelectorAll(".hover-underline").forEach(function(course){
-                    const courseNAME = course.textContent;
-                    const foundCourse = courses.find(c => c.name === courseNAME);
+                    let courseNAME = course.textContent;
+                    let foundCourse = courses.find(c => c.name === courseNAME);
                     if(foundCourse.certified){
                         course.style.display = "list-item";
                     } else {

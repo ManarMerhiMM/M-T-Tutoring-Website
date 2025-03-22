@@ -2,8 +2,8 @@ let Accounts;
 
 async function updateAccountsFromDB() {
     try {
-        const response = await fetch('JS/database.json');
-        const data = await response.json();
+        let response = await fetch('JS/database.json');
+        let data = await response.json();
         Accounts = data.accounts;
     } catch (error) {
         console.error('Error loading JSON:', error);

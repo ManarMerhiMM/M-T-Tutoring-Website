@@ -11,7 +11,7 @@ let courseCategories;
 let Courses;
 
 function getRandomItem(arr) {
-    const randomIndex = Math.floor(Math.random() * arr.length);
+    let randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];
 }
 
@@ -58,8 +58,8 @@ else {
 
 async function prepCoursePageUsingJSON() {
     try {
-        const response = await fetch('JS/database.json');
-        const data = await response.json();
+        let response = await fetch('JS/database.json');
+        let data = await response.json();
         Courses = data.courses;
     } catch (error) {
         console.error('Error loading JSON:', error);

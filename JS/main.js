@@ -41,8 +41,8 @@ else {
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    const navToggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    let navToggle = document.querySelector('.nav-toggle');
+    let navLinks = document.querySelector('.nav-links');
 
     navToggle.addEventListener('click', () => {
         navLinks.classList.toggle('active');
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-const courseContainer = document.querySelector(".courses-grid");
+let courseContainer = document.querySelector(".courses-grid");
 if (courseContainer) {
     let scrollAmount = 0;
     function autoScrollCourses() {
@@ -65,7 +65,7 @@ if (courseContainer) {
 }
 
 // Testimonials Slider (If Applicable)
-const testimonials = document.querySelectorAll(".testimonial");
+let testimonials = document.querySelectorAll(".testimonial");
 let currentTestimonial = 0;
 
 function showTestimonial(index) {
@@ -84,7 +84,7 @@ if (testimonials.length > 0) {
 
 // Hero Section Animation on Scroll
 window.addEventListener("scroll", () => {
-    const hero = document.querySelector(".hero");
+    let hero = document.querySelector(".hero");
     if (hero && window.scrollY > 50) {
         hero.style.opacity = "0.8";
         hero.style.transition = "opacity 0.5s ease-in-out";
@@ -95,8 +95,8 @@ window.addEventListener("scroll", () => {
 
 // Future Enhancements: Dynamic content fetching, interactive elements, API integration for course updates.
 document.addEventListener('DOMContentLoaded', function () {
-    const toggle = document.querySelector('.nav-toggle');
-    const links = document.querySelector('.nav-links');
+    let toggle = document.querySelector('.nav-toggle');
+    let links = document.querySelector('.nav-links');
 
     toggle.addEventListener('click', () => {
         links.classList.toggle('active');
@@ -220,8 +220,8 @@ async function getRandomCoursesForDisplayUsingJSON() {
     let Courses;
 
     try {
-        const response = await fetch('JS/database.json');
-        const data = await response.json();
+        let response = await fetch('JS/database.json');
+        let data = await response.json();
         Courses = data.courses;
     } catch (error) {
         console.error('Error loading JSON:', error);

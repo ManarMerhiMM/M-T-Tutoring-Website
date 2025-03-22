@@ -1,8 +1,8 @@
 // main.js - Global Scripts for M&T Tutoring Website
 
 // Mobile Navigation Toggle
-const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelector(".nav-links");
+let navToggle = document.querySelector(".nav-toggle");
+let navLinks = document.querySelector(".nav-links");
 
 if (navToggle) {
     navToggle.addEventListener("click", () => {
@@ -21,7 +21,7 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
+        let target = document.querySelector(this.getAttribute("href"));
         if (target) {
             target.scrollIntoView({ behavior: "smooth" });
         }
@@ -30,7 +30,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Sticky Navbar Effect
 window.addEventListener("scroll", () => {
-    const navbar = document.querySelector("nav");
+    let navbar = document.querySelector("nav");
     if (window.scrollY > 50) {
         navbar.classList.add("scrolled");
     } else {

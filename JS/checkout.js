@@ -51,9 +51,9 @@ document.querySelectorAll(".dashBoardInNav").forEach(dashBoard=>{dashBoard.addEv
 
 
 document.addEventListener("DOMContentLoaded", async () => {
-    const listContainer = document.querySelector(".listContainer");
-    const totalPriceLabel = document.querySelector(".totalPriceLabel");
-    const clearAllBtn = document.getElementById("clearAll_btn");
+    let listContainer = document.querySelector(".listContainer");
+    let totalPriceLabel = document.querySelector(".totalPriceLabel");
+    let clearAllBtn = document.getElementById("clearAll_btn");
 
     let cartCourses = JSON.parse(localStorage.getItem("cartCourses")) || [];
     let totalPrice = 0;
@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     async function fetchCourses() {
         try {
-            const response = await fetch("JS/database.json");
-            const data = await response.json();
+            let response = await fetch("JS/database.json");
+            let data = await response.json();
             coursesData = data.courses;
             renderCart();
         } catch (error) {
@@ -84,21 +84,21 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
         cartCourses.forEach((courseName, index) => {
-            const course = coursesData.find(c => c.name === courseName);
+            let course = coursesData.find(c => c.name === courseName);
             if (!course) return; 
 
-            const courseItem = document.createElement("div");
+            let courseItem = document.createElement("div");
             courseItem.classList.add("courseDetails");
 
-            const titleLabel = document.createElement("label");
+            let titleLabel = document.createElement("label");
             titleLabel.classList.add("courseNames");
             titleLabel.textContent = course.name;
 
-            const priceLabel = document.createElement("label");
+            let priceLabel = document.createElement("label");
             priceLabel.classList.add("priceLabel");
             priceLabel.textContent = `Price: $${parseFloat(course.price.replace("$", "")).toFixed(2)}`;
 
-            const removeBtn = document.createElement("button");
+            let removeBtn = document.createElement("button");
             removeBtn.textContent = "Remove";
             removeBtn.classList.add("remove_btn");
             removeBtn.dataset.courseName = course.name; 
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     
     listContainer.addEventListener("click", (event) => {
         if (event.target.classList.contains("remove_btn")) {
-            const courseName = event.target.dataset.courseName;
+            let courseName = event.target.dataset.courseName;
             cartCourses = cartCourses.filter(c => c !== courseName);
             localStorage.setItem("cartCourses", JSON.stringify(cartCourses));
             renderCart();
