@@ -158,6 +158,17 @@ footer p {
     font-size: 14px;
 }
 
+
+#cartLI a i, .toRemoveWhenNotLoggedIn a i {
+    font-size: 1.5rem; /* Adjust size */
+    color: #ffffff; /* Match your theme */
+    transition: color 0.3s ease-in-out;
+  }
+  
+  #cartLI a i:hover, .toRemoveWhenNotLoggedIn a i:hover {
+    color: #ffffff;
+  }
+  
 /* Responsive Styles */
 /* @media (max-width: 768px) {
     .nav-links {

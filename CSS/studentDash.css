@@ -36,7 +36,7 @@ body {
   left: 0;
   right: 0;
   z-index: 2147483647 !important; /* Force highest stacking order */
-  transform: translateZ(0); /* Create a new stacking context */
+  transform: translateZ(0);       /* Create a new stacking context */
   padding: 12px 0;
   background-color: #294169;
   backdrop-filter: blur(25px) saturate(180%);
@@ -293,14 +293,15 @@ body {
   }
 }
 
-/* ========== Footer (Same as Provided) ========== */
+/* ========== Footer ========== */
 .main-footer {
   background: linear-gradient(135deg, #1A365D, #2B6CB0);
   color: #fff;
   padding: 3rem 0;
-  font-family: 'Arial', sans-serif; /* or var(--font-body) if you prefer */
+  font-family: 'Arial', sans-serif;
   position: relative;
   overflow: hidden;
+  margin-top: 40px;
 }
 
 .main-footer .container {
@@ -309,7 +310,6 @@ body {
   padding: 0 20px;
 }
 
-/* Arrange elements in a column and center them */
 .footer-grid {
   display: flex;
   flex-direction: column;
@@ -318,7 +318,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Footer Brand (Logo and Social Links) */
 .footer-brand {
   text-align: center;
 }
@@ -339,7 +338,6 @@ body {
   font-size: 1rem;
 }
 
-/* Social Links */
 .social-links {
   display: flex;
   justify-content: center;
@@ -358,7 +356,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Footer Navigation (Quick Links) */
 .footer-nav {
   text-align: center;
   margin-bottom: 2rem;
@@ -371,7 +368,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* List quick links horizontally */
 .footer-nav ul {
   display: flex;
   justify-content: center;
@@ -391,8 +387,7 @@ body {
   color: #f57c00;
 }
 
-/* Copyright */
-.main-footer .copyright {
+.main-footer copyright {
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
   padding-top: 1rem;
@@ -401,15 +396,23 @@ body {
 
 /* ========== Dashboard-Specific Styles ========== */
 
+/* 
+  We remove the grid for .dashboard-content, 
+  so My Courses and Suggested Courses stack vertically.
+*/
+.dashboard-content {
+  display: flex;
+  flex-direction: column; /* vertical stack */
+  gap: 30px;             /* spacing between the two sections */
+}
+
 /* Dashboard Container */
 .dashboard-container {
-  /* We add extra top padding to avoid the nav overlapping the content */
-  padding: 120px 20px 40px;
+  padding: 120px 20px 40px; /* Offset for fixed nav */
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Page Heading */
 .dashboard-container h1 {
   text-align: center;
   font-family: var(--font-heading);
@@ -418,18 +421,11 @@ body {
   margin-bottom: 40px;
 }
 
-/* Dashboard Content Layout */
-.dashboard-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
 /* Dashboard Card Styling */
 .dashboard-card {
   background: var(--white);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 2px 10px rgba(0, 0, 255, 0.43);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -448,51 +444,56 @@ body {
   padding-bottom: 5px;
 }
 
-/* Section-Specific Content (if needed) */
+/* Horizontal Scroll for My Courses & Suggested Courses */
 #courseList,
-#upcomingSessions,
-#progressOverview {
-  margin-top: 15px;
+#upcomingSessions {
+  display: flex;           /* flex row for cards */
+  gap: 20px;
+  overflow-x: auto;        /* horizontal scroll if many cards */
+  scroll-behavior: smooth; /* smooth scrolling */
+  padding-bottom: 10px;    /* optional bottom spacing */
 }
 
-/* Example Item Styling for Dynamically Populated Lists */
-.dashboard-item {
-  background: var(--light-gray);
-  padding: 10px 15px;
-  border-radius: 6px;
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: var(--dark-gray);
+/* Style the scrollbar (WebKit browsers) */
+#courseList::-webkit-scrollbar,
+#upcomingSessions::-webkit-scrollbar {
+  height: 8px;
+}
+#courseList::-webkit-scrollbar-track,
+#upcomingSessions::-webkit-scrollbar-track {
+  background: #e1e1e1;
+  border-radius: 4px;
+}
+#courseList::-webkit-scrollbar-thumb,
+#upcomingSessions::-webkit-scrollbar-thumb {
+  background: #c2c2c2;
+  border-radius: 4px;
 }
 
-/* Footer Spacing on Dashboard (Optional) */
-.main-footer {
-  margin-top: 40px;
-}
-
-
+/* Each card has a fixed width so they appear side by side in the scroll row */
 .course-card {
-  background: rgba(182, 182, 182, 0.7);
-  /* Semi-transparent white */
+  flex: 0 0 300px;               /* fixed width for horizontal scrolling */
+  background: linear-gradient(
+    135deg, 
+    rgba(255, 255, 255, 0.25), 
+    rgba(255, 255, 255, 0.05)
+  );                             /* subtle gradient */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* thin, translucent border */
   border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s ease;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  border-radius: 12px;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  /* Adds a glassy effect */
-  border-radius: 12px;
+  backdrop-filter: blur(10px) saturate(150%);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   padding: 20px;
+  margin-bottom: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .course-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-
+/* Thumbnail and image styling */
 .course-thumbnail {
   position: relative;
   height: 250px;
@@ -510,49 +511,11 @@ body {
   transform: scale(1.05);
 }
 
-
-.course-thumbnail {
-  position: relative;
-  height: 250px;
-  overflow: hidden;
+/* Content inside each card */
+.course-content {
+  padding: 20px;
+  text-align: center;
 }
-
-.course-thumbnail img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.course-card:hover .course-thumbnail img {
-  transform: scale(1.05);
-}
-
-
-.course-content p {
-  font-size: 1rem;
-  color: #4A5568;
-  margin-bottom: 15px;
-}
-
-.course-content .btn {
-  color: #1a2a6c;
-  margin-top: 10px;
-  cursor: pointer;
-  display: block;
-  margin: auto;
-}
-
-
-.btn-secondary {
-  background-color: var(--accent-gold);
-  color: var(--white);
-}
-
-.btn-secondary:hover {
-  background-color: #e69a00;
-}
-
 
 .course-content h3 {
   font-size: 1.6rem;
@@ -561,7 +524,41 @@ body {
   font-family: var(--font-heading);
 }
 
-.course-content {
-  padding: 20px;
-  text-align: center;
+.course-content p {
+  font-size: 1rem;
+  color: #4A5568;
+  margin-bottom: 15px;
+}
+
+/* Button inside the card */
+.course-content .btn {
+  color: #1a2a6c;
+  margin-top: 10px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #ffffff, #ffffff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-family: var(--font-body, sans-serif);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #e06800f1, #f57b008a);
+  color: white;
+  font-weight: bold;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
