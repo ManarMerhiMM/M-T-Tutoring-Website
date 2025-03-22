@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tutor Dashboard - M&T Tutoring</title>
 
-    <!-- Font Awesome (for icons, e.g., cart icon) -->
+    <!-- Font Awesome (for icons) -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -34,14 +34,13 @@
           <li><a href="contact.html">Contact</a></li>
           <li id="cartLI">
             <a href="checkout.html">
-              <!-- Cart Icon -->
               <i class="fa-solid fa-shopping-cart"></i>
             </a>
           </li>
           <div id="accountDiv">
             <li><a href="#" id="accountInNav">Account</a></li>
             <ul class="nav-links-burger" id="nav-links-burger-1">
-              <li><a href="studentDash.html" class="dashBoardInNav">Dashboard</a></li>
+              <li><a href="tutorDash.html" class="dashBoardInNav">Dashboard</a></li>
               <li><a href="account.html">Account</a></li>
               <li><a href="#" class="signoutInNav">Signout</a></li>
             </ul>
@@ -78,11 +77,11 @@
       </header>
 
       <section class="dashboard-content">
-        <!-- Card 1: My Courses (Tutor's classes) -->
+        <!-- Card 1: My Courses (for the tutor) -->
         <article class="dashboard-card">
           <h2>My Courses</h2>
           <div id="classList">
-            <!-- Classes taught by this tutor will be dynamically populated here -->
+            <!-- Classes taught by this tutor will be populated here -->
           </div>
         </article>
 
@@ -90,7 +89,7 @@
         <article class="dashboard-card">
           <h2>Student Requests</h2>
           <div id="requestsList">
-            <!-- Student requests will be dynamically populated here -->
+            <!-- Student requests will be populated here -->
           </div>
         </article>
       </section>
