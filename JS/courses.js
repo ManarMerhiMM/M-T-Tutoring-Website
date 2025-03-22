@@ -101,7 +101,7 @@ fetch('JS/database.json')
       "Science and Engineering": "MEDIA/courseImages/ScienceAndEngineering.jpg",
       "Business and Management": "MEDIA/courseImages/BusinessAndManagement.webp",
       "Biology and Biomedical": "MEDIA/courseImages/BiologyAndBiomedical.jpg",
-      "Health and Medicine": "MEDIA/courseImages/HealthAndMedicine.jpg"
+      "Health & Medicine": "MEDIA/courseImages/HealthAndMedicine.jpg"
     };
 
     let categorySlider = document.querySelector('.category-slider');
@@ -111,7 +111,7 @@ fetch('JS/database.json')
       categorySection.classList.add("category-section");
 
       let categoryImage = document.createElement("img");
-      categoryImage.src = categoryImages[category] || "defaultImage.jpg"; 
+      categoryImage.src = categoryImages[category]; 
       categoryImage.alt = `${category} image`;
       categorySection.appendChild(categoryImage);
 
