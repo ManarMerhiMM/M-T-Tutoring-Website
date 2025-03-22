@@ -119,8 +119,22 @@ fetch('JS/database.json')
       categoryTitle.textContent = category;
       categoryTitle.classList.add("hover-underline");
       categoryTitle.addEventListener("click", () => {
-        localStorage.setItem("curCourseName", category);
-        window.location.href = "courseDetails.html";
+        categoryTitle.addEventListener("click", () => {
+            const section = document.getElementById(category);
+            if (section) {
+              section.scrollIntoView({ behavior: "smooth" });
+          
+              
+              section.classList.add("highlighted");
+          
+             
+              setTimeout(() => {
+                section.classList.remove("highlighted");
+              }, 2000);
+            }
+          });
+          
+          
       });
       categorySection.appendChild(categoryTitle);
 
@@ -138,12 +152,11 @@ fetch('JS/database.json')
       });
       categorySection.appendChild(courseList);
 
-      let viewCourseBtn = document.createElement("button");
-      viewCourseBtn.textContent = "View Courses";
-      categorySection.appendChild(viewCourseBtn);
+      
 
       categorySlider.appendChild(categorySection);
     }
+    
   })
   .catch(error => {
     console.error('Error loading the courses data:', error);

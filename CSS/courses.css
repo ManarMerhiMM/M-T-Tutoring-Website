@@ -401,7 +401,7 @@ body {
 }
 
 .category-section:hover {
-  transform: scale(1.05);
+  transform: scale(1.0099999);
 }
 
 .category-section img {
@@ -450,4 +450,8 @@ ul li {
 .hover-underline:hover {
   text-decoration: underline;
 }
+.highlighted {
+  color: rgb(28, 3, 219);
+}
+
 

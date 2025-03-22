@@ -52,13 +52,48 @@
     </header>
 
     <main class="container">
-        
+      
       <div id="categories-slider-container">
+        <label for="search_input" class="search-label">
+          <span>Search:</span>
+          <input type="text" id="search_input" class="search-input" placeholder="Enter course name...">
+        </label>
+      
+        <div class="filter-container">
+          <label for="price_checkbox" class="filter-checkbox-label">
+            <input type="checkbox" id="price_checkbox" class="filter-checkbox">
+            <span>Certified</span>
+          </label>
+      
+          <select id="filter_select" class="filter-select">
+            <option value="name">Filter by Name</option>
+            <option value="price">Filter by Price</option>
+          </select>
+
         <div class="category-slider">
-          <!-- Category sections will be dynamically added here by JavaScript -->
         </div>
       </div>
       
+      
+      <div id="categories-description-container">
+        <h1 id="Mathematics">Mathematics</h1>
+        <p>Explore the fundamental language of logic and numbers. Our Mathematics courses cover topics from basic arithmetic to advanced calculus, algebra, statistics, and applied mathematics—designed to sharpen analytical thinking and problem-solving skills essential across all scientific and technological domains.</p>
+
+        <h1 id="Tech and Development">Tech and Development</h1>
+        <p>Stay ahead in the digital age with our Tech and Development courses. Learn cutting-edge skills in web development, programming, software engineering, mobile apps, cybersecurity, and AI. Ideal for aspiring developers, tech enthusiasts, and career switchers looking to break into the tech industry.</p>
+
+        <h1 id="Science and Engineering">Science and Engineering</h1>
+        <p>Dive into the principles that drive innovation and discovery. From physics and chemistry to mechanical, electrical, and civil engineering, these courses combine theory with hands-on application to equip you for real-world challenges and technological advancements.</p>
+
+        <h1 id="Business and Management">Business and Management</h1>
+        <p>Gain the skills to lead, innovate, and succeed in the corporate world. Our Business and Management courses include marketing, entrepreneurship, leadership, finance, and organizational strategy—perfect for future managers, executives, and entrepreneurs.</p>
+
+        <h1 id="Biology and Biomedical">Biology and Biomedical</h1>
+        <p>Uncover the complexities of living organisms and the science of life. These courses span molecular biology, genetics, biotechnology, and biomedical research, preparing you for careers in healthcare, research, and the life sciences industry.</p>
+
+        <h1 id="Health and Medicine">Health & Medecine</h1>
+        <p>Build a solid foundation in medical science and public health. Topics include human anatomy, diseases, clinical practice, mental health, nutrition, and healthcare systems. These courses are designed for future medical professionals and anyone passionate about health and wellness.</p>
+      </div>
         
     </main>
 
