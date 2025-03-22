@@ -126,14 +126,12 @@
   top: 100%;
   right: 0%;
   flex-direction: column;
-  background: rgba(218, 218, 218, 0.158);
+  background: linear-gradient(135deg, #4facfeb8 0%, #071967 100%);
   padding: 40px 10px 40px 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.616);
-  border-left: 1px solid rgba(0, 0, 0, 0.616);
+  border-bottom-right-radius: 40px;
   border-bottom-left-radius: 40px;
   align-items: center;
   gap: 25px;
-
   transform: translateY(-20px);
   animation: dropDown 0.5s ease forwards;
 }
@@ -147,9 +145,7 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   border-radius: 20px;
-  background: linear-gradient(45deg, #1A365D, #2B6CB0);
 }
-
 .nav-links-burger a:not(.btn):hover {
   color: #f57c00;
   background: rgba(245, 124, 0, 0.08);
