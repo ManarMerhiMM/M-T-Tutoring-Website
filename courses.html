@@ -1,102 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Courses</title>
-    <link rel="stylesheet" href="CSS/global.css">
-    <link rel="stylesheet" href="CSS/courses.css">
-    <link rel="icon" href="MEDIA/favicon.ico">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
 
-<body>
+    <!-- Global & Courses CSS -->
+    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="CSS/courses.css" />
+    <link rel="icon" href="MEDIA/favicon.ico" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ======================== NAVBAR (Unchanged) ======================== -->
     <header>
-        <nav class="glass-nav" aria-label="Main navigation">
-            <div class="nav-container">
-              <a href="index.html" class="nav-logo">
-                <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo">
-                <span class="logo-text">M & T Tutoring</span>
+      <nav class="glass-nav" aria-label="Main navigation">
+        <div class="nav-container">
+          <a href="index.html" class="nav-logo">
+            <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo" />
+            <span class="logo-text">M & T Tutoring</span>
+          </a>
+          <ul class="nav-links" id="NAVLIST">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html" aria-current="page">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li id="cartLI">
+              <a href="checkout.html">
+                <i class="fa-solid fa-shopping-cart"></i>
               </a>
-              <ul class="nav-links" id="NAVLIST">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html" aria-current="page">Courses</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li id="cartLI"><a href="checkout.html"> <i class="fa-solid fa-shopping-cart"></i></a></li>
-                <div id="accountDiv">
-                  <li><a href="" id="accountInNav">Account</a></li>
-                  <ul class="nav-links-burger" id="nav-links-burger-1">
-                    <li><a href="" class="dashBoardInNav">Dashboard</a></li>
-                    <li><a href="account.html">Account</a></li>
-                    <li><a href="" class="signoutInNav">Signout</a></li>
-                  </ul>
-                </div>
+            </li>
+            <div id="accountDiv">
+              <li><a href="#" id="accountInNav">Account</a></li>
+              <ul class="nav-links-burger" id="nav-links-burger-1">
+                <li><a href="#" class="dashBoardInNav">Dashboard</a></li>
+                <li><a href="account.html">Account</a></li>
+                <li><a href="#" class="signoutInNav">Signout</a></li>
               </ul>
-              <div class="nav-toggle">
-                <span>&#9776;</span>
-                <ul class="nav-links-burger" id="nav-links-burger-2">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="courses.html" aria-current="page">Courses</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                  <li class="toRemoveWhenNotLoggedIn"><a href="checkout.html"> <i class="fa-solid fa-shopping-cart"></i></a></li>
-                  <li class="toRemoveWhenNotLoggedIn"><a href="" class="dashBoardInNav">Dashboard</a></li>
-                  <li class="toRemoveWhenNotLoggedIn"><a href="account.html">Account</a></li>
-                  <li class="toRemoveWhenNotLoggedIn"><a href="" class="signoutInNav">Signout</a></li>
-                </ul>
-              </div>
             </div>
-          </nav>
+          </ul>
+          <div class="nav-toggle">
+            <span>&#9776;</span>
+            <ul class="nav-links-burger" id="nav-links-burger-2">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="courses.html" aria-current="page">Courses</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li class="toRemoveWhenNotLoggedIn">
+                <a href="checkout.html">
+                  <i class="fa-solid fa-shopping-cart"></i>
+                </a>
+              </li>
+              <li class="toRemoveWhenNotLoggedIn">
+                <a href="#" class="dashBoardInNav">Dashboard</a>
+              </li>
+              <li class="toRemoveWhenNotLoggedIn">
+                <a href="account.html">Account</a>
+              </li>
+              <li class="toRemoveWhenNotLoggedIn">
+                <a href="#" class="signoutInNav">Signout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
+    <!-- ======================== END NAVBAR ======================== -->
 
     <main class="container">
-      
+      <!-- 
+        Filter row (Category filter, Course filter, Certified checkbox) 
+        + category slider container 
+      -->
       <div id="categories-slider-container">
-        <label for="search_input" class="search-label">
-          <span>Category:</span>
-          <input type="text" id="search_input_category" class="search-input" >
-          <br>
-          <span>Course:</span>
-          <input type="text" id="search_input_course" class="search-input">
-        </label>
-      
-        <div class="filter-container">
-          <label for="price_checkbox" class="filter-checkbox-label">
-            <span>Certified</span>
-            <input type="checkbox" id="certifiedCheck" class="filter-checkbox">
-            
+        <div class="filter-row">
+          <!-- Category Filter -->
+          <label class="search-label">
+            <span>Category:</span>
+            <input type="text" id="search_input_category" class="search-input" />
           </label>
-          
 
+          <!-- Course Filter -->
+          <label class="search-label">
+            <span>Course:</span>
+            <input type="text" id="search_input_course" class="search-input" />
+          </label>
+
+          <!-- Certified Checkbox -->
+          <div class="filter-container">
+            <label class="filter-checkbox-label">
+              <span>Certified</span>
+              <input type="checkbox" id="certifiedCheck" class="filter-checkbox" />
+            </label>
+          </div>
+        </div>
+
+        <!-- Category slider -->
         <div class="category-slider">
+          <!-- Categories appended via JS; each card has its own Show More button -->
         </div>
       </div>
-      
-      
+
+      <!-- Categories Description Section -->
       <div id="categories-description-container">
         <h1 id="Mathematics">Mathematics</h1>
-        <p>Explore the fundamental language of logic and numbers. Our Mathematics courses cover topics from basic arithmetic to advanced calculus, algebra, statistics, and applied mathematics—designed to sharpen analytical thinking and problem-solving skills essential across all scientific and technological domains.</p>
+        <p>
+          Explore the fundamental language of logic and numbers. Our Mathematics courses cover topics from basic arithmetic to advanced calculus, algebra, statistics, and applied mathematics—designed to sharpen analytical thinking and problem-solving skills essential across all scientific and technological domains.
+        </p>
 
         <h1 id="Tech and Development">Tech and Development</h1>
-        <p>Stay ahead in the digital age with our Tech and Development courses. Learn cutting-edge skills in web development, programming, software engineering, mobile apps, cybersecurity, and AI. Ideal for aspiring developers, tech enthusiasts, and career switchers looking to break into the tech industry.</p>
+        <p>
+          Stay ahead in the digital age with our Tech and Development courses. Learn cutting-edge skills in web development, programming, software engineering, mobile apps, cybersecurity, and AI. Ideal for aspiring developers, tech enthusiasts, and career switchers looking to break into the tech industry.
+        </p>
 
         <h1 id="Science and Engineering">Science and Engineering</h1>
-        <p>Dive into the principles that drive innovation and discovery. From physics and chemistry to mechanical, electrical, and civil engineering, these courses combine theory with hands-on application to equip you for real-world challenges and technological advancements.</p>
+        <p>
+          Dive into the principles that drive innovation and discovery. From physics and chemistry to mechanical, electrical, and civil engineering, these courses combine theory with hands-on application to equip you for real-world challenges and technological advancements.
+        </p>
 
         <h1 id="Business and Management">Business and Management</h1>
-        <p>Gain the skills to lead, innovate, and succeed in the corporate world. Our Business and Management courses include marketing, entrepreneurship, leadership, finance, and organizational strategy—perfect for future managers, executives, and entrepreneurs.</p>
+        <p>
+          Gain the skills to lead, innovate, and succeed in the corporate world. Our Business and Management courses include marketing, entrepreneurship, leadership, finance, and organizational strategy—perfect for future managers, executives, and entrepreneurs.
+        </p>
 
         <h1 id="Biology and Biomedical">Biology and Biomedical</h1>
-        <p>Uncover the complexities of living organisms and the science of life. These courses span molecular biology, genetics, biotechnology, and biomedical research, preparing you for careers in healthcare, research, and the life sciences industry.</p>
+        <p>
+          Uncover the complexities of living organisms and the science of life. These courses span molecular biology, genetics, biotechnology, and biomedical research, preparing you for careers in healthcare, research, and the life sciences industry.
+        </p>
 
-        <h1 id="Health and Medicine">Health & Medecine</h1>
-        <p>Build a solid foundation in medical science and public health. Topics include human anatomy, diseases, clinical practice, mental health, nutrition, and healthcare systems. These courses are designed for future medical professionals and anyone passionate about health and wellness.</p>
+        <h1 id="Health and Medicine">Health &amp; Medicine</h1>
+        <p>
+          Build a solid foundation in medical science and public health. Topics include human anatomy, diseases, clinical practice, mental health, nutrition, and healthcare systems. These courses are designed for future medical professionals and anyone passionate about health and wellness.
+        </p>
       </div>
-        
     </main>
 
-    <script src="JS/courses.js"></script> 
-</body>
+    <script src="JS/courses.js"></script>
+  </body>
 </html>
