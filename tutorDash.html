@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutor Dashboard - M&T Tutoring</title>
+
+    <!-- Font Awesome (for icons, e.g., cart icon) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <!-- Global CSS (nav, footer, etc.) -->
+    <link rel="stylesheet" href="CSS/global.css" />
+
+    <!-- Tutor Dashboard-Specific CSS -->
+    <link rel="stylesheet" href="CSS/tutorDash.css" />
+
+    <link rel="icon" href="MEDIA/favicon.ico" />
+  </head>
+  <body>
+    <!-- ========================= NAVBAR (Unchanged) ========================= -->
+    <nav class="glass-nav" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo" />
+          <span class="logo-text">M & T Tutoring</span>
+        </a>
+        <ul class="nav-links" id="NAVLIST">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="cartLI">
+            <a href="checkout.html">
+              <!-- Cart Icon -->
+              <i class="fa-solid fa-shopping-cart"></i>
+            </a>
+          </li>
+          <div id="accountDiv">
+            <li><a href="#" id="accountInNav">Account</a></li>
+            <ul class="nav-links-burger" id="nav-links-burger-1">
+              <li><a href="studentDash.html" class="dashBoardInNav">Dashboard</a></li>
+              <li><a href="account.html">Account</a></li>
+              <li><a href="#" class="signoutInNav">Signout</a></li>
+            </ul>
+          </div>
+        </ul>
+        <div class="nav-toggle">
+          <span>&#9776;</span>
+          <ul class="nav-links-burger" id="nav-links-burger-2">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="toRemoveWhenNotLoggedIn">
+              <a href="checkout.html">
+                <i class="fa-solid fa-shopping-cart"></i>
+              </a>
+            </li>
+            <li class="toRemoveWhenNotLoggedIn">
+              <a href="studentDash.html" class="dashBoardInNav">Dashboard</a>
+            </li>
+            <li class="toRemoveWhenNotLoggedIn"><a href="account.html">Account</a></li>
+            <li class="toRemoveWhenNotLoggedIn">
+              <a href="#" class="signoutInNav">Signout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- ========================= END NAVBAR ========================= -->
+
+    <main class="dashboard-container">
+      <header>
+        <h1>Tutor Dashboard</h1>
+      </header>
+
+      <section class="dashboard-content">
+        <!-- Card 1: My Courses (Tutor's classes) -->
+        <article class="dashboard-card">
+          <h2>My Courses</h2>
+          <div id="classList">
+            <!-- Classes taught by this tutor will be dynamically populated here -->
+          </div>
+        </article>
+
+        <!-- Card 2: Student Requests (or other tutor-specific feature) -->
+        <article class="dashboard-card">
+          <h2>Student Requests</h2>
+          <div id="requestsList">
+            <!-- Student requests will be dynamically populated here -->
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <!-- ========================= FOOTER (Unchanged) ========================= -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="MEDIA/logo.jpeg" alt="M&T Tutoring Logo" />
+            <p>Empowering Lebanon's Learners Since 2023</p>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/m_and_t_tutoring/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://wa.me/96181671594"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="tutor-apply.html">Become a Tutor</a></li>
+              <li><a href="webinars.html">Webinars</a></li>
+              <li><a href="careers.html">Career Support</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 M&T Tutoring. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <!-- ========================= END FOOTER ========================= -->
+
+    <!-- Tutor Dashboard JS -->
+    <script src="JS/tutorDash.js"></script>
+  </body>
+</html>
