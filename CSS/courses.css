@@ -5,46 +5,7 @@ body {
     color: #333;
 }
 
-.container {
-    max-width: 85%;
-    margin: auto;
-    text-align: center;
-    padding-top: 50px; 
-}
 
-  
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    margin-top: 200px; 
-}
-
-th {
-    background-color: #0056b3;
-    color: white;
-    text-transform: uppercase;
-    padding: 14px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-th, td {
-    border: 1px solid #ddd;
-    padding: 14px;
-    text-align: left;
-    font-size: 16px;
-}
-
-tr:hover {
-    background-color: #dce4f5;
-    transition: background 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
-}
 
 .certified-yes {
     color: #2d9c5b;
