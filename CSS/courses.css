@@ -246,7 +246,8 @@ body {
   
   .search-label span {
     margin-bottom: 0.3rem;
-    font-weight: 500;
+    font-weight:bold;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   .search-input {
@@ -260,6 +261,7 @@ body {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    justify-content: center;
   }
   
   .filter-checkbox-label {
@@ -267,6 +269,13 @@ body {
     align-items: center;
     gap: 0.3rem;
     font-size: 1rem;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .filter-checkbox-label span {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   .filter-checkbox {
