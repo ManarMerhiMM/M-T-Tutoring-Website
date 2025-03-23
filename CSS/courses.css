@@ -513,4 +513,36 @@ body {
       align-items: flex-start;
     }
   }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .category-title-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 4px;
+  }
+  
+  .category-title-link:hover {
+    color: #0077cc;
+    border-bottom: 2px solid #0077cc;
+    cursor: pointer;
+  }
+  @keyframes highlightFlash {
+    0% {
+      background-color: rgb(64, 0, 255);
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+  
+  .section-highlight {
+    animation: highlightFlash 0.5s ease-out;
+  }
+  
+  
   
