@@ -1,83 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>M&T Tutoring</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M&T Tutoring</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="CSS/global.css">
-  <link rel="stylesheet" href="CSS/checkout.css">
-  <link rel="icon" href="MEDIA/favicon.ico">
-</head>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
 
-<body>
-  <nav class="glass-nav" aria-label="Main navigation">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo">
-        <span class="logo-text" style="color: white;">M & T Tutoring</span>
-      </a>
-      <ul class="nav-links" id="NAVLIST">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="courses.html">Courses</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li id="cartLI"><a href="checkout.html" aria-current="page"> <i class="fa-solid fa-shopping-cart"></i></a></li>
-        <div id="accountDiv">
-          <li><a href="" id="accountInNav">Account</a></li>
-          <ul class="nav-links-burger" id="nav-links-burger-1">
-            <li><a href="" class="dashBoardInNav">Dashboard</a></li>
-            <li><a href="account.html">Account</a></li>
-            <li><a href="" class="signoutInNav">Signout</a></li>
-          </ul>
-        </div>
-      </ul>
-      <div class="nav-toggle">
-        <span>&#9776;</span>
-        <ul class="nav-links-burger" id="nav-links-burger-2">
+    <!-- Global & Checkout CSS -->
+    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="CSS/checkout.css" />
+    <link rel="icon" href="MEDIA/favicon.ico" />
+  </head>
+
+  <body>
+    <!-- ==================== NAVBAR (Unchanged) ==================== -->
+    <nav class="glass-nav" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo" />
+          <span class="logo-text" style="color: white;">M & T Tutoring</span>
+        </a>
+        <ul class="nav-links" id="NAVLIST">
           <li><a href="index.html">Home</a></li>
           <li><a href="courses.html">Courses</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li class="toRemoveWhenNotLoggedIn"><a href="checkout.html" aria-current="page"> <i class="fa-solid fa-shopping-cart"></i></a></li>
-          <li class="toRemoveWhenNotLoggedIn"><a href="" class="dashBoardInNav">Dashboard</a></li>
-          <li class="toRemoveWhenNotLoggedIn"><a href="account.html">Account</a></li>
-          <li class="toRemoveWhenNotLoggedIn"><a href="" class="signoutInNav">Signout</a></li>
+          <li id="cartLI">
+            <a href="checkout.html" aria-current="page">
+              <i class="fa-solid fa-shopping-cart"></i>
+            </a>
+          </li>
+          <div id="accountDiv">
+            <li><a href="#" id="accountInNav">Account</a></li>
+            <ul class="nav-links-burger" id="nav-links-burger-1">
+              <li><a href="#" class="dashBoardInNav">Dashboard</a></li>
+              <li><a href="account.html">Account</a></li>
+              <li><a href="#" class="signoutInNav">Signout</a></li>
+            </ul>
+          </div>
         </ul>
+        <div class="nav-toggle">
+          <span>&#9776;</span>
+          <ul class="nav-links-burger" id="nav-links-burger-2">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="toRemoveWhenNotLoggedIn">
+              <a href="checkout.html" aria-current="page">
+                <i class="fa-solid fa-shopping-cart"></i>
+              </a>
+            </li>
+            <li class="toRemoveWhenNotLoggedIn">
+              <a href="#" class="dashBoardInNav">Dashboard</a>
+            </li>
+            <li class="toRemoveWhenNotLoggedIn"><a href="account.html">Account</a></li>
+            <li class="toRemoveWhenNotLoggedIn"><a href="#" class="signoutInNav">Signout</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+    <!-- ==================== END NAVBAR ==================== -->
 
+    <!-- 
+      Instead of absolutely positioning #CONTAINER, we let it flow naturally 
+      so it's above the footer 
+    -->
+    <main>
+      <br /><br /><br /><br />
 
-  <br>
-  <br><br><br>
-  <div id="CONTAINER">
-    <div id="image">
-      <a href="https://apps.whish.money"><img src="MEDIA/Blue 3D Shop Payment Card Instagram Post.png"></a>
-    </div>
-    <div class="listContainer">
-      <div class="courseDetails">
-        <label id="titleCourse">Title of the course</label>
-        <label class="priceLabel">Price:</label>
+      <div id="CONTAINER">
+        <!-- Existing Image Link to Whish -->
+        <div id="image">
+          <a href="https://apps.whish.money">
+            <img
+              src="MEDIA/Blue 3D Shop Payment Card Instagram Post.png"
+              alt="Whish Payment"
+            />
+          </a>
+        </div>
+
+        <!-- The Cart Container (Existing) -->
+        <div class="listContainer">
+          <div class="courseDetails">
+            <label id="titleCourse">Title of the course</label>
+            <label class="priceLabel">Price:</label>
+          </div>
+          <button id="remove_btn">Remove</button>
+        </div>
+
+        <!-- ================= NEW FORM (Checkout Info) ================= -->
+        <div id="checkoutFormContainer">
+          <h2>Enter Your Details</h2>
+          <form id="checkoutForm">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="John Doe" required />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="+1 234 567 890" required />
+
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="1234 Main St" required />
+          </form>
+        </div>
+
+        <!-- Options Container (Clear All, Buy, Price) -->
+        <div class="optionsContainer">
+          <button id="clearAll_btn">Clear All</button>
+          <button id="buy_btn">Buy</button>
+          <label class="totalPriceLabel">Total Price: </label>
+        </div>
       </div>
-      <button id="remove_btn">Remove</button>
-    </div>
+    </main>
 
-    <div class="optionsContainer">
-      <button id="clearAll_btn">Clear All</button>
-      <button id="buy_btn" >Buy</button>
-      <label class="totalPriceLabel">Total Price: </label>
-    </div>
-  </div>
+    <!-- Footer Section -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="MEDIA/logo.jpeg" alt="M&T Tutoring Logo" />
+            <p>Empowering Lebanon's Learners Since 2023</p>
+            <div class="social-links">
+              <a
+                href="https://www.instagram.com/m_and_t_tutoring/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                href="https://wa.me/96181671594"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-nav">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="tutor-apply.html">Become a Tutor</a></li>
+              <li><a href="webinars.html">Webinars</a></li>
+              <li><a href="careers.html">Career Support</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 M&T Tutoring. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
 
-
-
-
-
-
-
-  <script src="JS/checkout.js"></script>
-</body>
-
+    <!-- Checkout JS -->
+    <script src="JS/checkout.js"></script>
+  </body>
 </html>

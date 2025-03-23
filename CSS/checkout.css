@@ -1,4 +1,4 @@
-/* Base Styles */
+/* ====================== Base Styles & Variables ====================== */
 :root {
   --primary-blue: #1a2a6c;
   --secondary-blue: #4facfe;
@@ -12,15 +12,15 @@
 }
 
 body {
-  position: relative;
-  /* Necessary for the overlay */
+  position: relative; /* Necessary for the overlay */
   font-family: var(--font-body);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   background:
     linear-gradient(45deg, #4465ad, #002f9644),
-    url('../MEDIA/blue-wave-is-lit-up-black-background_889227-20579.jpg.avif') no-repeat center center;
+    url('../MEDIA/blue-wave-is-lit-up-black-background_889227-20579.jpg.avif')
+      no-repeat center center;
   background-blend-mode: multiply;
   background-size: cover;
   background-attachment: fixed;
@@ -31,23 +31,21 @@ body::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  /* Adjust opacity as desired */
+  background: rgba(0, 0, 0, 0.6); /* Adjust opacity as desired */
   z-index: 0;
 }
 
 /* Ensure main content is above the overlay */
 header,
-#CONTAINER,
+main,
 .nav-container,
 #accountDiv,
-main,
 footer {
   position: relative;
   z-index: 1;
 }
 
-/* Navigation styling – kept exactly the same */
+/* ====================== Navbar (Unchanged) ====================== */
 .glass-nav {
   position: fixed;
   top: 0;
@@ -77,6 +75,7 @@ footer {
 
 .nav-toggle {
   display: none;
+
   transition: opacity 0.2s ease-in-out;
 }
 
@@ -101,8 +100,8 @@ footer {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  /* Gradient text effect */
   transition: all 0.3s ease;
+  color: white;
 }
 
 .nav-logo img {
@@ -136,12 +135,16 @@ footer {
   padding: 8px 15px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
+  /* border-radius: 20px; */
+  /* background: linear-gradient(45deg, #1A365D, #2B6CB0); */
 }
 
 .nav-links a:not(.btn):hover,
 #accountInNav:not(.btn):hover {
   color: #f57c00;
+  /* background: rgba(245, 124, 0, 0.08); */
 }
+
 
 .nav-links a[aria-current="page"],
 #accountInNav[aria-current="page"] {
@@ -162,6 +165,7 @@ footer {
   border-radius: 50%;
   animation: pulse 1.5s infinite;
 }
+
 
 .nav-links-burger {
   display: none;
@@ -196,6 +200,7 @@ footer {
   background: rgba(245, 124, 0, 0.08);
 }
 
+
 .nav-links-burger a[aria-current="page"] {
   color: #f57c00 !important;
   font-weight: 600;
@@ -214,137 +219,68 @@ footer {
   animation: pulse 1.5s infinite;
 }
 
-/* Media Queries for Navigation */
-@media (max-width: 400px) {
-  .course-box {
-    width: 90%;
-    padding: 20px;
-  }
+/* Button Styles */
+.btn {
+  padding: 10px 25px !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  border: 2px solid transparent;
+}
+
+.btn-login {
+  background: linear-gradient(45deg, #1A365D, #2B6CB0);
+  color: white !important;
+}
+
+.btn-signup {
+  background: linear-gradient(45deg, #f57c00, #ff9800);
+  color: white !important;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  opacity: 0.95;
+}
+
+
+#nav-links-burger-1 {
+  display: none;
+  padding-left: 0px;
+  padding-right: 0px;
+  right: 0%;
+  top: 204%;
+  border-bottom-right-radius: 40px;
+  border-right: 1px solid rgba(0, 0, 0, 0.616);
 }
 
 #accountDiv {
   position: relative;
 }
 
-.courseNames {
-  cursor: pointer;
+/* ====================== #CONTAINER Layout ====================== */
+main {
+  flex: 1 0 auto; /* ensures the footer sits at the bottom */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* place #CONTAINER near the top, not center vertically */
+  padding-bottom: 60px;    /* some space before the footer */
 }
 
-.courseNames:hover {
-  text-decoration: underline;
-}
-
-@media screen and (max-width: 1300px) {
-  .nav-links {
-    gap: 0px;
-  }
-
-  .nav-links a,
-  #accountInNav {
-    font-size: 0.95em;
-  }
-}
-
-@media screen and (max-width: 1100px) {
-
-  .nav-links a,
-  #accountInNav {
-    font-size: 0.8em;
-  }
-}
-
-@media screen and (max-width: 1030px) {
-  .nav-logo img {
-    width: 55px;
-    height: 55px;
-  }
-
-  .logo-text {
-    font-size: 0.85em;
-  }
-
-  .nav-links a,
-  #accountInNav {
-    font-size: 0.5em;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .nav-logo img {
-    width: 60px;
-    height: 60px;
-  }
-
-  .logo-text {
-    font-size: 1.2em;
-  }
-
-  .nav-links a,
-  #accountInNav {
-    display: none;
-  }
-
-  .nav-toggle {
-    display: block;
-    font-size: 2em;
-    font-weight: bold;
-    color: white;
-  }
-
-  #nav-links-burger-1 {
-    display: none !important;
-  }
-
-  #nav-links-burger-2 a {
-    font-size: 0.8rem;
-  }
-
-  #nav-links-burger-2 {
-    row-gap: 10px;
-  }
-}
-
-@keyframes dropDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Pulse Animation for Active Links */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.2);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-}
-
-/* Other Styling (Non-navigation) */
 #CONTAINER {
-  position: absolute;
-  width: 90%;
+  /* Removed absolute positioning; we use margin auto instead */
+  position: relative;
+  width: 1200px;
   max-width: 800px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 30px;
   background: #ffffff;
   border-radius: 12px;
   padding: 20px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 255, 0.292);
+  box-shadow: 2px 2px 10px rgba(0, 0, 255, 0.551);
 }
 
+/* The Image Link Container */
 #image {
   display: flex;
   justify-content: center;
@@ -357,6 +293,8 @@ footer {
   border-radius: 35px;
   margin: 15px;
   box-shadow: 2px 2px 10px rgba(0, 0, 255, 0.292);
+  transition: transform 0.3s ease;
+  margin-top: 80px;
 }
 
 #image img:hover {
@@ -364,6 +302,7 @@ footer {
   cursor: pointer;
 }
 
+/* The List Container (Cart Items) */
 .listContainer {
   display: flex;
   flex-direction: column;
@@ -405,6 +344,46 @@ footer {
   background-color: #b71c1c;
 }
 
+/* ====================== New Checkout Form ====================== */
+#checkoutFormContainer {
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 10px 0;
+  box-shadow: 0 1px 5px rgba(0, 0, 255, 0.1);
+}
+
+#checkoutFormContainer h2 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: var(--primary-blue);
+}
+
+#checkoutFormContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#checkoutFormContainer label {
+  font-weight: 600;
+  color: #333;
+}
+
+#checkoutFormContainer input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#checkoutFormContainer input:focus {
+  border-color: var(--primary-blue);
+}
+
+/* The Options Container (Buy, Clear, Price) */
 .optionsContainer {
   display: flex;
   justify-content: flex-start;
@@ -440,16 +419,329 @@ footer {
   margin-left: auto;
 }
 
-#nav-links-burger-1 {
-  display: none;
-  padding-left: 0;
-  padding-right: 0;
-  right: 0;
-  top: 204%;
-  border-bottom-right-radius: 40px;
-  border-right: 1px solid rgba(0, 0, 0, 0.616);
+/* Footer Section */
+.main-footer {
+  background: linear-gradient(135deg, #1A365D, #2B6CB0);
+  color: #fff;
+  padding: 3rem 0;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  overflow: hidden;
+  /* keep it at bottom */
+  margin-top: auto; /* ensures footer sits after main content */
 }
 
-#accountDiv {
-  position: relative;
+.main-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
+
+/* Arrange elements in a column and center them */
+.footer-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Footer Brand (Logo and Social Links) */
+.footer-brand {
+  text-align: center;
+}
+
+.footer-brand img {
+  max-width: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-brand img:hover {
+  transform: scale(1.1);
+}
+
+.footer-brand p {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #f57c00;
+  transform: scale(1.1);
+}
+
+/* Footer Navigation (Quick Links) */
+.footer-nav {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-nav h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* List quick links horizontally */
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1.5rem;
+}
+
+.footer-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  color: #f57c00;
+}
+
+/* Copyright */
+.main-footer .copyright {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-brand,
+  .footer-nav {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .nav-links {
+    gap: 0px;
+  }
+
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.95em;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .nav-logo img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .logo-text {
+    font-size: 0.85em;
+  }
+
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-text {
+    font-size: 1.2em;
+  }
+
+  .nav-links a,
+  #accountInNav {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  #nav-links-burger-1 {
+    display: none !important;
+  }
+
+  #nav-links-burger-2 a {
+    font-size: 0.8rem;
+  }
+
+  #nav-links-burger-2 {
+    row-gap: 10px;
+  }
+
+  #CONTAINER {
+    width: 80%;
+    margin-top: 30px;
+  }
+}
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-brand,
+  .footer-nav {
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 2rem;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .nav-links {
+    gap: 0px;
+  }
+
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.95em;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+
+  .nav-logo img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .logo-text {
+    font-size: 0.85em;
+  }
+
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .nav-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-text {
+    font-size: 1.2em;
+  }
+
+  .nav-links a,
+  #accountInNav {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  #nav-links-burger-1 {
+    display: none !important;
+  }
+
+  #nav-links-burger-2 a {
+    font-size: 0.8rem;
+  }
+
+  #nav-links-burger-2 {
+    row-gap: 10px;
+  }
+}
+
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    /* Final position */
+  }
+}
+
+
