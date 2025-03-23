@@ -556,7 +556,7 @@
                 "Biology and Biomedical"
             ],
             "tutor": "DriftSpectra88",
-            "price": "320$",
+            "price": "222$",
             "takenBy": [
                 "FrostGuardian99",
                 "StormWarden48",
@@ -564,6 +564,118 @@
             ],
             "certified": true,
             "description": "Anatomy is the study of the structure and organization of living organisms. It is divided into gross anatomy (large structures like organs and muscles), microscopic anatomy (cells and tissues), and systemic anatomy (body systems like skeletal and nervous systems). Anatomy is essential for understanding biological functions, medical sciences, and healthcare applications."
+        },
+        {
+            "name": "Neurobiology",
+            "category": [
+                "Biology and Biomedical"
+            ],
+            "tutor": "DriftSpectra88",
+            "price": "411$",
+            "takenBy": [
+                "FrostGuardian99",
+                "StormWarden48",
+                "MysticVortex81",
+                "ShadowStorm92"
+            ],
+            "certified": true,
+            "description": "Neurobiology is the study of the nervous system, focusing on the structure, function, and development of neurons and neural circuits. This course explores how the brain and spinal cord process information, regulate behavior, and respond to stimuli. Key topics include neuron communication (synapses and neurotransmitters), sensory systems, motor control, neurodevelopment, and neurological disorders. Labs may involve electrophysiology, brain anatomy, and experiments on neural activity."
+        },
+        {
+            "name": "Pathogenic Microbiology",
+            "category": [
+                "Biology and Biomedical"
+            ],
+            "tutor": "DriftSpectra88",
+            "price": "250$",
+            "takenBy": [
+                "FrostGuardian99",
+                "StormWarden48",
+                "MysticVortex81",
+                "ShadowStorm92"
+            ],
+            "certified": true,
+            "description": "Pathogenic Microbiology focuses on microorganisms that cause disease, particularly bacteria, viruses, fungi, and parasites that infect humans and animals. The course examines how pathogens invade the body, evade the immune system, and produce toxins or damage. Topics include disease mechanisms, host-pathogen interactions, and epidemiology. Lab work typically involves culturing pathogens, identifying them through staining and biochemical tests, and understanding diagnostic techniques used in clinical microbiology."
+        },
+        {
+            "name": "Biosystematics",
+            "category": [
+                "Biology and Biomedical"
+            ],
+            "tutor": "DriftSpectra88",
+            "price": "99$",
+            "takenBy": [
+                "FrostGuardian99",
+                "StormWarden48",
+                "MysticVortex81",
+                "ShadowStorm92"
+            ],
+            "certified": true,
+            "description": "Biosystematics is the scientific study of the classification, naming, and evolutionary relationships of organisms. It combines taxonomy (organizing and naming species) with phylogenetics (studying evolutionary history) to understand biodiversity. This course explores how scientists identify species, construct evolutionary trees, and use morphological and molecular data to trace lineages. Students may learn techniques like DNA barcoding and cladistic analysis."
+        },
+        {
+            "name": "Medical Microbiology",
+            "category": [
+                "Biology and Biomedical"
+            ],
+            "tutor": "DriftSpectra88",
+            "price": "320$",
+            "takenBy": [
+                "FrostGuardian99",
+                "StormWarden48",
+                "MysticVortex81",
+                "ShadowStorm92"
+            ],
+            "certified": true,
+            "description": "Medical Microbiology focuses on microorganisms that cause diseases in humans—such as bacteria, viruses, fungi, and parasites. The course covers pathogen identification, mechanisms of infection, host immune responses, and disease transmission. It also examines antimicrobial treatments, antibiotic resistance, and infection control in clinical settings. Lab sessions often include culturing microbes, staining, and diagnostic testing used in hospitals and research labs."
+        },
+        {
+            "name": "Virology",
+            "category": [
+                "Biology and Biomedical"
+            ],
+            "tutor": "DriftSpectra88",
+            "price": "310$",
+            "takenBy": [
+                "FrostGuardian99",
+                "StormWarden48",
+                "MysticVortex81",
+                "ShadowStorm92"
+            ],
+            "certified": true,
+            "description": "Virology is the study of viruses and virus-like agents—their structure, classification, genetics, replication, and interaction with host cells. This course covers how viruses infect organisms (including humans), cause disease, and how the immune system responds. It also explores viral evolution, vaccine development, antiviral therapies, and emerging viruses like coronaviruses or Ebola. Labs may include virus culturing, detection, and molecular techniques."
+        },
+        {
+            "name": "Zoology",
+            "category": [
+                "Biology and Biomedical"
+            ],
+            "tutor": "DriftSpectra88",
+            "price": "220$",
+            "takenBy": [
+                "FrostGuardian99",
+                "StormWarden48",
+                "MysticVortex81",
+                "ShadowStorm92"
+            ],
+            "certified": true,
+            "description": "Zoology is the scientific study of animals, including their classification, anatomy, physiology, behavior, evolution, and ecology. This course explores the diversity of animal life — from simple invertebrates to complex vertebrates — and how animals interact with their environments. Students often examine animal systems, life cycles, reproduction, and adaptations, and may participate in lab or fieldwork to observe animals directly."
+        },
+        {
+            "name": "General Genetics Laboratory",
+            "category": [
+                "Biology and Biomedical"
+            ],
+            "tutor": "DriftSpectra88",
+            "price": "320$",
+            "takenBy": [
+                "FrostGuardian99",
+                "StormWarden48",
+                "MysticVortex81",
+                "ShadowStorm92"
+            ],
+            "certified": true,
+            "description": "This course provides hands-on experience with key techniques and experiments in genetics. Students learn to apply principles of Mendelian inheritance, DNA extraction, gel electrophoresis, PCR, and genetic crosses using model organisms (like fruit flies or bacteria). The lab complements theoretical genetics courses by reinforcing concepts through practical application and data analysis."
         },
         {
             "name": "Physiology",
