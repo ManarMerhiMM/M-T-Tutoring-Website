@@ -5,20 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>M&T Tutoring</title>
 
-    <!-- Font Awesome -->
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
 
-    <!-- Global & Checkout CSS -->
     <link rel="stylesheet" href="CSS/global.css" />
     <link rel="stylesheet" href="CSS/checkout.css" />
     <link rel="icon" href="MEDIA/favicon.ico" />
   </head>
 
   <body>
-    <!-- ==================== NAVBAR (Unchanged) ==================== -->
     <nav class="glass-nav" aria-label="Main navigation">
       <div class="nav-container">
         <a href="index.html" class="nav-logo">
@@ -65,17 +63,11 @@
         </div>
       </div>
     </nav>
-    <!-- ==================== END NAVBAR ==================== -->
 
-    <!-- 
-      Instead of absolutely positioning #CONTAINER, we let it flow naturally 
-      so it's above the footer 
-    -->
     <main>
       <br /><br /><br /><br />
 
       <div id="CONTAINER">
-        <!-- Existing Image Link to Whish -->
         <div id="image">
           <a href="https://apps.whish.money">
             <img
@@ -85,7 +77,6 @@
           </a>
         </div>
 
-        <!-- The Cart Container (Existing) -->
         <div class="listContainer">
           <div class="courseDetails">
             <label id="titleCourse">Title of the course</label>
@@ -94,7 +85,6 @@
           <button id="remove_btn">Remove</button>
         </div>
 
-        <!-- ================= NEW FORM (Checkout Info) ================= -->
         <div id="checkoutFormContainer">
           <h2>Enter Your Details</h2>
           <form id="checkoutForm">
@@ -112,7 +102,6 @@
           </form>
         </div>
 
-        <!-- Options Container (Clear All, Buy, Price) -->
         <div class="optionsContainer">
           <button id="clearAll_btn">Clear All</button>
           <button id="buy_btn">Buy</button>
@@ -121,7 +110,6 @@
       </div>
     </main>
 
-    <!-- Footer Section -->
     <footer class="main-footer">
       <div class="container">
         <div class="footer-grid">
@@ -163,7 +151,6 @@
       </div>
     </footer>
 
-    <!-- Checkout JS -->
     <script src="JS/checkout.js"></script>
   </body>
 </html>
