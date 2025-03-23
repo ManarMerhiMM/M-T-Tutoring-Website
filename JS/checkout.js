@@ -7,12 +7,12 @@ if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "f
 
   document.getElementById("accountInNav").addEventListener("click", (event) => {
     event.preventDefault();
-    const burger1 = document.getElementById("nav-links-burger-1");
+    let burger1 = document.getElementById("nav-links-burger-1");
     burger1.style.display = (burger1.style.display === "flex") ? "none" : "flex";
   });
   
   document.querySelector(".nav-toggle span").addEventListener("click", (event) => {
-    const navBurger2 = document.getElementById("nav-links-burger-2");
+    let navBurger2 = document.getElementById("nav-links-burger-2");
     if (event.target.textContent === "☰") {
       event.target.textContent = "X";
       navBurger2.style.display = "flex";
@@ -52,10 +52,10 @@ if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "f
   
 
   document.addEventListener("DOMContentLoaded", async () => {
-    const listContainer = document.querySelector(".listContainer");
-    const totalPriceLabel = document.querySelector(".totalPriceLabel");
-    const clearAllBtn = document.getElementById("clearAll_btn");
-    const buyBtn = document.getElementById("buy_btn");
+    let listContainer = document.querySelector(".listContainer");
+    let totalPriceLabel = document.querySelector(".totalPriceLabel");
+    let clearAllBtn = document.getElementById("clearAll_btn");
+    let buyBtn = document.getElementById("buy_btn");
   
     let cartCourses = JSON.parse(localStorage.getItem("cartCourses")) || [];
     let totalPrice = 0;
@@ -63,8 +63,8 @@ if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "f
   
     async function fetchCourses() {
       try {
-        const response = await fetch("JS/database.json");
-        const data = await response.json();
+        let response = await fetch("JS/database.json");
+        let data = await response.json();
         coursesData = data.courses;
         renderCart();
       } catch (error) {
@@ -84,23 +84,23 @@ if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "f
       }
   
       cartCourses.forEach((courseName) => {
-        const course = coursesData.find((c) => c.name === courseName);
+        let course = coursesData.find((c) => c.name === courseName);
         if (!course) return;
   
-        const courseItem = document.createElement("div");
+        let courseItem = document.createElement("div");
         courseItem.classList.add("courseDetails");
   
-        const titleLabel = document.createElement("label");
+        let titleLabel = document.createElement("label");
         titleLabel.classList.add("courseNames");
         titleLabel.textContent = course.name;
   
-        const priceLabel = document.createElement("label");
+        let priceLabel = document.createElement("label");
         priceLabel.classList.add("priceLabel");
         priceLabel.textContent = `Price: $${parseFloat(
           course.price.replace("$", "")
         ).toFixed(2)}`;
   
-        const removeBtn = document.createElement("button");
+        let removeBtn = document.createElement("button");
         removeBtn.textContent = "Remove";
         removeBtn.classList.add("remove_btn");
         removeBtn.dataset.courseName = course.name;
@@ -125,7 +125,7 @@ if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "f
   
     listContainer.addEventListener("click", (event) => {
       if (event.target.classList.contains("remove_btn")) {
-        const courseName = event.target.dataset.courseName;
+        let courseName = event.target.dataset.courseName;
         cartCourses = cartCourses.filter((c) => c !== courseName);
         localStorage.setItem("cartCourses", JSON.stringify(cartCourses));
         renderCart();
@@ -143,10 +143,10 @@ if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "f
       event.preventDefault();
   
 
-      const fullName = document.getElementById("fullName");
-      const email = document.getElementById("email");
-      const phone = document.getElementById("phone");
-      const address = document.getElementById("address");
+      let fullName = document.getElementById("fullName");
+      let email = document.getElementById("email");
+      let phone = document.getElementById("phone");
+      let address = document.getElementById("address");
   
       if (!fullName.value || !email.value || !phone.value || !address.value) {
         alert("Please fill out all required fields before buying!");

@@ -123,7 +123,7 @@ if (!localStorage.getItem("LoggedIn")) {
         categoryTitle.textContent = category;
         categorySection.appendChild(categoryTitle);
 
-        const MAX_VISIBLE = 3;
+        let MAX_VISIBLE = 3;
         let allCoursesInCategory = categoriesMap[category];
         let partialCourses = allCoursesInCategory.slice(0, MAX_VISIBLE);
         let hiddenCourses = allCoursesInCategory.slice(MAX_VISIBLE);
