@@ -238,15 +238,18 @@ body {
 /* ========== Dashboard Container ========== */
 .dashboard-container {
   padding: 120px 20px 40px; /* offset for fixed nav */
-  max-width: 1200px;
+  max-width: 2200px;
   margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .dashboard-container h1 {
   text-align: center;
   font-size: 2.5rem;
   color: #1a2a6c;
-  margin-bottom: 40px;
+  margin-bottom: 2px;
 }
 
 /* Dashboard Content Layout */
@@ -260,9 +263,12 @@ body {
 .dashboard-card {
   background: #ffffff;
   border-radius: 12px;
+  /* Subtle gradient for more life */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.7), rgba(245, 245, 245, 0.9));
   box-shadow: 2px 2px 10px rgba(0, 0, 255, 0.301);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
 }
 
 .dashboard-card:hover {
@@ -279,13 +285,35 @@ body {
   padding-bottom: 5px;
 }
 
-/* Section-Specific Content (if needed) */
+/* 
+   Make the My Courses and Student Requests scrollable
+   so they can handle large lists without expanding 
+   the card too much 
+*/
 #classList,
 #requestsList {
   margin-top: 15px;
+  max-height: 200px; /* adjust as desired */
+  overflow-y: auto;
+  padding-right: 0.5rem; /* little space for scrollbar */
 }
 
-/* Example Item Styling for Dynamically Populated Lists */
+/* Custom scrollbar styling (optional) */
+#classList::-webkit-scrollbar,
+#requestsList::-webkit-scrollbar {
+  width: 8px;
+}
+#classList::-webkit-scrollbar-track,
+#requestsList::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+#classList::-webkit-scrollbar-thumb,
+#requestsList::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 4px;
+}
+
 .dashboard-item {
   background: #f5f5f5;
   padding: 10px 15px;
@@ -293,6 +321,13 @@ body {
   margin-bottom: 10px;
   font-size: 1rem;
   color: #333;
+  transition: background 0.2s ease;
+}
+
+/* Subtle hover effect on items */
+.dashboard-item:hover {
+  background: #eaeaea;
+  cursor: pointer;
 }
 
 /* ===== Footer Section (Unchanged) ===== */
@@ -402,20 +437,75 @@ body {
 }
 
 
-.coursesGiven:hover{
-  text-decoration: underline;
-  cursor: pointer;
+@media screen and (max-width: 1300px) {
+  .nav-links {
+    gap: 0px;
+  }
+
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.95em;
+  }
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .footer-grid {
-    flex-direction: column;
-    align-items: center;
+@media screen and (max-width: 1100px) {
+
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.8em;
   }
-  .footer-brand,
-  .footer-nav {
-    text-align: center;
+}
+
+@media screen and (max-width: 1030px) {
+
+  .nav-logo img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .logo-text {
+    font-size: 0.85em;
+  }
+
+  .nav-links a,
+  #accountInNav {
+    font-size: 0.5em;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .nav-logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .logo-text {
+    font-size: 1.2em;
+  }
+
+  .nav-links a,
+  #accountInNav {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  #nav-links-burger-1 {
+    display: none !important;
+  }
+
+  #nav-links-burger-2 a {
+    font-size: 0.8rem;
+  }
+
+  #nav-links-burger-2 {
+    row-gap: 10px;
   }
 }
 
@@ -431,3 +521,4 @@ body {
     /* Final position */
   }
 }
+
