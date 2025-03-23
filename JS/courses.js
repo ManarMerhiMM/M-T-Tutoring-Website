@@ -83,151 +83,151 @@ fetch("JS/database.json")
   .then((data) => {
     let courses = data.courses;
     let categoriesMap = {};
-
     courses.forEach((course) => {
-      course.category.forEach((category) => {
-        if (!categoriesMap[category]) {
-          categoriesMap[category] = [];
+      course.category.forEach((cat) => {
+        if (!categoriesMap[cat]) {
+          categoriesMap[cat] = [];
         }
-        categoriesMap[category].push(course.name);
+        categoriesMap[cat].push(course);
       });
     });
-
     let categoryImages = {
       "Tech and Development": "MEDIA/courseImages/TechAndDev.webp",
       Mathematics: "MEDIA/courseImages/Mathematics.jpg",
       "Science and Engineering": "MEDIA/courseImages/ScienceAndEngineering.jpg",
       "Business and Management": "MEDIA/courseImages/BusinessAndManagement.webp",
       "Biology and Biomedical": "MEDIA/courseImages/BiologyAndBiomedical.jpg",
-      "Health & Medicine": "MEDIA/courseImages/HealthAndMedicine.jpg",
+      "Health & Medicine": "MEDIA/courseImages/HealthAndMedicine.jpg"
     };
-
+    let MAX_VISIBLE = 3;
     let categorySlider = document.querySelector(".category-slider");
-
-    for (let category in categoriesMap) {
-      let categorySection = document.createElement("div");
-      categorySection.classList.add("category-section");
-
-      let categoryImage = document.createElement("img");
-      categoryImage.src = categoryImages[category] || "MEDIA/courseImages/placeholder.jpg";
-      categoryImage.alt = `${category} image`;
-      categorySection.appendChild(categoryImage);
-
-      let categoryTitle = document.createElement("h1");
-
+    let categorySections = {};
+    Object.keys(categoriesMap).forEach((category) => {
+      let allCourses = categoriesMap[category];
+      let visible = MAX_VISIBLE;
+      let section = document.createElement("div");
+      section.classList.add("category-section");
+      let img = document.createElement("img");
+      img.src = categoryImages[category] || "MEDIA/courseImages/placeholder.jpg";
+      img.alt = category + " image";
+      section.appendChild(img);
+      let h1 = document.createElement("h1");
       let titleLink = document.createElement("a");
       titleLink.classList.add("categoryTitles");
       titleLink.textContent = category;
-      titleLink.href = `#${encodeURIComponent(category)}`;
+      titleLink.href = "#" + encodeURIComponent(category);
       titleLink.addEventListener("click", (e) => {
-        
         setTimeout(() => {
-          const decodedId = decodeURIComponent(titleLink.getAttribute("href").substring(1));
-          const targetHeading = document.getElementById(decodedId);
+          let decodedId = decodeURIComponent(titleLink.getAttribute("href").substring(1));
+          let targetHeading = document.getElementById(decodedId);
           if (targetHeading) {
             targetHeading.classList.add("section-highlight");
-      
-            
             setTimeout(() => {
               targetHeading.classList.remove("section-highlight");
             }, 500);
           }
         }, 300);
       });
-      
-
-      categoryTitle.appendChild(titleLink);
-      categorySection.appendChild(categoryTitle);
-
-      let MAX_VISIBLE = 3;
-      let allCoursesInCategory = categoriesMap[category];
-      let partialCourses = allCoursesInCategory.slice(0, MAX_VISIBLE);
-      let hiddenCourses = allCoursesInCategory.slice(MAX_VISIBLE);
-
-      let partialUl = document.createElement("ul");
-      partialUl.classList.add("partial-course-list");
-      partialCourses.forEach((courseName) => {
-        let courseItem = document.createElement("li");
-        courseItem.textContent = courseName;
-        courseItem.classList.add("hover-underline");
-        courseItem.addEventListener("click", () => {
-          localStorage.setItem("curCourseName", courseName);
-          window.location.href = "courseDetails.html";
+      h1.appendChild(titleLink);
+      section.appendChild(h1);
+      let courseList = document.createElement("ul");
+      courseList.classList.add("partial-course-list");
+      section.appendChild(courseList);
+      let showMoreBtn = document.createElement("button");
+      showMoreBtn.classList.add("category-show-more-btn");
+      section.appendChild(showMoreBtn);
+      let updateCourseList = function(filterText) {
+        filterText = filterText || "";
+        let certifiedCheck = document.getElementById("certifiedCheck");
+        let filtered = allCourses.filter(function(course) {
+          return course.name.toLowerCase().indexOf(filterText) !== -1;
         });
-        partialUl.appendChild(courseItem);
+        if (certifiedCheck && certifiedCheck.checked) {
+          filtered = filtered.filter(function(course) {
+            return course.certified;
+          });
+        }
+        if (filtered.length === 0) {
+          section.style.display = "none";
+        } else {
+          section.style.display = "";
+        }
+        if (visible > filtered.length) {
+          visible = filtered.length;
+        }
+        courseList.innerHTML = "";
+        filtered.slice(0, visible).forEach(function(course) {
+          let li = document.createElement("li");
+          li.textContent = course.name;
+          li.classList.add("hover-underline");
+          li.addEventListener("click", function() {
+            localStorage.setItem("curCourseName", course.name);
+            window.location.href = "courseDetails.html";
+          });
+          courseList.appendChild(li);
+        });
+        if (filtered.length > MAX_VISIBLE) {
+          showMoreBtn.style.display = "block";
+          showMoreBtn.textContent = visible >= filtered.length ? "Show Less" : "Show More";
+        } else {
+          showMoreBtn.style.display = "none";
+        }
+      };
+      updateCourseList("");
+      showMoreBtn.addEventListener("click", function() {
+        let filterInput = document.getElementById("search_input_course");
+        let filterText = filterInput ? filterInput.value.toLowerCase() : "";
+        let certifiedCheck = document.getElementById("certifiedCheck");
+        let filtered = allCourses.filter(function(course) {
+          return course.name.toLowerCase().indexOf(filterText) !== -1;
+        });
+        if (certifiedCheck && certifiedCheck.checked) {
+          filtered = filtered.filter(function(course) {
+            return course.certified;
+          });
+        }
+        if (visible >= filtered.length) {
+          visible = MAX_VISIBLE;
+        } else {
+          visible = Math.min(visible + MAX_VISIBLE, filtered.length);
+        }
+        updateCourseList(filterText);
       });
-      categorySection.appendChild(partialUl);
-
-      let hiddenUl = document.createElement("ul");
-      hiddenUl.classList.add("hidden-course-list");
-      hiddenCourses.forEach((courseName) => {
-        let courseItem = document.createElement("li");
-        courseItem.textContent = courseName;
-        courseItem.classList.add("hover-underline");
-        courseItem.addEventListener("click", () => {
-          localStorage.setItem("curCourseName", courseName);
-          window.location.href = "courseDetails.html";
-        });
-        hiddenUl.appendChild(courseItem);
+      categorySlider.appendChild(section);
+      categorySections[category] = {
+        update: updateCourseList,
+        section: section,
+        reset: function() {
+          visible = MAX_VISIBLE;
+        }
+      };
+    });
+    let applyFilters = function() {
+      let courseFilterInput = document.getElementById("search_input_course");
+      let catFilterInput = document.getElementById("search_input_category");
+      let courseFilter = courseFilterInput ? courseFilterInput.value.toLowerCase() : "";
+      let catFilter = catFilterInput ? catFilterInput.value.toLowerCase() : "";
+      Object.keys(categorySections).forEach(function(catKey) {
+        let cs = categorySections[catKey];
+        cs.reset();
+        cs.update(courseFilter);
+        if (catFilter !== "" && catKey.toLowerCase().indexOf(catFilter) === -1) {
+          cs.section.style.display = "none";
+        }
       });
-      categorySection.appendChild(hiddenUl);
-
-      if (hiddenCourses.length > 0) {
-        let showMoreBtn = document.createElement("button");
-        showMoreBtn.classList.add("category-show-more-btn");
-        showMoreBtn.textContent = "Show More";
-
-        showMoreBtn.addEventListener("click", () => {
-          if (hiddenUl.style.display === "none" || hiddenUl.style.display === "") {
-            hiddenUl.style.display = "block";
-            showMoreBtn.textContent = "Show Less";
-          } else {
-            hiddenUl.style.display = "none";
-            showMoreBtn.textContent = "Show More";
-          }
-        });
-
-        categorySection.appendChild(showMoreBtn);
-      }
-
-      categorySlider.appendChild(categorySection);
+    };
+    let searchInputCourse = document.getElementById("search_input_course");
+    if (searchInputCourse) {
+      searchInputCourse.addEventListener("input", applyFilters);
     }
-
-    document.getElementById("search_input_category").addEventListener("input", function () {
-      let searchValueCategory = this.value.toLowerCase();
-      document.querySelectorAll(".category-section").forEach(function (section) {
-        let title = section.querySelector("h1").textContent.toLowerCase();
-        section.style.display = title.includes(searchValueCategory) ? "block" : "none";
-      });
-    });
-
-    document.getElementById("search_input_course").addEventListener("input", function () {
-      let searchValueCourse = this.value.toLowerCase();
-      document.querySelectorAll(".hover-underline").forEach(function (course) {
-        course.style.display = course.textContent.toLowerCase().includes(searchValueCourse)
-          ? "list-item"
-          : "none";
-      });
-    });
-
+    let searchInputCategory = document.getElementById("search_input_category");
+    if (searchInputCategory) {
+      searchInputCategory.addEventListener("input", applyFilters);
+    }
     let certifiedCheck = document.getElementById("certifiedCheck");
-    certifiedCheck.addEventListener("change", function () {
-      if (certifiedCheck.checked) {
-        document.querySelectorAll(".hover-underline").forEach(function (course) {
-          let courseNAME = course.textContent;
-          let foundCourse = courses.find((c) => c.name === courseNAME);
-          if (foundCourse && foundCourse.certified) {
-            course.style.display = "list-item";
-          } else {
-            course.style.display = "none";
-          }
-        });
-      } else {
-        document.querySelectorAll(".hover-underline").forEach(function (course) {
-          course.style.display = "list-item";
-        });
-      }
-    });
+    if (certifiedCheck) {
+      certifiedCheck.addEventListener("change", applyFilters);
+    }
   })
   .catch((error) => {
     console.error("Error loading the courses data:", error);
