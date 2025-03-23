@@ -1,6 +1,6 @@
-/* about.css */
 
-/* Use your global variables */
+
+
 :root {
   --primary-blue: #1a2a6c;
   --secondary-blue: #4facfe;
@@ -13,7 +13,7 @@
   --font-body: 'Inter', sans-serif;
 }
 
-/* Base Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +27,7 @@ body {
   background-color: var(--light-gray);
 }
 
-/* About Header Section */
+
 header {
   background: linear-gradient(135deg, var(--secondary-blue), var(--accent-orange));
   color: var(--white);
@@ -75,7 +75,7 @@ header::after {
   border-radius: 2px;
 }
 
-/* About Content Container */
+
 .about-content {
   max-width: 3000px;
   margin: 3rem auto;
@@ -102,14 +102,13 @@ header::after {
   }
 }
 
-/* Paragraphs */
+
 .about-content p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   color: #2D3748;
 }
 
-/* Section Subheadings */
 .about-content h2 {
   font-family: var(--font-heading);
   font-size: 2rem;
@@ -137,7 +136,7 @@ header::after {
   border-radius: 2px;
 }
 
-/* Background Pattern Overlay */
+
 .about-content::before {
   content: '';
   position: absolute;
@@ -151,7 +150,7 @@ header::after {
   pointer-events: none;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.5rem;
