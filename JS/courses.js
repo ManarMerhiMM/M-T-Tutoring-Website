@@ -116,6 +116,7 @@ fetch("JS/database.json")
       let categoryTitle = document.createElement("h1");
 
       let titleLink = document.createElement("a");
+      titleLink.classList.add("categoryTitles");
       titleLink.textContent = category;
       titleLink.href = `#${encodeURIComponent(category)}`;
       titleLink.addEventListener("click", (e) => {

@@ -405,7 +405,13 @@ body {
     margin-bottom: 0.5rem;
     font-weight: 600;
   }
-  
+  .categoryTitles{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.85);
+  }
+  .categoryTitles:hover{
+    text-decoration: underline;
+  }
   #categories-description-container p {
     margin-bottom: 1rem;
     line-height: 1.6;

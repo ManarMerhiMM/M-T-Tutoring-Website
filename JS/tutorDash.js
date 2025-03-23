@@ -87,7 +87,7 @@ let studentRequests = [
     let classList = document.getElementById("classList");
     let requestsList = document.getElementById("requestsList");
   
-s
+
     let tutorClasses = [];
     let userName = localStorage.getItem("curUsername");
     if (Courses && Array.isArray(Courses)) {

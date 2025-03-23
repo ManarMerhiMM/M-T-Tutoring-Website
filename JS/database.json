@@ -1034,7 +1034,7 @@
             "description": "Linear Algebra is the branch of mathematics that studies vectors, matrices, and linear transformations. It focuses on key concepts such as vector spaces, systems of linear equations, determinants, eigenvalues, eigenvectors, and orthogonality. Linear algebra is fundamental in various fields, including computer science, engineering, physics, machine learning, and economics, as it provides the mathematical foundation for data analysis, graphics, and optimization. It plays a crucial role in solving real-world problems involving multidimensional systems, making it essential for both theoretical and applied sciences."
         },
         {
-            "name": "Ordinary differential equation ODE",
+            "name": "ODE",
             "category": [
                 "Mathematics",
                 "Science and Engineering",
@@ -1051,7 +1051,7 @@
             "description": "Ordinary Differential Equations (ODEs) involve equations containing functions and their derivatives, describing how a quantity changes over time. ODEs are classified based on order, linearity, and solution techniques. Key topics include first-order and higher-order differential equations, separable and exact equations, homogeneous and non-homogeneous solutions, and methods such as Laplace transforms and numerical approximations. ODEs are fundamental in modeling real-world phenomena in physics, engineering, biology, and economics, including population growth, electrical circuits, mechanical vibrations, and fluid dynamics."
         },
         {
-            "name": "Partial differential equation PDE",
+            "name": "PDE",
             "category": [
                 "Mathematics"
             ],

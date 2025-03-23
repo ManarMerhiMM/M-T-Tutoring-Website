@@ -10,6 +10,14 @@ let courseCategories;
 
 let Courses;
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; 
+    }
+    return array;
+}
+
 function getRandomItem(arr) {
     let randomIndex = Math.floor(Math.random() * arr.length);
     return arr[randomIndex];
@@ -147,6 +155,7 @@ async function prepCoursePageUsingJSON() {
     }
     let courseCounter = 0;
     let j = 0;
+    shuffleArray(Courses);
     while (courseCounter < 6 && j < courseCategories.length) {
         for (let i = 0; i < Courses.length; i++) {
             if (Courses[i].category.includes(courseCategories[j]) && Courses[i].name != courseName) {
