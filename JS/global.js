@@ -1,6 +1,6 @@
-// main.js - Global Scripts for M&T Tutoring Website
 
-// Mobile Navigation Toggle
+
+
 let navToggle = document.querySelector(".nav-toggle");
 let navLinks = document.querySelector(".nav-links");
 
@@ -10,14 +10,14 @@ if (navToggle) {
     });
 }
 
-// Close mobile menu when a link is clicked
+
 document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("active");
     });
 });
 
-// Smooth Scrolling for Internal Links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         e.preventDefault();
@@ -28,7 +28,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Sticky Navbar Effect
+
 window.addEventListener("scroll", () => {
     let navbar = document.querySelector("nav");
     if (window.scrollY > 50) {
@@ -38,7 +38,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Course Card Hover Effect (Optional - Can Be Styled in CSS)
+
 document.querySelectorAll(".course-card").forEach(card => {
     card.addEventListener("mouseenter", () => {
         card.style.transform = "scale(1.05)";
@@ -49,5 +49,5 @@ document.querySelectorAll(".course-card").forEach(card => {
     });
 });
 
-// Future Enhancements: Additional scripts for user authentication, pop-ups, and interactivity can be added here.
+
 

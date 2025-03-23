@@ -1,4 +1,4 @@
-// tutorDash.js
+
 
 let studentRequests = [
     { student: "Alice", course: "Intro to C++" },
@@ -17,21 +17,21 @@ let studentRequests = [
     { student: "Noah", course: "Game Development" }
   ];
   
-  // Redirect if user is not logged in or not a tutor
+
   if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "false") {
     window.location.href = "index.html";
   } else if (localStorage.getItem("curAccountType") !== "tutor") {
     window.location.href = "studentDash.html";
   }
   
-  // Toggle account dropdown
+
   document.getElementById("accountInNav").addEventListener("click", (event) => {
     event.preventDefault();
     let burger1 = document.getElementById("nav-links-burger-1");
     burger1.style.display = (burger1.style.display === "flex") ? "none" : "flex";
   });
   
-  // Toggle mobile nav
+
   document.querySelector(".nav-toggle span").addEventListener("click", (event) => {
     let navBurger2 = document.getElementById("nav-links-burger-2");
     if (event.target.textContent === "☰") {
@@ -43,7 +43,7 @@ let studentRequests = [
     }
   });
   
-  // Sign out logic
+
   document.querySelectorAll(".signoutInNav").forEach((signout) => {
     signout.addEventListener("click", (event) => {
       event.preventDefault();
@@ -60,8 +60,7 @@ let studentRequests = [
       }
     });
   });
-  
-  // Dashboard or not
+
   document.querySelectorAll(".dashBoardInNav").forEach((dashBoard) => {
     dashBoard.addEventListener("click", (event) => {
       event.preventDefault();
@@ -75,7 +74,7 @@ let studentRequests = [
   
   let Courses;
   
-  // Load courses from database.json
+
   async function fillCourses() {
     try {
       let response = await fetch("JS/database.json");
@@ -88,7 +87,7 @@ let studentRequests = [
     let classList = document.getElementById("classList");
     let requestsList = document.getElementById("requestsList");
   
-    // Identify tutor's classes
+s
     let tutorClasses = [];
     let userName = localStorage.getItem("curUsername");
     if (Courses && Array.isArray(Courses)) {
@@ -99,7 +98,7 @@ let studentRequests = [
       }
     }
   
-    // Render tutor classes
+
     if (tutorClasses.length === 0) {
       classList.innerHTML = "<p>No courses to display.</p>";
     } else {
@@ -112,7 +111,7 @@ let studentRequests = [
       });
     }
   
-    // Render student requests
+
     if (studentRequests.length === 0) {
       requestsList.innerHTML = "<p>No student requests at the moment.</p>";
     } else {
@@ -124,7 +123,7 @@ let studentRequests = [
       });
     }
   
-    // On click of a course in "My Courses", go to courseDetails
+
     document.querySelectorAll(".coursesGiven").forEach((item) => {
       item.addEventListener("click", (event) => {
         localStorage.setItem("curCourseName", event.target.dataset.courseName);

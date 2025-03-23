@@ -1,11 +1,10 @@
-// Existing logic: redirect if not logged in or if tutor
+
 if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "false") {
     window.location.href = "index.html";
   } else if (localStorage.getItem("curAccountType") === "tutor") {
     window.location.href = "index.html";
   }
-  
-  // Navbar toggles
+
   document.getElementById("accountInNav").addEventListener("click", (event) => {
     event.preventDefault();
     const burger1 = document.getElementById("nav-links-burger-1");
@@ -51,7 +50,7 @@ if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "f
     });
   });
   
-  // Cart logic
+
   document.addEventListener("DOMContentLoaded", async () => {
     const listContainer = document.querySelector(".listContainer");
     const totalPriceLabel = document.querySelector(".totalPriceLabel");
@@ -139,11 +138,11 @@ if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "f
       renderCart();
     });
   
-    // When user clicks "Buy", redirect to Whish after optional form validation
+
     buyBtn.addEventListener("click", (event) => {
       event.preventDefault();
   
-      // Optional: Validate the form
+
       const fullName = document.getElementById("fullName");
       const email = document.getElementById("email");
       const phone = document.getElementById("phone");
@@ -154,7 +153,7 @@ if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "f
         return;
       }
   
-      // If everything is fine, proceed to Whish
+
       window.location.href = "https://apps.whish.money";
     });
   

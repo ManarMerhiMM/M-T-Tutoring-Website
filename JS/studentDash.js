@@ -79,7 +79,7 @@ async function fillCourses() {
 
   let myCourses = [];
   let suggestedCourses = [];
-  //filling my courses and suggested courses
+
   for(let i = 0; i < Courses.length; i++){
     if(Courses[i].takenBy.includes(localStorage.getItem("curUsername"))){
       myCourses.push(Courses[i]);
@@ -130,7 +130,7 @@ async function fillCourses() {
 
 
 
-  //Suggested Courses to be displayed
+
 if(suggestedCourses.length > 6){
   firstIndex = Math.floor(Math.random() * suggestedCourses.length);
 
@@ -161,7 +161,7 @@ if(suggestedCourses.length > 6){
 
   
 
-  //filling the page with myCourses
+
   for (let i = 0; i < myCourses.length; i++) {
       let article = document.createElement("article");
       article.classList.add("course-card");
@@ -222,7 +222,6 @@ if(suggestedCourses.length > 6){
 
   }
 
-  //filling the page with Suggested Courses based on major
   for (let i = 0; i < suggestedCourses.length; i++) {
     let article = document.createElement("article");
     article.classList.add("course-card");

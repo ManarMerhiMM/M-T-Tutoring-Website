@@ -55,7 +55,7 @@ if (courseContainer) {
     let scrollAmount = 0;
     function autoScrollCourses() {
         if (scrollAmount < courseContainer.scrollWidth - courseContainer.clientWidth) {
-            scrollAmount += 2; // Adjust speed
+            scrollAmount += 2;
         } else {
             scrollAmount = 0;
         }
@@ -64,7 +64,7 @@ if (courseContainer) {
     setInterval(autoScrollCourses, 100);
 }
 
-// Testimonials Slider (If Applicable)
+
 let testimonials = document.querySelectorAll(".testimonial");
 let currentTestimonial = 0;
 
@@ -79,10 +79,10 @@ if (testimonials.length > 0) {
     setInterval(() => {
         currentTestimonial = (currentTestimonial + 1) % testimonials.length;
         showTestimonial(currentTestimonial);
-    }, 5000); // Change testimonial every 5 seconds
+    }, 5000); 
 }
 
-// Hero Section Animation on Scroll
+
 window.addEventListener("scroll", () => {
     let hero = document.querySelector(".hero");
     if (hero && window.scrollY > 50) {
@@ -93,7 +93,7 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Future Enhancements: Dynamic content fetching, interactive elements, API integration for course updates.
+
 document.addEventListener('DOMContentLoaded', function () {
     let toggle = document.querySelector('.nav-toggle');
     let links = document.querySelector('.nav-links');
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function () {
         toggle.classList.toggle('active');
     });
 
-    // Close menu when clicking outside on mobile
+
     document.addEventListener('click', (e) => {
         if (!toggle.contains(e.target) && !links.contains(e.target)) {
             links.classList.remove('active');

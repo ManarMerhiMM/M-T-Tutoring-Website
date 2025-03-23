@@ -84,7 +84,7 @@ if (!localStorage.getItem("LoggedIn")) {
       let courses = data.courses;
       let categoriesMap = {};
   
-      // Build category -> array of courses
+      
       courses.forEach((course) => {
         course.category.forEach((category) => {
           if (!categoriesMap[category]) {
@@ -94,7 +94,7 @@ if (!localStorage.getItem("LoggedIn")) {
         });
       });
   
-      // Images for each category
+
       let categoryImages = {
         "Tech and Development": "MEDIA/courseImages/TechAndDev.webp",
         Mathematics: "MEDIA/courseImages/Mathematics.jpg",
@@ -106,30 +106,29 @@ if (!localStorage.getItem("LoggedIn")) {
   
       let categorySlider = document.querySelector(".category-slider");
   
-      // For each category, we create a card with partial courses, hidden courses, and a Show More button
+     
       for (let category in categoriesMap) {
-        // Create the card container
+
         let categorySection = document.createElement("div");
         categorySection.classList.add("category-section");
   
-        // Category image
+
         let categoryImage = document.createElement("img");
         categoryImage.src = categoryImages[category] || "MEDIA/courseImages/placeholder.jpg";
         categoryImage.alt = `${category} image`;
         categorySection.appendChild(categoryImage);
   
-        // Category title
+
         let categoryTitle = document.createElement("h1");
         categoryTitle.textContent = category;
         categorySection.appendChild(categoryTitle);
-  
-        // Slicing courses into partial vs. hidden
+
         const MAX_VISIBLE = 3;
         let allCoursesInCategory = categoriesMap[category];
         let partialCourses = allCoursesInCategory.slice(0, MAX_VISIBLE);
         let hiddenCourses = allCoursesInCategory.slice(MAX_VISIBLE);
   
-        // UL for partial courses
+
         let partialUl = document.createElement("ul");
         partialUl.classList.add("partial-course-list");
         partialCourses.forEach((courseName) => {
@@ -144,7 +143,7 @@ if (!localStorage.getItem("LoggedIn")) {
         });
         categorySection.appendChild(partialUl);
   
-        // UL for hidden courses
+
         let hiddenUl = document.createElement("ul");
         hiddenUl.classList.add("hidden-course-list");
         hiddenCourses.forEach((courseName) => {
@@ -159,7 +158,7 @@ if (!localStorage.getItem("LoggedIn")) {
         });
         categorySection.appendChild(hiddenUl);
   
-        // If we have hidden courses, create a Show More button
+
         if (hiddenCourses.length > 0) {
           let showMoreBtn = document.createElement("button");
           showMoreBtn.classList.add("category-show-more-btn");
@@ -178,11 +177,10 @@ if (!localStorage.getItem("LoggedIn")) {
           categorySection.appendChild(showMoreBtn);
         }
   
-        // Finally, append this category card to the slider
         categorySlider.appendChild(categorySection);
       }
-  
-      // Filtering by category name
+
+
       document.getElementById("search_input_category").addEventListener("input", function () {
         let searchValueCategory = this.value.toLowerCase();
         document.querySelectorAll(".category-section").forEach(function (section) {
@@ -190,8 +188,7 @@ if (!localStorage.getItem("LoggedIn")) {
           section.style.display = title.includes(searchValueCategory) ? "block" : "none";
         });
       });
-  
-      // Filtering by course name
+
       document.getElementById("search_input_course").addEventListener("input", function () {
         let searchValueCourse = this.value.toLowerCase();
         document.querySelectorAll(".hover-underline").forEach(function (course) {
@@ -201,11 +198,11 @@ if (!localStorage.getItem("LoggedIn")) {
         });
       });
   
-      // Certified filter
+
       let certifiedCheck = document.getElementById("certifiedCheck");
       certifiedCheck.addEventListener("change", function () {
         if (certifiedCheck.checked) {
-          // Show only certified courses
+
           document.querySelectorAll(".hover-underline").forEach(function (course) {
             let courseNAME = course.textContent;
             let foundCourse = courses.find((c) => c.name === courseNAME);
@@ -216,7 +213,7 @@ if (!localStorage.getItem("LoggedIn")) {
             }
           });
         } else {
-          // Show all courses again
+
           document.querySelectorAll(".hover-underline").forEach(function (course) {
             course.style.display = "list-item";
           });
