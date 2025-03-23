@@ -1,8 +1,8 @@
-/* ========== Font Imports (Optional) ========== */
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Inter:400,600&display=swap');
 
-/* ========== CSS Variables ========== */
+
 :root {
   --primary-blue: #1a2a6c;
   --secondary-blue: #4facfe;
@@ -15,7 +15,7 @@
   --font-body: 'Inter', sans-serif;
 }
 
-/* ========== Base Reset & Body ========== */
+
 * {
   margin: 0;
   padding: 0;
@@ -29,14 +29,13 @@ body {
   background-color: #F5F5F5;
 }
 
-/* ========== Navigation (Same as Provided) ========== */
 .glass-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2147483647 !important; /* Force highest stacking order */
-  transform: translateZ(0);       /* Create a new stacking context */
+  z-index: 2147483647 !important;
+  transform: translateZ(0);       
   padding: 12px 0;
   background-color: #294169;
   backdrop-filter: blur(25px) saturate(180%);
@@ -60,7 +59,6 @@ body {
   transition: opacity 0.2s ease-in-out;
 }
 
-/* Logo Styling */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -80,10 +78,10 @@ body {
   background: #4facfe;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent; /* Gradient text effect */
+  color: transparent; 
   transition: all 0.3s ease;
-  /* Overriding color so that the gradient is visible */
-  color: white; /* fallback if needed */
+
+  color: white; 
 }
 
 .nav-logo img {
@@ -100,7 +98,7 @@ body {
   box-shadow: 0 6px 20px rgba(26, 54, 93, 0.15);
 }
 
-/* Navigation Links */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -124,7 +122,7 @@ body {
   color: #f57c00;
 }
 
-/* Current Page Indicator */
+
 .nav-links a[aria-current="page"],
 #accountInNav[aria-current="page"] {
   color: #f57c00 !important;
@@ -145,7 +143,7 @@ body {
   animation: pulse 1.5s infinite;
 }
 
-/* Dropdown Menus (Burger) */
+
 .nav-links-burger {
   display: none;
   list-style: none;
@@ -179,7 +177,7 @@ body {
   background: rgba(245, 124, 0, 0.08);
 }
 
-/* Current Page in Burger Menu */
+
 .nav-links-burger a[aria-current="page"] {
   color: #f57c00 !important;
   font-weight: 600;
@@ -198,7 +196,7 @@ body {
   animation: pulse 1.5s infinite;
 }
 
-/* Sub-menu Positioning */
+
 #nav-links-burger-1 {
   padding-left: 0;
   padding-right: 0;
@@ -212,7 +210,7 @@ body {
   position: relative;
 }
 
-/* Media Queries for Navigation */
+
 @media screen and (max-width: 800px) {
   .nav-links a,
   #accountInNav {
@@ -266,7 +264,7 @@ body {
   }
 }
 
-/* DropDown Animation */
+
 @keyframes dropDown {
   0% {
     opacity: 0;
@@ -278,7 +276,7 @@ body {
   }
 }
 
-/* Pulse Animation for Current Page Indicator */
+
 @keyframes pulse {
   0% {
     transform: translateX(-50%) scale(1);
@@ -291,7 +289,7 @@ body {
   }
 }
 
-/* ========== Footer ========== */
+
 .main-footer {
   background: linear-gradient(135deg, #1A365D, #2B6CB0);
   color: #fff;
@@ -392,21 +390,17 @@ body {
   font-size: 0.9rem;
 }
 
-/* ========== Dashboard-Specific Styles ========== */
 
-/* 
-  We remove the grid for .dashboard-content, 
-  so My Courses and Suggested Courses stack vertically.
-*/
+
 .dashboard-content {
   display: flex;
-  flex-direction: column; /* vertical stack */
-  gap: 30px;             /* spacing between the two sections */
+  flex-direction: column; 
+  gap: 30px;             
 }
 
-/* Dashboard Container */
+
 .dashboard-container {
-  padding: 120px 20px 40px; /* Offset for fixed nav */
+  padding: 120px 20px 40px; 
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -419,7 +413,7 @@ body {
   margin-bottom: 40px;
 }
 
-/* Dashboard Card Styling */
+
 .dashboard-card {
   background: var(--white);
   border-radius: 12px;
@@ -442,17 +436,16 @@ body {
   padding-bottom: 5px;
 }
 
-/* Horizontal Scroll for My Courses & Suggested Courses */
 #courseList,
 #upcomingSessions {
-  display: flex;           /* flex row for cards */
+  display: flex;          
   gap: 20px;
-  overflow-x: auto;        /* horizontal scroll if many cards */
-  scroll-behavior: smooth; /* smooth scrolling */
-  padding-bottom: 10px;    /* optional bottom spacing */
+  overflow-x: auto;        
+  scroll-behavior: smooth; 
+  padding-bottom: 10px;    
 }
 
-/* Style the scrollbar (WebKit browsers) */
+
 #courseList::-webkit-scrollbar,
 #upcomingSessions::-webkit-scrollbar {
   height: 8px;
@@ -468,15 +461,15 @@ body {
   border-radius: 4px;
 }
 
-/* Each card has a fixed width so they appear side by side in the scroll row */
+
 .course-card {
-  flex: 0 0 300px;               /* fixed width for horizontal scrolling */
+  flex: 0 0 300px;               
   background: linear-gradient(
     135deg, 
     rgba(255, 255, 255, 0.25), 
     rgba(255, 255, 255, 0.05)
-  );                             /* subtle gradient */
-  border: 1px solid rgba(255, 255, 255, 0.2); /* thin, translucent border */
+  );                             
+  border: 1px solid rgba(255, 255, 255, 0.2); 
   border-radius: 12px;
   overflow: hidden;
   backdrop-filter: blur(10px) saturate(150%);
@@ -491,7 +484,7 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Thumbnail and image styling */
+
 .course-thumbnail {
   position: relative;
   height: 250px;
@@ -509,7 +502,7 @@ body {
   transform: scale(1.05);
 }
 
-/* Content inside each card */
+
 .course-content {
   padding: 20px;
   text-align: center;
@@ -528,7 +521,6 @@ body {
   margin-bottom: 15px;
 }
 
-/* Button inside the card */
 .course-content .btn {
   color: #1a2a6c;
   margin-top: 10px;

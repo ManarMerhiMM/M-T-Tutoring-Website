@@ -1,4 +1,4 @@
-/* ======== Modern CSS Enhancements ======== */
+
 :root {
   --primary-blue: #1a2a6c;
   --secondary-blue: #4facfe;
@@ -11,7 +11,7 @@
   --font-body: 'Inter', sans-serif;
 }
 
-/* Base Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -25,16 +25,14 @@ body {
   background-color: #F5F5F5;
 }
 
-/* Modern Glass Navigation */
+
 .glass-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 2147483647 !important;
-  /* Force highest stacking order */
   transform: translateZ(0);
-  /* Create a new stacking context */
   padding: 12px 0;
   background-color: #294169;
   backdrop-filter: blur(25px) saturate(180%);
@@ -59,7 +57,6 @@ body {
   transition: opacity 0.2s ease-in-out;
 }
 
-/* Logo Styling */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -98,7 +95,7 @@ body {
   box-shadow: 0 6px 20px rgba(26, 54, 93, 0.15);
 }
 
-/* Navigation Links */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -115,14 +112,13 @@ body {
   padding: 8px 15px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  /* border-radius: 20px; */
-  /* background: linear-gradient(45deg, #1A365D, #2B6CB0); */
+
 }
 
 .nav-links a:not(.btn):hover,
 #accountInNav:not(.btn):hover {
   color: #f57c00;
-  /* background: rgba(245, 124, 0, 0.08); */
+  
 }
 
 
@@ -199,7 +195,7 @@ body {
   animation: pulse 1.5s infinite;
 }
 
-/* Button Styles */
+
 .btn {
   padding: 10px 25px !important;
   border-radius: 10px !important;
@@ -253,7 +249,7 @@ body {
   }
 }
 
-/* Hero Section with Background Image */
+
 .hero {
   position: relative;
   height: 90vh;
@@ -275,9 +271,7 @@ body {
 .heading-container {
   display: flex;
   align-items: center;
-  /* Aligns text vertically */
   gap: 15px;
-  /* Adds spacing between the headings */
   justify-content: center;
 }
 
@@ -319,7 +313,7 @@ body {
   transition: background 0.3s ease;
 }
 
-/* Buttons (Global) */
+
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -351,7 +345,6 @@ body {
   color: var(--white);
 }
 
-/* Featured Courses Section with Background Image */
 .featured-courses {
   padding: 60px 20px;
   position: relative;
@@ -375,7 +368,6 @@ body {
 
 .course-card {
   background: rgba(255, 255, 255, 0.7);
-  /* Semi-transparent white */
   border-radius: 12px;
   overflow: hidden;
   transition: transform 0.3s ease;
@@ -386,7 +378,6 @@ body {
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
-  /* Adds a glassy effect */
   border-radius: 12px;
   padding: 20px;
 }
@@ -443,41 +434,36 @@ body {
   cursor: pointer;
 }
 
-/* --- Services Section --- */
+
 .services-section {
   padding: 60px 20px;
   text-align: center;
 }
 
-/* Section Title */
+
 .section-title {
   font-size: 2.2rem;
   margin-bottom: 20px;
   color: var(--primary-blue, #1A365D);
 }
 
-/* Intro Text */
+
 .section-intro {
   font-size: 1rem;
   color: #4A5568;
   max-width: 600px;
   margin: 0 auto 40px;
-  /* Centers text and adds spacing below */
   line-height: 1.5;
 }
 
-/* Services Grid */
+
 .services-grid {
   display: grid;
   gap: 20px;
-  /* 
-       repeat(auto-fit, minmax(250px, 1fr)) 
-       ensures responsive columns that fit nicely on all screen sizes
-    */
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
-/* Individual Service Card */
+
 .service-card {
   background-color: #fff;
   border-radius: 8px;
@@ -486,13 +472,13 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect on Card */
+
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Card Image */
+
 .service-card img {
   width: 100%;
   height: 50%;
@@ -501,14 +487,14 @@ body {
   object-fit: cover;
 }
 
-/* Card Title */
+
 .service-card h3 {
   font-size: 1.4rem;
   margin-bottom: 10px;
   color: #2D3748;
 }
 
-/* Card Text */
+
 .service-card p {
   font-size: 1rem;
   color: #4A5568;
@@ -516,26 +502,23 @@ body {
 }
 
 
-/* --- Mission Section with Background Image --- */
 .mission-statement {
   padding: 8rem 20px;
   background: url('MEDIA/bg-mission.jpg') no-repeat center center;
   background-size: cover;
 }
 
-/* Wrapper to align text and image side-by-side */
 .mission-wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
   background: rgba(247, 250, 252, 0.95);
-  /* Light overlay for readability */
   padding: 2rem;
   border-radius: 12px;
 }
 
-/* Title and description styling */
+
 .mission-title {
   font-family: var(--font-heading, sans-serif);
   font-size: 2.5rem;
@@ -550,14 +533,12 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Highlights Container */
 .mission-highlights {
   display: flex;
   gap: 2rem;
   margin-top: 2rem;
 }
 
-/* Individual highlight cards */
 .highlight-card {
   display: flex;
   flex-direction: column;
@@ -576,18 +557,17 @@ body {
   color: #2D3748;
 }
 
-/* Mission Image */
+
 .mission-image img {
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
 }
 
-/* --- Responsive Adjustments --- */
+
 @media (max-width: 768px) {
   .mission-wrapper {
     grid-template-columns: 1fr;
-    /* Stack content on smaller screens */
     text-align: center;
   }
 
@@ -599,11 +579,10 @@ body {
 }
 
 
-/* Testimonials Section */
+
 .testimonials-section {
   padding: 4rem 20px;
   background-color: #f9fafb;
-  /* Light background for contrast */
   text-align: center;
 }
 
@@ -613,14 +592,13 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Responsive Grid for Testimonials */
+
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-/* Individual Testimonial Card */
 .testimonial-card {
   background-color: #fff;
   padding: 2rem;
@@ -634,7 +612,7 @@ body {
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* Blockquote styling for testimonial text */
+
 .testimonial-card blockquote {
   margin: 0 0 1.5rem;
   font-size: 1.2rem;
@@ -642,7 +620,7 @@ body {
   color: #4A5568;
 }
 
-/* Cite styling for attribution */
+
 .testimonial-card cite {
   font-size: 1rem;
   font-weight: bold;
@@ -650,7 +628,7 @@ body {
   display: block;
 }
 
-/* Contact Page Specific Styles */
+
 .contact-section {
   padding: 4rem 20px;
   background: linear-gradient(135deg, #f7fafc, #e2e8f0);
@@ -692,7 +670,7 @@ body {
   z-index: 1;
 }
 
-/* Layout for the info and form */
+
 .contact-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -742,7 +720,7 @@ body {
   color: #f57c00;
 }
 
-/* Form Styles */
+
 .contact-form .form-group {
   margin-bottom: 1.5rem;
 }
@@ -785,7 +763,7 @@ body {
 }
 
 
-/* Footer Section */
+
 .main-footer {
   background: linear-gradient(135deg, #1A365D, #2B6CB0);
   color: #fff;
@@ -801,7 +779,7 @@ body {
   padding: 0 20px;
 }
 
-/* Arrange elements in a column and center them */
+
 .footer-grid {
   display: flex;
   flex-direction: column;
@@ -810,7 +788,7 @@ body {
   margin-bottom: 2rem;
 }
 
-/* Footer Brand (Logo and Social Links) */
+
 .footer-brand {
   text-align: center;
 }
@@ -831,7 +809,7 @@ body {
   font-size: 1rem;
 }
 
-/* Social Links */
+
 .social-links {
   display: flex;
   justify-content: center;
@@ -850,7 +828,7 @@ body {
   transform: scale(1.1);
 }
 
-/* Footer Navigation (Quick Links) */
+
 .footer-nav {
   text-align: center;
   margin-bottom: 2rem;
@@ -863,7 +841,7 @@ body {
   letter-spacing: 1px;
 }
 
-/* List quick links horizontally */
+
 .footer-nav ul {
   display: flex;
   justify-content: center;
@@ -883,7 +861,7 @@ body {
   color: #f57c00;
 }
 
-/* Copyright */
+
 .main-footer .copyright {
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.3);
@@ -891,7 +869,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   .footer-grid {
     flex-direction: column;
@@ -991,7 +969,7 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0);
-    /* Final position */
+
   }
 }
 

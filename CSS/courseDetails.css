@@ -1,8 +1,8 @@
-/* ========== Font Imports (Optional) ========== */
+
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Inter:400,600&display=swap');
 
-/* ========== CSS Variables ========== */
+
 :root {
   --primary-blue: #1a2a6c;
   --secondary-blue: #4facfe;
@@ -15,7 +15,7 @@
   --font-body: 'Inter', sans-serif;
 }
 
-/* ========== Base Reset & Body ========== */
+
 * {
   margin: 0;
   padding: 0;
@@ -33,14 +33,14 @@ body {
   background-attachment: fixed;
 }
 
-/* ========== Navigation (Same as Provided) ========== */
+
 .glass-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 2147483647 !important; /* Force highest stacking order */
-  transform: translateZ(0);       /* Create a new stacking context */
+  z-index: 2147483647 !important; 
+  transform: translateZ(0);      
   padding: 12px 0;
   background-color: #294169;
   backdrop-filter: blur(25px) saturate(180%);
@@ -64,7 +64,7 @@ body {
   transition: opacity 0.2s ease-in-out;
 }
 
-/* Logo Styling */
+
 .nav-logo {
   display: flex;
   align-items: center;
@@ -84,10 +84,9 @@ body {
   background: #4facfe;
   -webkit-background-clip: text;
   background-clip: text;
-  color: transparent; /* Gradient text effect */
+  color: transparent;
   transition: all 0.3s ease;
-  /* Overriding color so that the gradient is visible */
-  color: white; /* fallback if needed */
+  color: white; 
 }
 
 .nav-logo img {
@@ -104,7 +103,7 @@ body {
   box-shadow: 0 6px 20px rgba(26, 54, 93, 0.15);
 }
 
-/* Navigation Links */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -128,7 +127,7 @@ body {
   color: #f57c00;
 }
 
-/* Current Page Indicator */
+
 .nav-links a[aria-current="page"],
 #accountInNav[aria-current="page"] {
   color: #f57c00 !important;
@@ -149,7 +148,7 @@ body {
   animation: pulse 1.5s infinite;
 }
 
-/* Dropdown Menus (Burger) */
+
 .nav-links-burger {
   display: none;
   list-style: none;
@@ -183,7 +182,7 @@ body {
   background: rgba(245, 124, 0, 0.08);
 }
 
-/* Current Page in Burger Menu */
+
 .nav-links-burger a[aria-current="page"] {
   color: #f57c00 !important;
   font-weight: 600;
@@ -202,7 +201,7 @@ body {
   animation: pulse 1.5s infinite;
 }
 
-/* Sub-menu Positioning */
+
 #nav-links-burger-1 {
   padding-left: 0;
   padding-right: 0;
@@ -216,7 +215,7 @@ body {
   position: relative;
 }
 
-/* Media Queries for Navigation */
+
 @media screen and (max-width: 800px) {
   .nav-links a,
   #accountInNav {
@@ -270,7 +269,7 @@ body {
   }
 }
 
-/* DropDown Animation */
+
 @keyframes dropDown {
   0% {
     opacity: 0;
@@ -282,7 +281,7 @@ body {
   }
 }
 
-/* Pulse Animation for Current Page Indicator */
+
 @keyframes pulse {
   0% {
     transform: translateX(-50%) scale(1);
@@ -294,7 +293,7 @@ body {
     transform: translateX(-50%) scale(1);
   }
 }
-/* ========== Main Content Styles ========== */
+
 #mainContainer {
   max-width: 1350px;
   margin: 100px auto 40px;
@@ -399,7 +398,6 @@ body {
   opacity: 0.8;
 }
 
-/* ========== Suggested Courses Section ========== */
 #similarSuggestedDiv {
   padding: 30px;
   background: var(--light-gray);
@@ -468,7 +466,7 @@ body {
   cursor: pointer;
 }
 
-/* ========== Responsive Design ========== */
+
 @media (max-width: 1024px) {
   #mainCourseContainer {
     flex-direction: column;

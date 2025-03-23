@@ -1,9 +1,9 @@
-/* Global Styles for M&T Tutoring Website */
 
-/* Import Google Fonts */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap');
 
-/* Root Variables */
+
 :root {
     --primary-blue: #1a2a6c;
     --secondary-blue: #4facfe;
@@ -16,14 +16,14 @@
     --font-body: 'Open Sans', sans-serif;
 }
 
-/* Reset Styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Global Body Styling */
+
 body {
     font-family: var(--font-body);
     color: var(--dark-gray);
@@ -31,14 +31,14 @@ body {
     line-height: 1.6;
 }
 
-/* Global Container */
+
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Buttons */
+
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -68,7 +68,7 @@ body {
     background-color: #e66900;
 }
 
-/* Navigation Bar */
+
 nav {
     background-color: var(--primary-blue);
     padding: 15px 0;
@@ -113,7 +113,7 @@ nav {
     color: var(--secondary-blue);
 }
 
-/* Mobile Navigation */
+
 .nav-toggle {
     display: none;
     cursor: pointer;
@@ -126,7 +126,7 @@ nav {
     margin: 5px 0;
 }
 
-/* Hero Section */
+
 .hero {
     background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
     color: var(--white);
@@ -145,7 +145,7 @@ nav {
     margin-bottom: 20px;
 }
 
-/* Footer */
+
 footer {
     background-color: var(--primary-blue);
     color: var(--white);
@@ -160,8 +160,8 @@ footer p {
 
 
 #cartLI a i, .toRemoveWhenNotLoggedIn a i {
-    font-size: 1.5rem; /* Adjust size */
-    color: #ffffff; /* Match your theme */
+    font-size: 1.5rem; 
+    color: #ffffff; 
     transition: color 0.3s ease-in-out;
   }
   
@@ -169,25 +169,3 @@ footer p {
     color: #ffffff;
   }
   
-/* Responsive Styles */
-/* @media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: var(--primary-blue);
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .nav-links li {
-        text-align: center;
-        margin: 10px 0;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-} */

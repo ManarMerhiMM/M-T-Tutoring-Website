@@ -4,9 +4,7 @@
   left: 0;
   right: 0;
   z-index: 2147483647 !important;
-  /* Force highest stacking order */
   transform: translateZ(0);
-  /* Create a new stacking context */
   padding: 12px 0;
   background-color: #294169;
   backdrop-filter: blur(25px) saturate(180%);
@@ -31,7 +29,7 @@
   transition: opacity 0.2s ease-in-out;
 }
 
-/* Logo Styling */
+
 .nav-logo {
   display: flex;
   align-items: center;
@@ -70,7 +68,7 @@
   box-shadow: 0 6px 20px rgba(26, 54, 93, 0.15);
 }
 
-/* Navigation Links */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -87,14 +85,11 @@
   padding: 8px 15px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
-  /* border-radius: 20px; */
-  /* background: linear-gradient(45deg, #1A365D, #2B6CB0); */
 }
 
 .nav-links a:not(.btn):hover,
 #accountInNav:not(.btn):hover {
   color: #f57c00;
-  /* background: rgba(245, 124, 0, 0.08); */
 }
 
 
@@ -170,7 +165,7 @@
   animation: pulse 1.5s infinite;
 }
 
-/* Button Styles */
+
 .btn {
   padding: 10px 25px !important;
   border-radius: 10px !important;
@@ -280,7 +275,7 @@
   z-index: 1;
 }
 
-/* Layout for the info and form */
+
 .contact-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -330,7 +325,7 @@
   color: #f57c00;
 }
 
-/* Form Styles */
+
 .contact-form .form-group {
   margin-bottom: 1.5rem;
 }
@@ -372,7 +367,7 @@
   transform: scale(1.02);
 }
 
-/* Contact Image - Cool Styling */
+
 .contact-image-container {
   display: flex;
   justify-content: center;

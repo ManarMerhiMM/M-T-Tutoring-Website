@@ -240,7 +240,7 @@ a {
   color: inherit;
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 768px) {
   body {
     background-attachment: scroll;

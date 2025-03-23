@@ -18,9 +18,7 @@ body {
   left: 0;
   right: 0;
   z-index: 2147483647 !important;
-  /* Force highest stacking order */
   transform: translateZ(0);
-  /* Create a new stacking context */
   padding: 12px 0;
   background-color: #294169;
   backdrop-filter: blur(25px) saturate(180%);
@@ -44,7 +42,7 @@ body {
   transition: opacity 0.2s ease-in-out;
 }
 
-/* Logo Styling */
+
 .nav-logo {
   display: flex;
   align-items: center;
@@ -82,7 +80,7 @@ body {
   box-shadow: 0 6px 20px rgba(26, 54, 93, 0.15);
 }
 
-/* Navigation Links */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -304,8 +302,8 @@ main {
 }
 
 #cartLI a i, .toRemoveWhenNotLoggedIn a i {
-  font-size: 1.5rem; /* Adjust size */
-  color: #ffffff; /* Match your theme */
+  font-size: 1.5rem; 
+  color: #ffffff; 
   transition: color 0.3s ease-in-out;
 }
 
@@ -413,6 +411,5 @@ main {
   100% {
     opacity: 1;
     transform: translateY(0);
-    /* Final position */
   }
 }
