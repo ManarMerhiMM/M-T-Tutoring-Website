@@ -38,7 +38,7 @@
             </a>
           </li>
           <div id="accountDiv">
-            <li><a href="#" id="accountInNav">Account</a></li>
+            <li><a href="#" id="accountInNav" aria-current="page">Account</a></li>
             <ul class="nav-links-burger" id="nav-links-burger-1">
               <li><a href="tutorDash.html" class="dashBoardInNav">Dashboard</a></li>
               <li><a href="account.html">Account</a></li>
@@ -59,7 +59,7 @@
               </a>
             </li>
             <li class="toRemoveWhenNotLoggedIn">
-              <a href="tutorDash.html" class="dashBoardInNav">Dashboard</a>
+              <a href="tutorDash.html" class="dashBoardInNav" aria-current="page">Dashboard</a>
             </li>
             <li class="toRemoveWhenNotLoggedIn"><a href="account.html">Account</a></li>
             <li class="toRemoveWhenNotLoggedIn">
@@ -73,7 +73,7 @@
 
     <main class="dashboard-container">
       <header>
-        <h1>Welcome, Tutor!</h1>
+        <h1 id="welcomeMessageToTutor"></h1>
       </header>
 
       <section class="dashboard-content">

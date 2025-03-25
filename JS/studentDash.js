@@ -1,3 +1,6 @@
+document.getElementById("welcomeMessageToStudent").textContent = `Welcome, ${localStorage.getItem("curUsername")}!`;
+
+
 if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "false") {
   window.location.href = "index.html";
 } else if (localStorage.getItem("curAccountType") !== "student") {

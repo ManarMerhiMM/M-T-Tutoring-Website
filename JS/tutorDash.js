@@ -1,4 +1,4 @@
-
+document.getElementById("welcomeMessageToTutor").textContent = `Welcome, ${localStorage.getItem("curUsername")}!`;
 
 let studentRequests = [
     { student: "Alice", course: "Intro to C++" },
