@@ -451,9 +451,7 @@ main {
   transition: transform 0.3s ease;
 }
 
-.footer-brand img:hover {
-  transform: scale(1.1);
-}
+
 
 .footer-brand p {
   margin-bottom: 1rem;

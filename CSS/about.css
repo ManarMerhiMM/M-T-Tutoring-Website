@@ -104,9 +104,10 @@ header::after {
 
 
 .about-content p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   margin-bottom: 1.5rem;
   color: #2D3748;
+  font-weight: bold;
 }
 
 .about-content h2 {
