@@ -175,6 +175,19 @@ body {
   animation: pulse 1.5s infinite;
 }
 
+#nav-links-burger-1 {
+  display: none;
+  padding-left: 0px;
+  padding-right: 0px;
+  right: 0%;
+  top: 204%;
+  border-bottom-right-radius: 40px;
+  border-right: 1px solid rgba(0, 0, 0, 0.616);
+}
+
+#accountDiv {
+  position: relative;
+}
 
 form {
   box-shadow: 2px 2px 10px rgba(0, 0, 255, 0.417);

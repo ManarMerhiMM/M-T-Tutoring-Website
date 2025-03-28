@@ -39,12 +39,16 @@ header {
 
 #nav-links-burger-1 {
   display: none;
-  padding-left: 0;
-  padding-right: 0;
-  right: 0;
+  padding-left: 0px;
+  padding-right: 0px;
+  right: 0%;
   top: 204%;
   border-bottom-right-radius: 40px;
   border-right: 1px solid rgba(0, 0, 0, 0.616);
+}
+
+#accountDiv {
+  position: relative;
 }
 
 header h1 {
