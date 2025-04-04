@@ -96,7 +96,7 @@ if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "f
   
         let priceLabel = document.createElement("label");
         priceLabel.classList.add("priceLabel");
-        priceLabel.textContent = `Price: $${parseFloat(
+        priceLabel.textContent = `$${parseFloat(
           course.price.replace("$", "")
         ).toFixed(2)}`;
   
