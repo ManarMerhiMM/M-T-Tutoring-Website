@@ -5,6 +5,8 @@ if (!localStorage.getItem("LoggedIn") || localStorage.getItem("LoggedIn") === "f
     window.location.href = "index.html";
   }
 
+  document.getElementById("email").value = localStorage.getItem("curEmail");
+  document.getElementById("fullName").value = localStorage.getItem("curUsername");
   document.getElementById("accountInNav").addEventListener("click", (event) => {
     event.preventDefault();
     let burger1 = document.getElementById("nav-links-burger-1");
