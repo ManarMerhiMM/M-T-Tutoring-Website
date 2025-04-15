@@ -1,173 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Courses</title>
 
-   
-    <link rel="stylesheet" href="CSS/global.css" />
-    <link rel="stylesheet" href="CSS/courses.css" />
-    <link rel="icon" href="MEDIA/favicon.ico" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses</title>
 
-    
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    
-    <header>
-      <nav class="glass-nav" aria-label="Main navigation">
-        <div class="nav-container">
-          <a href="index.html" class="nav-logo">
-            <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo" />
-            <span class="logo-text">M & T Tutoring</span>
-          </a>
-          <ul class="nav-links" id="NAVLIST">
+  <link rel="stylesheet" href="CSS/global.css" />
+  <link rel="stylesheet" href="CSS/courses.css" />
+  <link rel="icon" href="MEDIA/favicon.ico" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+
+<body>
+
+  <header>
+    <nav class="glass-nav" aria-label="Main navigation">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <img src="MEDIA/logo.jpeg" alt="M&T Tutoring - Logo" />
+          <span class="logo-text">M & T Tutoring</span>
+        </a>
+        <ul class="nav-links" id="NAVLIST">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html" aria-current="page">Courses</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li id="cartLI">
+            <a href="checkout.html">
+              <i class="fa-solid fa-shopping-cart"></i>
+            </a>
+          </li>
+          <div id="accountDiv">
+            <li><a href="#" id="accountInNav">Account</a></li>
+            <ul class="nav-links-burger" id="nav-links-burger-1">
+              <li><a href="#" class="dashBoardInNav">Dashboard</a></li>
+              <li><a href="account.html">Account</a></li>
+              <li><a href="#" class="signoutInNav">Signout</a></li>
+            </ul>
+          </div>
+        </ul>
+        <div class="nav-toggle">
+          <span>&#9776;</span>
+          <ul class="nav-links-burger" id="nav-links-burger-2">
             <li><a href="index.html">Home</a></li>
             <li><a href="courses.html" aria-current="page">Courses</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
-            <li id="cartLI">
+            <li class="toRemoveWhenNotLoggedIn">
               <a href="checkout.html">
                 <i class="fa-solid fa-shopping-cart"></i>
               </a>
             </li>
-            <div id="accountDiv">
-              <li><a href="#" id="accountInNav">Account</a></li>
-              <ul class="nav-links-burger" id="nav-links-burger-1">
-                <li><a href="#" class="dashBoardInNav">Dashboard</a></li>
-                <li><a href="account.html">Account</a></li>
-                <li><a href="#" class="signoutInNav">Signout</a></li>
-              </ul>
-            </div>
+            <li class="toRemoveWhenNotLoggedIn">
+              <a href="#" class="dashBoardInNav">Dashboard</a>
+            </li>
+            <li class="toRemoveWhenNotLoggedIn">
+              <a href="account.html">Account</a>
+            </li>
+            <li class="toRemoveWhenNotLoggedIn">
+              <a href="#" class="signoutInNav">Signout</a>
+            </li>
           </ul>
-          <div class="nav-toggle">
-            <span>&#9776;</span>
-            <ul class="nav-links-burger" id="nav-links-burger-2">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="courses.html" aria-current="page">Courses</a></li>
-              <li><a href="about.html">About</a></li>
-              <li><a href="contact.html">Contact</a></li>
-              <li class="toRemoveWhenNotLoggedIn">
-                <a href="checkout.html">
-                  <i class="fa-solid fa-shopping-cart"></i>
-                </a>
-              </li>
-              <li class="toRemoveWhenNotLoggedIn">
-                <a href="#" class="dashBoardInNav">Dashboard</a>
-              </li>
-              <li class="toRemoveWhenNotLoggedIn">
-                <a href="account.html">Account</a>
-              </li>
-              <li class="toRemoveWhenNotLoggedIn">
-                <a href="#" class="signoutInNav">Signout</a>
-              </li>
-            </ul>
-          </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
+  </header>
 
-    <main class="container">
+  <main class="container">
+    <div class="filter-row">
 
-      <div id="categories-slider-container">
-        <div class="filter-row">
-
-          <label class="search-label">
-            <span>Category:</span>
-            <input type="text" id="search_input_category" class="search-input" />
-          </label>
-
+      <label for="courseCategory" class="search-label" id="categoriesWord">Categories:</label>
+      <div class="category-checkbox-slider">
+        <div id="checkboxDiv">
+          <div class="dropdownDiv">
+            <label class="dropdownLabels" for="Math">Mathematics</label>
+            <input type="checkbox" name="" id="Math">
+          </div>
   
-          <label class="search-label">
-            <span>Course:</span>
-            <input type="text" id="search_input_course" class="search-input" />
-          </label>
-
-         
-          <div class="filter-container">
-            <label class="filter-checkbox-label">
-              <span>Certified?</span>
-              <input type="checkbox" id="certifiedCheck" class="filter-checkbox" />
-            </label>
+          <div class="dropdownDiv">
+            <label class="dropdownLabels" for="Tech">Tech and Development</label>
+            <input type="checkbox" name="" id="Tech">
+          </div>
+  
+          <div class="dropdownDiv">
+            <label class="dropdownLabels" for="Science">Science and Engineering</label>
+            <input type="checkbox" name="" id="Science">
+          </div>
+  
+          <div class="dropdownDiv">
+            <label class="dropdownLabels" for="Business">Business and Management</label>
+            <input type="checkbox" name="" id="Business">
+          </div>
+  
+          <div class="dropdownDiv">
+            <label class="dropdownLabels" for="Biology">Biology and Biomedical</label>
+            <input type="checkbox" name="" id="Biology">
+          </div>
+  
+          <div class="dropdownDiv">
+            <label class="dropdownLabels" for="Health">Health and Medicine</label>
+            <input type="checkbox" name="" id="Health">
           </div>
         </div>
+      </div>
 
+      <div id="generalFilters">
+        <div class="generalFilterBlock">
+          <label for="courseName" class="search-label">Course:</label>
+          <input type="text" id="courseName" placeholder="Filter by course name...">
+        </div>
         
-        <div class="category-slider">
-          
+        <div class="generalFilterBlock">
+          <label for="coursePrice" class="search-label">Budget:</label>
+          <input type="number" id="coursePrice" min="0" placeholder="Enter your budget...">
         </div>
-      </div>
+     
+        <div class="generalFilterBlock">
+          <label for="certifiedCheck">Certified:</label>
+          <input type="checkbox" id="certifiedCheck" class="filter-checkbox" />
+        </div>
 
+      </div>
       
-      <div id="categories-description-container">
-        <h1 id="Mathematics">Mathematics</h1>
-        <p>
-          Explore the fundamental language of logic and numbers. Our Mathematics courses cover topics from basic arithmetic to advanced calculus, algebra, statistics, and applied mathematics—designed to sharpen analytical thinking and problem-solving skills essential across all scientific and technological domains.
-        </p>
+    </div>
 
-        <h1 id="Tech and Development">Tech and Development</h1>
-        <p>
-          Stay ahead in the digital age with our Tech and Development courses. Learn cutting-edge skills in web development, programming, software engineering, mobile apps, cybersecurity, and AI. Ideal for aspiring developers, tech enthusiasts, and career switchers looking to break into the tech industry.
-        </p>
+    <h1 class="h1Categories" id="MathematicsH1">Mathematics</h1>
+    <p id="MathematicsP">
+      Explore the fundamental language of logic and numbers. Our Mathematics courses cover topics from basic
+      arithmetic to advanced calculus, algebra, statistics, and applied mathematics—designed to sharpen analytical
+      thinking and problem-solving skills essential across all scientific and technological domains.
+    </p>
 
-        <h1 id="Science and Engineering">Science and Engineering</h1>
-        <p>
-          Dive into the principles that drive innovation and discovery. From physics and chemistry to mechanical, electrical, and civil engineering, these courses combine theory with hands-on application to equip you for real-world challenges and technological advancements.
-        </p>
+    <div id="mathContainer" data-category="Mathematics" data-h1="MathematicsH1" data-p="MathematicsP" class="category-slider">
+    </div>
 
-        <h1 id="Business and Management">Business and Management</h1>
-        <p>
-          Gain the skills to lead, innovate, and succeed in the corporate world. Our Business and Management courses include marketing, entrepreneurship, leadership, finance, and organizational strategy—perfect for future managers, executives, and entrepreneurs.
-        </p>
+    <h1  class="h1Categories" id="TechH1">Tech and Development</h1>
+    <p id="TechP">
+      Stay ahead in the digital age with our Tech and Development courses. Learn cutting-edge skills in web
+      development, programming, software engineering, mobile apps, cybersecurity, and AI. Ideal for aspiring
+      developers, tech enthusiasts, and career switchers looking to break into the tech industry.
+    </p>
+    <div id="techContainer" data-category="Tech and Development" data-h1="TechH1" data-p="TechP" class="category-slider">
+    </div>
 
-        <h1 id="Biology and Biomedical">Biology and Biomedical</h1>
-        <p>
-          Uncover the complexities of living organisms and the science of life. These courses span molecular biology, genetics, biotechnology, and biomedical research, preparing you for careers in healthcare, research, and the life sciences industry.
-        </p>
+    <h1  class="h1Categories" id="ScienceH1">Science and Engineering</h1>
+    <p id="ScienceP">
+      Dive into the principles that drive innovation and discovery. From physics and chemistry to mechanical,
+      electrical, and civil engineering, these courses combine theory with hands-on application to equip you for
+      real-world challenges and technological advancements.
+    </p>
+    <div id="scienceContainer" data-category="Science and Engineering" data-h1="ScienceH1" data-p="ScienceP" class="category-slider">
+    </div>
 
-        <h1 id="Health and Medicine">Health &amp; Medicine</h1>
-        <p>
-          Build a solid foundation in medical science and public health. Topics include human anatomy, diseases, clinical practice, mental health, nutrition, and healthcare systems. These courses are designed for future medical professionals and anyone passionate about health and wellness.
-        </p>
-      </div>
-    </main>
-    <footer class="main-footer">
-      <div class="container">
-        <div class="footer-grid">
-          <div class="footer-brand">
-            <img src="MEDIA/logo.jpeg" alt="M&T Tutoring Logo">
-            <p>Empowering Lebanon's Learners Since 2023</p>
-            <div class="social-links">
-              <a href="https://www.instagram.com/m_and_t_tutoring/" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i>
-              </a>
-              <a href="#" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://wa.me/96181671594" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-whatsapp"></i>
-              </a>
-            </div>
-          </div>
-          <div class="footer-nav">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="tutor-apply.html">Become a Tutor</a></li>
-              <li><a href="webinars.html">Webinars</a></li>
-              <li><a href="careers.html">Career Support</a></li>
-            </ul>
+    <h1 class="h1Categories" id="BusinessH1">Business and Management</h1>
+    <p id="BusinessP">
+      Gain the skills to lead, innovate, and succeed in the corporate world. Our Business and Management courses
+      include marketing, entrepreneurship, leadership, finance, and organizational strategy—perfect for future
+      managers, executives, and entrepreneurs.
+    </p>
+
+    <div id="businessContainer" data-category="Business and Management" data-h1="BusinessH1" data-p="BusinessP" class="category-slider">
+    </div>
+
+
+    <h1 class="h1Categories" id="BiologyH1">Biology and Biomedical</h1>
+    <p id="BiologyP">
+      Uncover the complexities of living organisms and the science of life. These courses span molecular biology,
+      genetics, biotechnology, and biomedical research, preparing you for careers in healthcare, research, and the
+      life sciences industry.
+    </p>
+    <div id="biologyContainer" data-category="Biology and Biomedical" data-h1="BiologyH1" data-p="BiologyP" class="category-slider">
+    </div>
+
+
+    <h1 class="h1Categories" id="HealthH1">Health &amp; Medicine</h1>
+    <p id="HealthP">
+      Build a solid foundation in medical science and public health. Topics include human anatomy, diseases, clinical
+      practice, mental health, nutrition, and healthcare systems. These courses are designed for future medical
+      professionals and anyone passionate about health and wellness.
+    </p>
+
+    <div id="healthContainer" data-category="Health & Medicine" data-h1="HealthH1" data-p="HealthP" class="category-slider">
+    </div>
+  </main>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="MEDIA/logo.jpeg" alt="M&T Tutoring Logo">
+          <p>Empowering Lebanon's Learners Since 2023</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/m_and_t_tutoring/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://wa.me/96181671594" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-whatsapp"></i>
+            </a>
           </div>
         </div>
-        <div class="copyright">
-          <p>&copy; 2025 M&T Tutoring. All Rights Reserved.</p>
+        <div class="footer-nav">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="tutor-apply.html">Become a Tutor</a></li>
+            <li><a href="webinars.html">Webinars</a></li>
+            <li><a href="careers.html">Career Support</a></li>
+          </ul>
         </div>
       </div>
-    </footer>
-    <script src="JS/courses.js"></script>
-  </body>
+      <div class="copyright">
+        <p>&copy; 2025 M&T Tutoring. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="JS/courses.js"></script>
+</body>
+
 </html>
