@@ -751,10 +751,12 @@ html {
 }
 
 
+
+
 .main-footer {
   background: linear-gradient(135deg, #1A365D, #2B6CB0);
   color: #fff;
-  padding: 3rem 0;
+  padding: 1.2rem 0;
   font-family: 'Arial', sans-serif;
   position: relative;
   overflow: hidden;
@@ -768,7 +770,7 @@ html {
 .main-footer .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -778,8 +780,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: 1rem;
+  margin-bottom: 0.3rem;
 }
 
 
