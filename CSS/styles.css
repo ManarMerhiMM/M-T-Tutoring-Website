@@ -251,7 +251,7 @@ body {
 
 .hero {
   position: relative;
-  height: 90vh;
+  height: 100vh;
   background: linear-gradient(to right, rgba(26, 54, 93, 0.8), rgba(43, 108, 176, 0.8)),
     url('../MEDIA/blue-wave-is-lit-up-black-background_889227-20579.jpg.avif') no-repeat center center;
   background-size: cover;
@@ -287,7 +287,7 @@ body {
 .hero-content {
   position: relative;
   z-index: 2;
-  padding-top: 15vh;
+  padding-top: 5vh;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -345,7 +345,7 @@ body {
 }
 
 .featured-courses {
-  padding: 60px 20px;
+  padding: 40px 20px;
   position: relative;
   border-radius: 50px;
   color: #1a2a6c
@@ -443,7 +443,7 @@ body {
 
 
 .services-section {
-  padding: 60px 20px;
+  padding: 40px 20px;
   text-align: center;
 }
 
@@ -510,7 +510,7 @@ body {
 
 
 .mission-statement {
-  padding: 8rem 20px;
+  padding: 4rem 20px;
   background: url('MEDIA/bg-mission.jpg') no-repeat center center;
   background-size: cover;
 }
@@ -637,11 +637,11 @@ body {
 
 
 .contact-section {
-  padding: 4rem 20px;
+  padding: 2.5rem 20px;
   background: linear-gradient(135deg, #f7fafc, #e2e8f0);
   text-align: center;
   border-radius: 16px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   max-width: 800px;
   position: relative;
   overflow: hidden;
@@ -774,7 +774,7 @@ body {
 .main-footer {
   background: linear-gradient(135deg, #1A365D, #2B6CB0);
   color: #fff;
-  padding: 3rem 0;
+  padding: 2rem 0;
   font-family: 'Arial', sans-serif;
   position: relative;
   overflow: hidden;
